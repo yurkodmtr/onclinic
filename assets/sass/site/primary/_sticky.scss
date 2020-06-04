@@ -1,0 +1,39 @@
+.sticky-label {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 14px;
+	margin-top: -12px;
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 30px;
+	font-weight: 400;
+	line-height: 30px;
+	font-size: 16px;
+	border-radius: 30px;
+	
+	&.type-icon{
+		width: 36px;
+		height: 36px;
+		padding: 8px;
+		border-radius: 50%;
+
+		svg{
+			display: block;
+			width: 18px;
+			height: 18px;
+			margin-left: 2px;
+		}
+	}
+
+	&.type-both {
+
+		svg {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 8px;
+			width: 16px;
+			height: 16px;
+			margin-top: -4px;
+		}
+	}
+}

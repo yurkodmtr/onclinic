@@ -1,0 +1,146 @@
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	@include btn;
+}
+
+// Button styles
+.btn {
+	text-decoration: none;
+	@include btn;
+
+	&.invert-button {
+		border: 1px solid $color__white;
+		background: none;
+	}
+}
+
+.link,
+.btn-link,
+.btn-icon {
+	font-size: 10px;
+	display: inline-block;
+	line-height: 1.5;
+	font-weight: 400;
+	text-transform: uppercase;
+	
+	svg {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 5px;
+		margin-top: 2px;
+		width: 9px;
+		height: 9px;
+	}
+
+	&.btn {
+		padding: 8px 17px 3px;
+		
+		svg{
+			width: 14px;
+			height: 14px;
+		}
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+// General styles
+%btn {
+	line-height: 1.7;
+	display: inline-block;
+	max-width: 100%;
+	padding: 18px 100px;
+	cursor: pointer;
+	text-align: center;
+	overflow: hidden;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	transition: .1s;
+	border-width: 2px;
+	border-style: solid;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	border-radius: 0;
+
+	&,
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus {
+		outline: 0;
+	}
+}
+
+@mixin btn {
+	@extend %btn;
+}
+
+%btn-xs {
+	font-size: 10px;
+}
+
+%btn-sm {
+	font-weight: 400;
+	border-radius: 0;
+}
+
+.btn,
+form button,
+form input[type='button'],
+form input[type='reset'],
+form input[type='submit'] {
+	@include btn;
+
+	&.btn-fullwidth {
+		width: 100%;
+	}
+	&.btn-xs {
+		@extend %btn-xs;
+	}
+	&.btn-sm {
+		@extend %btn-sm;
+	}
+
+	&[class*="-transparent"] {
+		background-color: transparent;
+	}
+
+	i { margin-left: 5px; }
+}
+
+.btn-initial {
+	padding: 0;
+	font: inherit;
+	text-transform: none;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	overflow: visible;
+
+	&,
+	&:hover {
+		color: inherit;
+		background: none;
+	}
+}
+
+//	Block: Button
+.wp-block {
+	
+	&-button {
+		margin: 1rem 0;
+	}
+
+	.is-style-outline & {
+		
+		&-button__link {
+			padding: calc(1.1em - 0.2rem) calc(1.44em - 0.2rem);
+		}
+	}
+}

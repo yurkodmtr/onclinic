@@ -1,0 +1,30 @@
+.search-form {
+	display: flex;
+	align-items: center;
+	
+	&__input-wrap{
+		position: relative;
+		flex: 30 1 160px;
+		min-width: 160px;
+		display: flex;
+		margin-bottom: 0;
+	}
+
+	&__field[type='search'] {
+		box-sizing: border-box;
+		width: 100%;
+		max-width: 100%;
+		min-width: 50px;
+		padding-right: 60px;
+		text-transform: uppercase;
+	}
+	
+	&__submit.btn {
+		position: absolute;
+		top: 16px;
+		right: 20px;
+		z-index: 1;
+		color: #888;
+		background-color: transparent;
+	}
+}

@@ -1,0 +1,219 @@
+/**
+ * Variations form
+ */
+.woocommerce table.variations {
+	width: 100%;
+	border: 0;
+
+	tr, td {
+		display: block;
+		margin: 0;
+		border-radius:0;
+		border:0;
+		background: none !important;
+	}
+
+	tr {
+		
+		td {
+			padding: 0 0 10px 0;
+			font-size: 14px;
+		}
+	}
+
+	.label {
+		min-width: 80px;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: $wc-label-lh;
+		margin: $wc-label-offset;
+		padding-top: 7px;
+		text-transform: capitalize;
+		border: 0;
+	}
+
+	td.value {
+		position: relative;
+		padding-bottom: 3px;
+		
+		select {
+			@include media-breakpoint-down(lg) {
+				width: 100%;
+			}
+		}
+		
+		.reset_variations {
+			float: left;
+			font-size: 14px;
+		}
+	}
+	
+	select {
+		display: block;
+		max-width: 100%;
+		width: 80%;
+		height: auto;
+		min-width: 0;
+		padding-top: 8px;
+		padding-bottom: 6px;
+		cursor: pointer;
+		
+		@include media-breakpoint-up(sm) {
+			width: 100%;
+		}
+	}
+
+	tr + tr {
+		padding-top: $wc-variations-select-offset;
+	}
+
+	tr:last-child select {
+		margin-bottom: 5px;
+	}
+
+	// clear button
+	.reset_variations {
+		font-size: $wc-variations-clear-btn-fz;
+		line-height: $wc-variations-clear-btn-lh;
+		padding: 0;
+		display: inline-block !important;
+		margin-bottom: 10px;
+	}
+}
+
+.single-product {
+	
+	// Quantity
+	.quantity {
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 20px;
+		margin-right: 17px;
+	
+		label:not(.screen-reader-text){
+			clip: auto;
+			position: relative !important;
+			top: 0;
+			height: auto;
+			width: auto;
+			overflow: visible;
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+		
+		input {
+			width: 70px;
+			height: 70px;
+			padding: 0;
+			text-align: center;
+			font-size: 24px;
+		}
+	}
+
+	// add to cart button
+	.single_add_to_cart_button {
+		display: inline-block;
+		vertical-align: top;
+		min-width: 330px;
+		margin-bottom: 20px;
+		padding-top: 19px;
+		padding-bottom: 17px;
+
+		@include media-breakpoint-down(xs) {
+			min-width: calc(100% - 95px);
+		}
+
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: top;
+			margin-top: 2px;
+			margin-right: 10px;
+			width: 20px;
+			height: 20px;
+
+					mask-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6.99252 4.99994C6.99252 3.3431 8.33911 1.99997 10.0002 1.99997C11.6613 1.99997 13.0079 3.3431 13.0079 4.99994H15.0131C15.0131 2.23855 12.7687 0 10.0002 0C7.2317 0 4.98738 2.23855 4.98738 4.99994H6.99252Z"/><path d="M1.95379 5.77532L0 6.22503L3.18704 20H16.813L20 6.22503L18.0462 5.77532L15.2178 18H4.78215L1.95379 5.77532Z"/></svg>');
+			-webkit-mask-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" role="img" focusable="false" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6.99252 4.99994C6.99252 3.3431 8.33911 1.99997 10.0002 1.99997C11.6613 1.99997 13.0079 3.3431 13.0079 4.99994H15.0131C15.0131 2.23855 12.7687 0 10.0002 0C7.2317 0 4.98738 2.23855 4.98738 4.99994H6.99252Z"/><path d="M1.95379 5.77532L0 6.22503L3.18704 20H16.813L20 6.22503L18.0462 5.77532L15.2178 18H4.78215L1.95379 5.77532Z"/></svg>');
+
+			transition: background-color 0.2s ease-out
+		}
+		
+		&.disabled {
+			opacity: .3;
+		}
+	}
+}
+
+// grouped list
+table.woocommerce-grouped-product-list {
+	padding-bottom: 10px;
+	border:0;
+	
+	tr, td {
+		border-radius:0;
+		border:0;
+		background: none !important;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 2.15em;
+	}
+	
+	&.variations_form {
+		margin-bottom: 30px;
+	}
+
+	.single_variation_wrap {
+		.woocommerce-variation-price {
+			padding: 0 0 15px;
+		}
+	}
+	
+	.variations_form {
+		margin-bottom: 10px;
+	}
+	
+	.woocommerce-grouped-product-list-item__price {
+		font-size: 24px;
+
+		del {
+			font-size: 18px;
+			color: #888;
+		}
+		
+		ins {
+			font-style: normal;
+			border: 0;
+		}
+	}
+
+	div.quantity {
+		float: left;
+		margin: 0 10px 0 0;
+		position: relative;
+		
+		input[type="number"]::-webkit-inner-spin-button,
+		input[type="number"]::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+		}
+		
+		input.qty {
+			width: 80px;
+			text-align: center;
+			appearance: none;
+			line-height: 2.3;
+		}
+		
+		.tm-qty-minus,
+		.tm-qty-plus {
+			display: none;
+		}
+	}
+	
+	.button {
+		clear: left;
+		margin-top: 20px;
+		font-size: 12px;
+		padding: 22.5px 30px 22.5px 60px;
+	}
+}

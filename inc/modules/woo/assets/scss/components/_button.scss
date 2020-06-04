@@ -1,0 +1,96 @@
+/**
+ * Buttons
+ */
+.button {
+	display: inline-block;
+	max-width: 100%;
+	padding: 13px 20px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	border: 2px solid transparent;
+	border-radius: 0;
+
+	transition: background-color 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out;
+	
+	&.single_add_to_cart_button,
+	&.add_to_cart_button,
+	&.product_type_variable {
+		position: relative;
+		
+		&:after,
+		&:before {
+			display: inline-block;
+			@extend %icon-font-default;
+			font-size: $wc-add-to-cart-icon-fz;
+			line-height: $wc-add-to-cart-icon-lh;
+		}
+		
+		// loader
+		&:after {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-top: -7px;
+			margin-left: -5px;
+			transition: .3s all ease;
+			
+			@include spin-animation;
+		}
+		
+		&:before {
+			margin-right: 7px;
+		}
+	}
+	
+	// button with icon
+	@if ($wc-add-to-cart-with-icon) {
+		&.add_to_cart_button:before,
+		&.single_add_to_cart_button:before {
+			content: $wc-add-to-cart-sample-icon;
+			display: none;
+		}
+		
+		&.product_type_variable:before {
+			content: $wc-add-to-cart-variable-icon;
+		}
+	}
+	
+	// loading state
+	&.ajax_add_to_cart.loading {
+		.button-text,
+		&:before {
+			opacity: 0;
+		}
+		
+		&:after {
+			content: $wc-add-to-cart-loading-icon;
+		}
+	}
+	
+	// added state
+	&.ajax_add_to_cart.added {
+		
+		
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 22px;
+			height: 18px;
+
+					mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 22 18" xmlns="http://www.w3.org/2000/svg"><path d="M22 1.34255L6.96803 18L0 11.3402L1.34609 9.89297L6.86476 15.1675L20.5522 0L22 1.34255Z"/></svg>');
+			-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 22 18" xmlns="http://www.w3.org/2000/svg"><path d="M22 1.34255L6.96803 18L0 11.3402L1.34609 9.89297L6.86476 15.1675L20.5522 0L22 1.34255Z"/></svg>');
+
+			transition: background-color 0.2s ease-out
+		}
+	}
+}
+
+.added_to_cart {
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 10px;
+	padding: $wc-button-indents;
+	border-radius: $wc-button-border-radius;
+}

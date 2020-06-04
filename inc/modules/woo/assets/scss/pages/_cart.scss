@@ -1,0 +1,369 @@
+/**
+ * WooComerce cart page
+ */
+
+.woocommerce{
+	.cart-empty{
+		display: block;
+		width: 100%;
+	}
+}
+
+.woocommerce-cart {
+	
+	.page-title {
+		margin-bottom: 98px;
+		text-align: center;
+	}
+
+	.woocommerce-cart-form {
+		border-radius: 4px;
+		overflow: hidden;
+	}
+
+	
+	.woocommerce {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		
+		.woocommerce-notices-wrapper{
+			width: 100%;
+		}
+
+		.woocommerce-message,
+		.woocommerce-error,
+		.woocommerce-info {
+			width: 100%;
+		}
+
+		.woocommerce-cart-form {
+			width: 100%;
+
+			@include media-breakpoint-up(md) {
+				width: 65%;
+			}
+		}
+	}
+
+	table.cart {
+		width: 100%;
+		margin: 0;
+		border: 0;
+
+		thead {
+			background: none !important;
+			
+			@include media-breakpoint-down(xs) {
+				display: none;
+			}
+		}
+
+		tr {
+			background: none !important;
+
+			td, th {
+				border: 0;
+				border-bottom: 1px solid #E5E5E5;
+			}
+
+			th {
+				padding: 0 20px 13px;
+				text-transform: uppercase;
+				font-size: 12px;
+
+				&:first-child {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+
+			td {
+				vertical-align: middle;
+				padding: 40px 20px;
+
+				@include media-breakpoint-down(xs) {
+					display: block;
+					width: 100% !important;
+					padding: 10px;
+					text-align: center;
+					border: none;
+				}
+
+				// woocomerce cart product price
+				&.product-price {
+				
+				}
+
+				&.product-price {
+					@include media-breakpoint-down(xs) {
+						display: none;
+					}
+				}
+
+				// woocomerce cart product actions
+				&.actions {
+					padding: 40px 0;
+					text-align: right;
+					background: none;
+
+					.coupon {
+						float: none;
+						display: flex;
+						flex-wrap: wrap;
+						align-items: center;
+						margin-bottom: 10px;
+
+						@include media-breakpoint-up(xl) {
+							float: left;
+						}
+
+						* + * {
+
+							@include media-breakpoint-down(xs) {
+								display: block;
+								margin: 0 0 10px;
+							}
+						}
+
+						.button{
+							min-width: 200px;
+							margin-left: 10px;
+							padding: 10px 30px 6px;
+							font-weight: 500;
+							font-size: 18px;
+
+							@include media-breakpoint-down(xs) {
+								display: block;
+								width: 100%;
+								margin: 0;
+							}
+						}
+					}
+
+					.input-text {
+						width: calc(100% - 210px);
+						padding: 9px 30px 8px;
+						text-transform: none;
+						font-size: 18px;
+
+						@include media-breakpoint-up(xl) {
+							width: 320px;
+						}
+
+						@include media-breakpoint-down(xs) {
+							display: block;
+							width: 100%;
+							margin: 0 0 10px;
+						}
+					}
+
+					label {
+						display: none;
+					}
+
+					> .button {
+						float: none;
+						min-width: 200px;
+						margin-left: 10px;
+						padding: 10px 30px 6px;
+						font-weight: 500;
+						font-size: 18px;
+
+						@include media-breakpoint-up(sm) {
+							float: right;
+						}
+
+						@include media-breakpoint-down(xs) {
+							display: block;
+							width: 100%;
+							margin: 0;
+						}
+
+						&:hover {
+							cursor: pointer;
+						}
+					}
+				}
+
+				// woocomerce cart product quantity
+				&.product-quantity {
+					input {
+						width: 70px;
+						text-align: center;
+						font-size: 24px;
+
+						&[type=number]::-webkit-inner-spin-button,
+						&[type=number]::-webkit-outer-spin-button {
+							-webkit-appearance: none;
+							margin: 0;
+						}
+					}
+				}
+
+				// woocomerce cart product thumbnail
+				&.product-thumbnail {
+					width: 180px;
+				}
+
+				// woocomerce cart product title
+				&.product-name {
+					line-height: 1.6;
+				}
+
+				// woocomerce cart remove icon
+				&.product-remove {
+					width: 16px;
+					padding: 0;
+
+					a {
+						font-size: 0;
+
+						&:before {
+							content: '';
+							display: inline-block;
+							width: 16px;
+							height: 16px;
+									mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M6.58586 8.00001L0.292969 1.70712L1.70718 0.292908L8.00008 6.5858L14.293 0.292908L15.7072 1.70712L9.41429 8.00001L15.7072 14.2929L14.293 15.7071L8.00008 9.41423L1.70718 15.7071L0.292969 14.2929L6.58586 8.00001Z"/></svg>');
+							-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M6.58586 8.00001L0.292969 1.70712L1.70718 0.292908L8.00008 6.5858L14.293 0.292908L15.7072 1.70712L9.41429 8.00001L15.7072 14.2929L14.293 15.7071L8.00008 9.41423L1.70718 15.7071L0.292969 14.2929L6.58586 8.00001Z"/></svg>');
+							transition: background-color 0.2s ease-out;
+						}
+					}
+				}
+
+				&.product-subtotal {
+					@include media-breakpoint-down(xs) {
+						padding-bottom: 50px;
+					}
+				}
+			}
+		}
+	}
+
+	// cart collaterals
+	.cart-collaterals {
+		padding: 43px 40px 50px;
+		margin-top: 30px;
+		border: 0;
+		border-radius: 0;
+
+		width: 100%;
+		margin-top: 30px;
+		margin-left: 0;
+
+		@include media-breakpoint-up(md) {
+			width: calc(35% - 60px);
+			margin-top: 0;
+			margin-left: 60px;
+		}
+
+		h2 {
+			margin: 0 0 32px;
+			text-transform: capitalize;
+			font-weight: 600;
+			
+			&:before {
+				content: "\\";
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 20px;
+			}
+		}
+
+		.wc-proceed-to-checkout .checkout-button {
+			width: 100%;
+		}
+
+		table {
+			margin-bottom: 45px;
+			border: none;
+
+			tr {
+				vertical-align: baseline;
+
+				th {
+					font-size: $wc-label-fz;
+					padding-right: 25px;
+				}
+
+				&.shipping {
+					td {
+						width: 230px;
+						font-size: $wc-label-fz;
+
+						.shipping-calculator-button {
+							&::before {
+								content: $wc-cart-page-calculate-shipping-button-icon;
+								@extend %icon-font-default;
+								font-size: 12px;
+								padding-right: 5px;
+							}
+						}
+					}
+				}
+
+				&.cart-subtotal {
+					
+					th, td {
+						font-weight: 600;
+						font-size: 14px;
+					}
+
+					.amount {
+						font-weight: 600;
+						font-size: 14px;
+					}
+				}
+
+				.shipping-calculator-form {
+					padding: 20px 0;
+
+					input {
+						width: 100%;
+
+						@include media-breakpoint-only(md) {
+							width: 150px;
+						}
+					}
+
+					.button {
+						display: block;
+						width: 100%;
+
+						&::before {
+							content: $wc-cart-page-table-actions-button-icon;
+							@extend %icon-font-default;
+							font-size: 12px;
+							padding-right: 5px;
+						}
+					}
+
+					p + p {
+						margin-top: 20px;
+					}
+				}
+
+				&.order-total {
+
+					strong {
+						font-weight: 400;
+					}
+				}
+
+				td, th {
+					border: none;
+				}
+
+				.woocommerce-shipping-destination{
+					margin: 10px 0;
+				}
+			}
+		}
+
+		#shipping_method {
+			label {
+				font-size: 18px;
+			}
+		}
+	}
+}

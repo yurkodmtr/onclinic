@@ -1,0 +1,101 @@
+input,
+select,
+textarea {
+	padding: 14px 20px 13px;
+	border: 2px solid transparent;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 29px;
+	transition: .2s;
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+select option {
+	font-family: "Source Sans Pro",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'],
+textarea {
+	appearance: none;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'] {
+	hyphens: none;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+	display: inline-block;
+	width: auto;
+	vertical-align: middle;
+}
+
+input[type='file'] {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+}
+
+select {
+	width: 100%;
+	max-width: 100%;
+}
+
+textarea {
+	$height: 160px;
+
+	height: $height;
+	min-height: $height;
+	width: 100%;
+
+	@include resizable(vertical);
+}
+
+
+
+// custom woo select
+#page {
+	.select2-selection {
+		height: 48px;
+		border: 0;
+		font-size: 18px;
+		line-height: 27px;
+		
+		&:focus{
+			outline: none;
+		}
+
+		b {
+			margin-top: 0;
+		}
+
+		.select2-selection__rendered {
+			padding: 9.5px 20px;
+		}
+
+		&.select2-selection--single{
+			.select2-selection__arrow{
+				top: 9px;
+			}
+		}
+
+		&.select2-selection--multiple{
+			height: auto;
+		}
+	}
+}

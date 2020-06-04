@@ -1,0 +1,33 @@
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+
+	img[class*="wp-image-"] {
+		@include center-block;
+	}
+
+	.wp-caption-text {
+		margin: 0.8075em 0;
+		@include font-size(.75);
+	}
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+.single-post .entry-content figure figcaption.blocks-gallery-item__caption {
+	position: static;
+	width: 100%;
+	overflow: auto;
+	margin-top: 21px;
+	margin-bottom: 18px;
+	padding: 0;
+	color: #888;
+	text-align: left;
+	font-size: 12px;
+	font-weight: 400;
+	text-transform: uppercase;
+	line-height: 1.7em;
+	background: none;
+}

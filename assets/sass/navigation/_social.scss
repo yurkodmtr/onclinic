@@ -1,0 +1,48 @@
+.social-list {
+	.menu-item {
+		margin-left: 30px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		> a {
+			position: relative;
+			display: block;
+			text-decoration: none;
+			text-align: center;
+			
+			&:hover {
+				text-decoration: none;
+			}
+			
+			&:focus {
+				outline: none;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 1px;
+				bottom: 4px;
+				width: 0;
+				height: 1px;
+				transition: width 0.2s ease-out;
+			}
+			&:hover:after {
+				width: 100%;
+			}
+
+			span.screen-reader-text {
+				clip: auto;
+				position: static !important;
+				display: block;
+				height: auto;
+				width: auto;
+				overflow: hidden;
+				font-weight: 500;
+				font-size: 18px;
+			}
+		}
+	}
+}

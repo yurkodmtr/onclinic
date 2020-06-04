@@ -1,0 +1,60 @@
+/**
+ * Price filter widget
+ */
+.elementor-widget-wp-widget-woocommerce_price_filter,
+.widget_price_filter{
+	.price_slider_wrapper{
+		position: relative;
+		padding-top: 25px;
+		
+		.price_label{
+			position: absolute;
+			top: 67px;
+			left: 0;
+			font-size: 14px;
+		}
+	}
+	
+	.price_slider{
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 2px;
+		border-radius: 0;
+		background-color: #bfbfbf;
+	}
+	
+	.ui-slider-range{
+		position: absolute;
+		height: 2px;
+		border-radius: 0;
+	}
+	
+	.ui-slider-handle{
+		position: absolute;
+		top: 50%;
+		display: block;
+		margin-top: -15px;
+		width: 10px;
+		height: 30px;
+		border-radius: 0;
+		border: 2px solid;
+		outline: none;
+		background-color: #fff;
+		transition: background-color 0.2s ease-out;
+		
+		&:last-child{
+			margin-left: -10px;
+		}
+	}
+	
+	.price_slider_amount {
+		margin-top: 30px;
+
+		.button{
+			float: right;
+			padding: 7px 20px 2px;
+			font-size: 14px;
+		}
+	}
+}

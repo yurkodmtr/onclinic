@@ -1,0 +1,85 @@
+/*-------------------
+### Default Styles
+---------------------*/
+
+.default-item {
+	
+	.post-thumbnail{
+		margin-bottom: 40px;
+	}
+
+	@include media-breakpoint-up(md) {
+		display: flex;
+		justify-content: flex-start;
+
+		&:nth-child(2n) {
+			justify-content: flex-end;
+
+			.posts-list__item-content {
+				order: -1;
+			}
+
+			.post-thumbnail + .posts-list__item-content {
+				margin-right: 60px;
+			}
+		}
+
+		.post-thumbnail{
+			flex: 0 0 39.131%;
+			max-width: 39.131%;
+			margin-bottom: 0;
+
+			.sidebar_enabled & {
+				flex: 0 0 41.177%;
+				max-width: 41.177%;
+			}
+		}
+		
+		.posts-list__item-content {
+			flex: 0 0 39.131%;
+			max-width: 39.131%;
+
+			.sidebar_enabled & {
+				flex: 0 0 52.942%;
+				max-width: 52.942%;
+			}
+		}
+
+		.post-thumbnail + .posts-list__item-content {
+			margin-left: 60px;
+		}
+	}
+
+	.entry {
+		
+		&-header {
+			margin-top: -3px;
+
+			.entry-meta {
+				margin-top: 0;
+			}
+		}
+
+		&-meta {
+			.comments-link {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+### Posts List Formats
+--------------------------------------------------------------*/
+
+.default-item.format-post {
+	.entry-footer .entry-meta {
+		.tags-links+div:not(:empty) {
+			margin-top: 28px;
+		}
+		>div {
+			@include space-between-content;
+		}
+	}
+}

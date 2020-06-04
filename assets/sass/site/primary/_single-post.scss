@@ -1,0 +1,259 @@
+/*--------------------------------------------------------------
+### Single Post
+--------------------------------------------------------------*/
+.single-post {
+	
+	.post .entry {
+		
+		&-header {
+			
+			span.cat-links {
+				margin-bottom: 23px;
+			}
+
+			.entry-title {
+				margin-top: 0;
+				margin-bottom: 76px;
+			}
+		}
+		
+		&-content {
+			@include media-breakpoint-up(sm) {
+				line-height: 1.6;
+				@include font-size(22/16);
+			}
+
+			margin-top: 10px;
+
+			figure {
+				flex-direction: column;
+				justify-content: flex-end;
+
+				figcaption.blocks-gallery-item__caption {
+					position: static;
+					width: 100%;
+					overflow: auto;
+					margin-top: 21px;
+					margin-bottom: 18px;
+					padding: 0;
+					color: #888;
+					text-align: left;
+					font-size: 12px;
+					font-weight: 400;
+					text-transform: uppercase;
+					line-height: 1.7em;
+					background: none;
+				}
+
+				img {
+					vertical-align: top;
+				}
+			}
+
+			@media (min-width: 700px) {
+				.wp-block {
+					&-archives:not(.alignwide):not(.alignfull),
+					&-categories:not(.alignwide):not(.alignfull),
+					&-code,
+					&-columns:not(.alignwide):not(.alignfull),
+					&-cover:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.aligncenter),
+					&-embed:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.aligncenter),
+					&-gallery:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.aligncenter),
+					&-group:not(.has-background):not(.alignwide):not(.alignfull),
+					&-image:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.aligncenter),
+					&-latest-comments:not(.aligncenter):not(.alignleft):not(.alignright),
+					&-latest-posts:not(.aligncenter):not(.alignleft):not(.alignright),
+					&-media-text:not(.alignwide):not(.alignfull),
+					&-preformatted,
+					&-pullquote:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright),
+					&-verse,
+					&-video:not(.alignwide):not(.alignfull) {
+						margin-bottom: 2rem;
+						margin-top: 2rem;
+					}
+
+					&-quote,
+					&-quote.is-large,
+					&-quote.is-style-large {
+						margin-top: 3rem;
+						margin-bottom: 3.5rem;
+					}
+				}
+			}
+		}
+		&-footer {
+			.entry-meta:not(:empty) {
+				margin-top: 13px;
+			}
+		}
+	}
+	
+	.entry {
+		&-footer {
+			margin-top: 18px;
+			
+			.tags-links {
+				a {
+					@extend %tags-style;
+
+					margin-right: 10px;
+				}
+
+				strong {
+					display: block;
+					margin-bottom: 23px;
+					text-transform: none;
+					font-weight: 600;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	
+	.post-thumbnail {
+		margin-bottom: 0;
+		img {
+			margin-bottom: 35px;
+		}
+	}
+	
+	.overlay-thumbnail {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		background-size: cover;
+		background-position: center;
+	}
+	
+	.col-md-10.post {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.post-by-author {
+
+		&__avatar {
+			overflow: hidden;
+			width: 60px;
+			height: 60px;
+			margin-bottom: 37px;
+			border-radius: 50%;
+		}
+
+		&__title {
+			margin-bottom: 8px;
+			font-weight: 600;
+			line-height: 28px;
+			font-size: 18px;
+		}
+
+		&__content {
+			margin-bottom: 29px;
+			font-size: 14px;
+		}
+
+		&__meta {
+
+			span {
+				display: block;
+			}
+
+			.comments-link {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	&.position-one-left-sidebar .post-by-author {
+		order: 1;
+	}
+}
+
+/*--------------------------------------------------------------
+### Related posts
+--------------------------------------------------------------*/
+
+.related-posts {
+	position: relative;
+	margin-bottom: 0;
+	padding-top: 97px;
+	padding-bottom: 0;
+
+	.related-post {
+		margin-bottom: 130px;
+	}
+
+	.post-navigation + & {
+		margin-top: 140px;
+	}
+
+	[class*="col-"] {
+		position: relative;
+		z-index: 2;
+		display: flex;
+	}
+
+	&__title {
+		position: relative;
+		z-index: 2;
+		margin-bottom: 52px;
+	}
+
+	.post-thumbnail {
+		margin-bottom: 37px;
+
+		.post-thumbnail__link {
+			display: block;
+			img{ 
+				margin-bottom: 0;
+				width: 100%;
+				max-height: 90vh;
+				object-fit: cover;
+			}
+		}
+	}
+
+	.entry-meta:first-child {
+		margin-top: 0;
+	}
+
+	.entry-header {
+		
+		.entry-title {
+			margin-bottom: 0;
+			margin-top: 24px;
+
+			@include media-breakpoint-up(xl) {
+				font-size: 36px;
+			}
+		}
+
+		& + .entry-meta:not(:empty){
+			margin-top: 27px;
+		}
+	}
+
+	.entry-content {
+		margin-top: 15px;
+
+		& + .entry-meta:not(:empty){
+			margin-top: 27px;
+		}
+	}
+
+	&__overlay {
+		position: absolute;
+		z-index: 1;
+		left: -200%;
+		top: 0;
+		bottom: 0;
+		right: -200%;
+	}
+
+	.entry-footer {
+		margin-top: 0;
+	}
+}

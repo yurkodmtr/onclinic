@@ -1,0 +1,14 @@
+/*--------------------------------------------------------------
+## Carousel
+--------------------------------------------------------------*/
+
+.slick-slide {
+	&:focus {
+		outline: none;
+	}
+}
+
+/* Search Popup */
+.jet-search__form .jet-search__field {
+	text-align: center;
+}

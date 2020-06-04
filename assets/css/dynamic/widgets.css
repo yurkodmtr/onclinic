@@ -1,0 +1,96 @@
+.widget-title.h6-style {
+	font-family: @font_family( $body_font_family );
+}
+
+
+/* Widgets misc */
+.widget_recent_entries .post-date,
+.widget_recent_comments .recentcomments,
+.wp-block-archives-list li a:not(:hover),
+.wp-block-categories-list li a:not(:hover),
+.entry-content .wp-block-latest-posts__list li a + time,
+.page-content .wp-block-latest-posts__list li a + time {
+	color: $secondary_text_color;
+}
+.widget_categories li > a:not(:hover),
+.widget_archive li > a:not(:hover) {
+	color: $primary_text_color;
+}
+
+/* #Widget Recent Posts - Comments*/
+.widget-area:not(.footer-area) .widget_nav_menu div li > a:not(:hover),
+.elementor-widget-sidebar .widget_nav_menu div li > a:not(:hover),
+.widget_meta li > a:not(:hover),
+.widget_pages li > a:not(:hover),
+.widget_recent_entries a:not(:hover),
+.widget_recent_comments .comment-author-link a:not(:hover) {
+	color: $primary_text_color;
+}
+
+.invert .widget_recent_entries a:not(:hover),
+.invert .widget_recent_comments a:not(:hover) {
+	color: $invert_text_color;
+}
+
+/* #Widget RSS */
+.widget_rss .widget-title:before {
+	background-color: $primary_text_color;
+}
+.widget_rss ul li .rss-date {
+	color: $secondary_text_color;
+}
+
+/* #Widget Tags */
+.tagcloud a,
+.tags-links a {
+	background-color: $grey_color_1;
+}
+.tagcloud a:hover,
+.tags-links a:hover{
+	color: $invert_text_color;
+	background-color: $primary_text_color;
+}
+
+.tagcloud a:hover,
+.tags-links a:hover{
+	color: $btn_text_color;
+	border-color: $btn_border_color;
+	background-color: $btn_bg_color;
+}
+
+/* #Widget Calendar */
+.invert .widget_calendar {
+	color: $primary_text_color;
+}
+
+.widget_calendar thead th {
+	color: $secondary_text_color;
+	background-color: $grey_color_1;
+}
+
+.widget_calendar caption{
+	color: $primary_text_color;
+	background-color: $grey_color_1;
+}
+.wp-calendar-nav-prev a:before,
+.wp-calendar-nav-next a:before {
+	background-color: $secondary_text_color;
+}
+.wp-calendar-nav-prev a:hover:before,
+.wp-calendar-nav-next a:hover:before {
+	background-color: $primary_text_color;
+}
+
+.widget_calendar tbody td#today a{
+	color: $invert_text_color;
+	background-color: $primary_text_color;
+}
+.widget_calendar tbody td a {
+	color: $primary_text_color;
+	border-color: $primary_text_color;
+}
+
+.widget_calendar tbody td a:hover {
+	color: $btn_text_color;
+	background-color: $btn_bg_color;
+}

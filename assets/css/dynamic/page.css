@@ -1,0 +1,23 @@
+/* #Page preloader */
+.page-preloader-cover .bar:before{
+	background-color: $accent_color;
+}
+.page-preloader-cover .bar {
+	background-color: $grey_color_1;
+}
+
+
+/* Logo */
+.site-logo,
+.site-logo__link,
+.site-logo__link:hover {
+	font-style: $header_logo_font_style;
+	font-weight: $header_logo_font_weight;
+	font-size: $header_logo_font_size{px};
+	color: $primary_text_color;
+}
+
+/* Search Result */
+.search-item .entry-title {
+	font-family: @font_family( $body_font_family );
+}

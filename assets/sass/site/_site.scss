@@ -1,0 +1,158 @@
+.site {
+	@include hyphens(auto);
+	
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	word-wrap: break-word;
+	
+	&-header__wrap.container,
+	&-content.container {
+		padding-left: 0;
+		padding-right: 0;
+
+		@include media-breakpoint-down(xl) {
+			max-width: 100%;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+
+		@media (max-width: 1024px) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		body.layout-fullwidth &,
+		body.elementor-template-full-width &,
+		body.page-template-fullwidth-content & {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.breadcrumbs {
+		body.layout-fullwidth &,
+		body.elementor-template-full-width &,
+		body.page-template-fullwidth-content & {
+			padding-left: 20px;
+			padding-right: 20px;
+
+			@media (min-width: 1024px) {
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+
+			.container {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&-content {
+		flex: auto;
+		width: 100%;
+		min-height: 1px;
+
+		body:not(.elementor-page) &,
+		body.single.elementor-page & {
+			margin-top: 80px;
+			margin-bottom: 0;
+		}
+
+		body.elementor-template-full-width &,
+		body.page-template-fullwidth-content & {
+			max-width: 100%;
+		}
+
+		body.blog.layout-fullwidth & {
+			padding-left: 20px;
+			padding-right: 20px;
+
+			@media (min-width: 1024px) {
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+		}
+
+		&__wrap {
+			max-width: 100%;
+
+			&.container {
+				max-width: 100%;
+			}
+		}
+	}
+	
+	&-main {
+		>*:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&-footer {
+		body.blog.layout-fullwidth & {
+			.container {
+				max-width: 100%;
+			}
+
+			padding-left: 20px;
+			padding-right: 20px;
+
+			@media (min-width: 1024px) {
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+		}
+	}
+}
+
+#primary {
+	margin-bottom: 70px;
+
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 140px;
+	}
+}
+
+#secondary {
+	@include media-breakpoint-down(sm) {
+		margin-top: 40px;
+	}
+}
+
+.space-between-content {
+	@include space-between-content;
+}
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+
+@import "primary/header";
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+
+@import "primary/footer";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Single post
+--------------------------------------------------------------*/
+
+@import "primary/single-post";
+
+/*--------------------------------------------------------------
+## Sticky 
+--------------------------------------------------------------*/
+
+@import "primary/sticky";

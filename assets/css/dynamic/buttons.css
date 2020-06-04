@@ -1,0 +1,123 @@
+/* #Button Appearance Styles */
+.btn,
+.btn-link,
+.link,
+.elementor-widget .elementor-button,
+.cherry-projects-wrapper .projects-ajax-button-wrapper .projects-ajax-button span,
+a.button,
+form button,
+form input[type='button'],
+form input[type='reset'],
+form input[type='submit'] {
+	font-family: @font_family( $meta_font_family );
+}
+
+.btn-text-icon path,
+.btn-icon path{
+	fill: $link_color;
+}
+.btn-text-icon:hover path,
+.btn-icon:hover path{
+	fill: $link_hover_color;
+}
+.btn.btn-icon path,
+.btn.btn-icon:hover path{
+	fill: $invert_text_color;
+}
+
+.btn,
+.btn-primary,
+.invert .btn-primary,
+.elementor-widget .elementor-button,
+.cherry-projects-wrapper .projects-ajax-button-wrapper .projects-ajax-button span,
+.tm-pg_front_gallery .load-more-button .btn,
+form button,
+form input[type='button'],
+form input[type='submit']{
+	font-family: @font_family( $button_font_family );
+	text-transform: $button_text_transform;
+	font-style: $button_font_style;
+	font-weight: $button_font_weight;
+	font-size: $button_font_size{px};
+	color: $btn_text_color;
+	line-height: $button_line_height;
+	letter-spacing: $button_letter_spacing{px};
+	border-color: $btn_border_color;
+	background-color: $btn_bg_color;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.invert .btn-primary:hover,
+.btn-primary.processing,
+.invert .btn-primary.processing,
+.elementor-widget .elementor-button:hover,
+.cherry-projects-wrapper .projects-ajax-button-wrapper .projects-ajax-button span:hover,
+.tm-pg_front_gallery .load-more-button .btn:hover,
+form button:hover,
+form input[type='button']:hover,
+form input[type='submit']:hover{
+	color: $btn_bg_color;
+	border-color: $btn_bg_color;
+	background-color: transparent;
+}
+
+.btn-secondary,
+.invert .btn-secondary,
+form input[type="reset"]{
+	color: $invert_text_color;
+	background-color: $regular_accent_color_2;
+	border-color: $regular_accent_color_2;
+}
+.btn-secondary:hover,
+.invert .btn-secondary:hover,
+.btn-secondary.processing,
+.invert .btn-secondary.processing,
+form input[type="reset"]:hover {
+	color: $invert_text_color;
+	background-color: $accent_color;
+	border-color: $accent_color;
+}
+
+.btn-primary-transparent{
+	color: $regular_text_color;
+}
+.invert .btn-primary-transparent{
+	color: $invert_text_color;
+	border-color: $invert_text_color;
+}
+.btn-primary-transparent:hover,
+.invert .btn-primary-transparent:hover,
+.btn-primary-transparent.processing,
+.invert .btn-primary-transparent.processing{
+	color: $invert_text_color;
+	background-color: $accent_color;
+	border-color: $accent_color;
+}
+
+.btn-grey,
+.invert .btn-grey {
+	color: $regular_text_color;
+	background-color: $grey_color_1;
+	border-color: $grey_color_1;
+}
+.btn-grey:hover,
+.invert .btn-grey:hover,
+.btn-grey.processing,
+.invert .btn-grey.processing{
+	color: $regular_text_color;
+	background-color: @darken($grey_color_1, 10%);
+	border-color: @darken($grey_color_1, 10%);
+}
+
+
+/* #ToTop button */
+#toTop:before{
+	background-color: $primary_text_color;
+}
+#toTop:hover {
+	background-color: $primary_text_color;
+}
+#toTop:hover:before{
+	background-color: $invert_text_color;
+}

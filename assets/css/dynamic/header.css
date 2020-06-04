@@ -1,0 +1,27 @@
+/* #Header */
+.site-header__wrap {
+	
+}
+
+/* Site Branding */
+.site-logo.retina-logo img {
+	height: $logo_retina_height{px};
+	width: auto;
+}
+
+/* #Search Popup */
+.site-header .header-search-form__field,
+.jet-search__field[type="search"] {
+	font-weight: $h3_font_weight;
+	font-size: $h2_font_size{px};
+	font-family: @font_family( $h3_font_family );
+	letter-spacing: $h3_letter_spacing{px};
+	color: $h3_color;
+}
+.site-header .header-search-form__field::placeholder,
+.jet-search__field[type="search"]::placeholder {
+	opacity: 1;
+}
+.site-header .site-header__mobile .header-search-form__field {
+	font-family: @font_family( $body_font_family );
+}

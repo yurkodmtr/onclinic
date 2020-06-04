@@ -1,0 +1,19 @@
+/**
+ * Tag cloud widget
+ */
+.elementor-widget-wp-widget-woocommerce_product_tag_cloud,
+.widget_product_tag_cloud {
+	.tagcloud {
+		a {
+			display: inline-block;
+			margin-right: 6px;
+			margin-bottom: 10px;
+			padding: 7px 11px 3px;
+			text-transform: uppercase;
+			line-height: 22px;
+			font-size: 12px !important;
+			border-width: 1px;
+			border-style: solid;
+		}
+	}
+}

@@ -1,0 +1,79 @@
+/*--------------------------------------------------------------
+### Grid Posts List
+--------------------------------------------------------------*/
+
+.posts-list.posts-list--grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -$grid-gutter-width/2;
+	margin-right: -$grid-gutter-width/2;
+	margin-bottom: 0;
+	
+	&.posts-list-3-cols {
+		.grid-item {
+			padding-left: $grid-gutter-width/2;
+			padding-right: $grid-gutter-width/2;
+			max-width: calc(100%);
+			width: calc(100% );
+			flex: 0 0 calc(100%);
+			
+			@include media-breakpoint-up(sm) {
+				max-width: calc(100% / 2);
+				width: calc(100% / 2);
+				flex: 0 0 calc(100% / 2);
+			}
+			
+			@include media-breakpoint-up(md) {
+				max-width: calc(100% / 3);
+				width: calc(100% / 3);
+				flex: 0 0 calc(100% / 3);
+			}
+		}
+	}
+
+	&.posts-list-2-cols{
+		.grid-item {
+			padding-left: $grid-gutter-width/2;
+			padding-right: $grid-gutter-width/2;
+			max-width: calc(100%);
+			width: calc(100% );
+			flex: 0 0 calc(100%);
+			
+			@include media-breakpoint-up(sm) {
+				max-width: calc(100% / 2);
+				width: calc(100% / 2);
+				flex: 0 0 calc(100% / 2);
+			}
+		}
+	}
+
+	.entry {
+		
+		&-header {
+			.entry-meta {
+				margin-top: 38px;
+			}
+		}
+
+		&-title {
+			margin-top: 17px;
+			font-size: 36px;
+		}
+
+		&-content {
+			margin-top: 19px;
+		}
+
+		&-meta {
+			.comments-link {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.blog-grid:not(.sidebar_enabled) .posts-list-2-cols {
+	.entry-title {
+		font-size: 48px;
+	}
+}

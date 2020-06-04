@@ -1,0 +1,42 @@
+input,
+select,
+textarea {
+	font-style: $body_font_style;
+	font-weight: $body_font_weight;
+	font-family: @font_family( $body_font_family );
+	background-color: $grey_color_1;
+	color: $secondary_text_color;
+}
+
+/* #Input Placeholders */
+::-webkit-input-placeholder { color: $primary_text_color; opacity:0.5; }
+::-moz-placeholder          { color: $primary_text_color; opacity:0.5; }
+:-moz-placeholder           { color: $primary_text_color; opacity:0.5; }
+:-ms-input-placeholder      { color: $primary_text_color; opacity:0.5; }
+::-ms-input-placeholder 	{ color: $primary_text_color; opacity:0.5; }
+::placeholder 				{ color: $primary_text_color; opacity:0.5; }
+
+input:focus,
+select:focus,
+textarea:focus {
+	color: $primary_text_color;
+	border-color: $primary_text_color;
+	background-color: #fff;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+	opacity: 1;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+	opacity: 1;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+	opacity: 1;
+}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+	opacity: 1;
+}

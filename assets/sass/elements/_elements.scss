@@ -1,0 +1,178 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+blockquote,
+q {
+	quotes: none;
+	&:before,
+	&:after {
+		content: '';
+	}
+}
+
+blockquote {
+	position: relative;
+	padding: 50px 15% 58px 15% !important;
+	margin: 35px 0;
+	text-align: center;
+	line-height: 1.5;
+	clear: left;
+
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	
+	p {
+		margin: 30px 0 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:before {
+			content: '“';
+		}
+
+		&:after {
+			content: '”';
+		}
+
+		&:before,
+		&:after {
+			display: inline-block;
+			vertical-align: bottom;
+		}
+	}
+
+	cite {
+		position: relative;
+		display: inline-block;
+		margin-top: 18px;
+		font-style: normal;
+		text-align: center !important;
+		font-size: 14px !important;
+		
+		&:before {
+			content: '—';
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 4px;
+		}
+
+		em {
+			font-style: normal;
+		}
+	}
+
+	:root .has-cyan-bluish-gray-background-color & {
+		background: none;
+	}
+}
+
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin: 1.5em 0;
+}
+
+.svg-icon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	fill: currentColor;
+}
+
+.fa::before {
+	content: "+";
+}
+
+.site-main {
+	table {
+		margin: 0 0 1.5em;
+		max-width: 100%;
+		width: 100%;
+		border: 0;
+		
+		th,
+		td {
+			padding: 18px 20px 19px;
+			vertical-align: middle;
+			border: 0;
+		}
+
+		th {
+			font-size: 18px;
+		}
+
+		td {
+			font-size: 14px;
+		}
+
+		thead {
+			background-color: #F8F8F8;
+
+			th {
+				vertical-align: bottom;
+				border: 0;
+			}
+
+			& + tbody {
+				tr:nth-child(2n) {
+					background: #f8f8f8;
+				}
+
+				tr:nth-child(2n + 1) {
+					background: #fff;
+				}
+			}
+		}
+		
+		tbody {
+			tr:nth-child(2n + 1) {
+				background: #f8f8f8;
+			}
+		}
+	}
+}
+
+.edit-link {
+	display: inline-block;
+	margin-top: 25px;
+}
+
+/*--------------------------------------------------------------
+## Lists
+--------------------------------------------------------------*/
+
+@import "lists";
+/*--------------------------------------------------------------
+## ToTop
+--------------------------------------------------------------*/
+
+@import "totop-button";
+/*--------------------------------------------------------------
+## Page preloader
+--------------------------------------------------------------*/
+
+@import "page-preloader";

@@ -1,0 +1,138 @@
+/**
+ * Rating
+ */
+.star-rating {
+	overflow: hidden;
+	position: relative;
+	display: block;
+	width: 100px;
+	height: 19px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 19px;
+		opacity: 0.15;
+
+				mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.3607 7.25735H20L13.8197 11.7426L16.1803 19L10 14.5147L3.81966 19L6.18034 11.7426L0 7.25735H7.63932L10 0Z"/></svg>');
+		-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.3607 7.25735H20L13.8197 11.7426L16.1803 19L10 14.5147L3.81966 19L6.18034 11.7426L0 7.25735H7.63932L10 0Z"/></svg>');
+
+		transition: background-color 0.2s ease-out;
+	}
+
+	span {
+		padding-top: 1.5em;
+		overflow: hidden;
+		float: left;
+		top: 0;
+		left: 0;
+		position: absolute;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 19px;
+
+					mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.3607 7.25735H20L13.8197 11.7426L16.1803 19L10 14.5147L3.81966 19L6.18034 11.7426L0 7.25735H7.63932L10 0Z"/></svg>');
+			-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.3607 7.25735H20L13.8197 11.7426L16.1803 19L10 14.5147L3.81966 19L6.18034 11.7426L0 7.25735H7.63932L10 0Z"/></svg>');
+
+			transition: background-color 0.2s ease-out;
+		}
+
+		span {
+			display: none;
+		}
+	}
+
+	// Single product rating
+	.single-product .summary & {
+		display: inline-block;
+		margin: 0;
+	}
+}
+
+// Single Product Reviews rating
+.stars {
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 0;
+	margin-top: 8px;
+	margin-left: 25px;
+	width: 141px;
+	height: 19px;
+
+	span {
+		line-height: 2;
+	}
+
+	a {
+		position: relative;
+		height: 19px;
+		width: 20px;
+		text-indent: -999em;
+		display: inline-block;
+		text-decoration: none;
+		opacity: 0.15;
+
+		&:hover,
+		&.active {
+			opacity: 1;
+		}
+		
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 19px;
+
+					mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.3607 7.25735H20L13.8197 11.7426L16.1803 19L10 14.5147L3.81966 19L6.18034 11.7426L0 7.25735H7.63932L10 0Z"/></svg>');
+			-webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.3607 7.25735H20L13.8197 11.7426L16.1803 19L10 14.5147L3.81966 19L6.18034 11.7426L0 7.25735H7.63932L10 0Z"/></svg>');
+
+			transition: background-color 0.2s ease-out;
+			
+			line-height: 1;
+			text-indent: 0;
+		}
+	}
+	
+	&:hover{
+		a{
+			opacity: 1;
+			
+			&:hover ~ a {
+				opacity: 0.15;
+			}
+		}
+	}
+	
+	&.selected{
+		a{
+			&:not(.active) {
+				opacity: 1;
+			}
+			
+			&.active ~ a {
+				opacity: 0.15;
+			}
+		}
+	}
+}
+
+.single-product{
+	.woocommerce-product-rating{
+		margin-bottom: 20px;
+	}
+}
+
+.woocommerce-review-link{
+	margin-left: 15px;
+}

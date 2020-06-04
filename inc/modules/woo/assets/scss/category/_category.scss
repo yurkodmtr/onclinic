@@ -1,0 +1,46 @@
+/**
+ * Category main styles
+ */
+ul.products{
+	li.product-category {
+		margin-bottom: 123px;
+		
+		@include media-breakpoint-up(xl) {
+			flex: 0 0 33.33334% !important;
+			max-width: 33.33334% !important;
+		}
+		
+		.category-content{
+			.entry-meta {
+				transition: color 0.2s ease-out;
+			}	
+		}
+
+		&.category-last {
+			font-size: 0;
+			width: 100%;
+			margin: 0;
+			flex: 0 0 100% !important;
+			max-width: 100% !important;
+		}
+		
+	}
+
+	.woocommerce-loop-category {
+		
+		&__title{
+			margin-top: 23px;
+			margin-bottom: 25px;
+			font-size: 36px;
+			transition: color 0.2s ease-out;
+		}
+
+		&__description {
+			font-size: 18px;
+
+			& + .entry-meta {
+				margin-top: 26px;
+			}
+		}
+	}
+}
