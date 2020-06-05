@@ -4,28 +4,28 @@
 
 
 /* Widgets misc */
-.widget_recent_entries .post-date,
-.widget_recent_comments .recentcomments,
-.wp-block-archives-list li a:not(:hover),
-.wp-block-categories-list li a:not(:hover),
-.entry-content .wp-block-latest-posts__list li a + time,
-.page-content .wp-block-latest-posts__list li a + time {
-	color: $secondary_text_color;
-}
-.widget_categories li > a:not(:hover),
-.widget_archive li > a:not(:hover) {
-	color: $primary_text_color;
-}
+/*.widget_recent_entries .post-date,*/
+/*.widget_recent_comments .recentcomments,*/
+/*.wp-block-archives-list li a:not(:hover),*/
+/*.wp-block-categories-list li a:not(:hover),*/
+/*.entry-content .wp-block-latest-posts__list li a + time,*/
+/*.page-content .wp-block-latest-posts__list li a + time {*/
+/*	color: $secondary_text_color;*/
+/*}*/
+/*.widget_categories li > a:not(:hover),*/
+/*.widget_archive li > a:not(:hover) {*/
+/*	color: $primary_text_color;*/
+/*}*/
 
 /* #Widget Recent Posts - Comments*/
-.widget-area:not(.footer-area) .widget_nav_menu div li > a:not(:hover),
-.elementor-widget-sidebar .widget_nav_menu div li > a:not(:hover),
-.widget_meta li > a:not(:hover),
-.widget_pages li > a:not(:hover),
-.widget_recent_entries a:not(:hover),
-.widget_recent_comments .comment-author-link a:not(:hover) {
-	color: $primary_text_color;
-}
+/*.widget-area:not(.footer-area) .widget_nav_menu div li > a:not(:hover),*/
+/*.elementor-widget-sidebar .widget_nav_menu div li > a:not(:hover),*/
+/*.widget_meta li > a:not(:hover),*/
+/*.widget_pages li > a:not(:hover),*/
+/*.widget_recent_entries a:not(:hover),*/
+/*.widget_recent_comments .comment-author-link a:not(:hover) {*/
+/*	color: $primary_text_color;*/
+/*}*/
 
 .invert .widget_recent_entries a:not(:hover),
 .invert .widget_recent_comments a:not(:hover) {

@@ -25,7 +25,7 @@ function onclinic_get_customizer_options() {
 		'type'          => 'theme_mod',
 		'fonts_manager' => new CX_Fonts_Manager(),
 		'options'       => array(
-			
+
 			/** `Site Identity` section */
 			'logo_retina' => array(
 				'title' 			=> esc_html__( 'Retina Logo', 'onclinic' ),
@@ -88,7 +88,7 @@ function onclinic_get_customizer_options() {
 				'field'    => 'checkbox',
 				'type'     => 'control',
 			),
-			
+
 			/** `Breadcrumbs` section */
 			'breadcrumbs' => array(
 				'title'    => esc_html__( 'Breadcrumbs', 'onclinic' ),
@@ -218,70 +218,70 @@ function onclinic_get_customizer_options() {
 			'primary_text_color' => array(
 				'title'   => esc_html__( 'Primary Text color', 'onclinic' ),
 				'section' => 'color_scheme',
-				'default' => '#222222',
+				'default' => '#1E306E',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'secondary_text_color' => array(
 				'title'   => esc_html__( 'Secondary Text color', 'onclinic' ),
 				'section' => 'color_scheme',
-				'default' => '#888888',
+				'default' => '#298CD3',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'link_color' => array(
 				'title'   => esc_html__( 'Link color', 'onclinic' ),
 				'section' => 'color_scheme',
-				'default' => '#222222',
+				'default' => '#298CD3',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'link_hover_color' => array(
 				'title'   => esc_html__( 'Link hover color', 'onclinic' ),
 				'section' => 'color_scheme',
-				'default' => '#888888',
+				'default' => '#8067BD',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'h1_color' => array(
 				'title'   => esc_html__( 'H1 color', 'onclinic' ),
 				'section' => 'color_scheme',
-				'default' => '#222222',
+				'default' => '#1E306E',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'h2_color' => array(
 				'title'   => esc_html__( 'H2 color', 'onclinic' ),
 				'section' => 'color_scheme',
-				'default' => '#222222',
+				'default' => '#1E306E',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'h3_color' => array(
 				'title'   => esc_html__( 'H3 color', 'onclinic' ),
 				'section' => 'color_scheme',
-				'default' => '#222222',
+				'default' => '#1E306E',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'h4_color' => array(
 				'title'   => esc_html__( 'H4 color', 'onclinic' ),
 				'section' => 'color_scheme',
-				'default' => '#222222',
+				'default' => '#1E306E',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'h5_color' => array(
 				'title'   => esc_html__( 'H5 color', 'onclinic' ),
 				'section' => 'color_scheme',
-				'default' => '#222222',
+				'default' => '#1E306E',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'h6_color' => array(
 				'title'   => esc_html__( 'H6 color', 'onclinic' ),
 				'section' => 'color_scheme',
-				'default' => '#222222',
+				'default' => '#1E306E',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
@@ -340,7 +340,7 @@ function onclinic_get_customizer_options() {
 			'body_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'onclinic' ),
 				'section' => 'body_typography',
-				'default' => 'Spartan, sans-serif',
+				'default' => 'Gothic A1, serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -355,7 +355,7 @@ function onclinic_get_customizer_options() {
 			'body_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'onclinic' ),
 				'section' => 'body_typography',
-				'default' => '400',
+				'default' => '300',
 				'field'   => 'select',
 				'choices' => onclinic_get_font_weight(),
 				'type'    => 'control',
@@ -376,7 +376,7 @@ function onclinic_get_customizer_options() {
 				'title'       => esc_html__( 'Line Height', 'onclinic' ),
 				'description' => esc_html__( 'Relative to the font-size of the element', 'onclinic' ),
 				'section'     => 'body_typography',
-				'default'     => '1.667',
+				'default'     => '1.222',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 1.0,
@@ -412,7 +412,7 @@ function onclinic_get_customizer_options() {
 				'field'   => 'select',
 				'choices' => onclinic_get_text_aligns(),
 				'type'    => 'control',
-			),			
+			),
 			'body_text_transform' => array(
 				'title'   => esc_html__( 'Text Transform', 'onclinic' ),
 				'section' => 'body_typography',
@@ -432,7 +432,7 @@ function onclinic_get_customizer_options() {
 			'h1_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'onclinic' ),
 				'section' => 'h1_typography',
-				'default' => 'Cantata One, serif',
+				'default' => 'Gothic A1, serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -447,7 +447,7 @@ function onclinic_get_customizer_options() {
 			'h1_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'onclinic' ),
 				'section' => 'h1_typography',
-				'default' => '400',
+				'default' => '500',
 				'field'   => 'select',
 				'choices' => onclinic_get_font_weight(),
 				'type'    => 'control',
@@ -455,7 +455,7 @@ function onclinic_get_customizer_options() {
 			'h1_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'onclinic' ),
 				'section'     => 'h1_typography',
-				'default'     => '64',
+				'default'     => '60',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -468,7 +468,7 @@ function onclinic_get_customizer_options() {
 				'title'       => esc_html__( 'Line Height', 'onclinic' ),
 				'description' => esc_html__( 'Relative to the font-size of the element', 'onclinic' ),
 				'section'     => 'h1_typography',
-				'default'     => '1.3',
+				'default'     => '1.25',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 1.0,
@@ -524,7 +524,7 @@ function onclinic_get_customizer_options() {
 			'h2_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'onclinic' ),
 				'section' => 'h2_typography',
-				'default' => 'Cantata One, serif',
+				'default' => 'Gothic A1, serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -539,7 +539,7 @@ function onclinic_get_customizer_options() {
 			'h2_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'onclinic' ),
 				'section' => 'h2_typography',
-				'default' => '400',
+				'default' => '500',
 				'field'   => 'select',
 				'choices' => onclinic_get_font_weight(),
 				'type'    => 'control',
@@ -560,7 +560,7 @@ function onclinic_get_customizer_options() {
 				'title'       => esc_html__( 'Line Height', 'onclinic' ),
 				'description' => esc_html__( 'Relative to the font-size of the element', 'onclinic' ),
 				'section'     => 'h2_typography',
-				'default'     => '1.2',
+				'default'     => '1.25',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 1.0,
@@ -616,7 +616,7 @@ function onclinic_get_customizer_options() {
 			'h3_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'onclinic' ),
 				'section' => 'h3_typography',
-				'default' => 'Cantata One, serif',
+				'default' => 'Gothic A1, serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -631,7 +631,7 @@ function onclinic_get_customizer_options() {
 			'h3_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'onclinic' ),
 				'section' => 'h3_typography',
-				'default' => '400',
+				'default' => '500',
 				'field'   => 'select',
 				'choices' => onclinic_get_font_weight(),
 				'type'    => 'control',
@@ -639,7 +639,7 @@ function onclinic_get_customizer_options() {
 			'h3_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'onclinic' ),
 				'section'     => 'h3_typography',
-				'default'     => '36',
+				'default'     => '34',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -652,7 +652,7 @@ function onclinic_get_customizer_options() {
 				'title'       => esc_html__( 'Line Height', 'onclinic' ),
 				'description' => esc_html__( 'Relative to the font-size of the element', 'onclinic' ),
 				'section'     => 'h3_typography',
-				'default'     => '1.4',
+				'default'     => '1.23',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 1.0,
@@ -708,7 +708,7 @@ function onclinic_get_customizer_options() {
 			'h4_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'onclinic' ),
 				'section' => 'h4_typography',
-				'default' => 'Cantata One, serif',
+				'default' => 'Gothic A1, serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -723,7 +723,7 @@ function onclinic_get_customizer_options() {
 			'h4_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'onclinic' ),
 				'section' => 'h4_typography',
-				'default' => '400',
+				'default' => '600',
 				'field'   => 'select',
 				'choices' => onclinic_get_font_weight(),
 				'type'    => 'control',
@@ -731,7 +731,7 @@ function onclinic_get_customizer_options() {
 			'h4_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'onclinic' ),
 				'section'     => 'h4_typography',
-				'default'     => '28',
+				'default'     => '24',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -744,7 +744,7 @@ function onclinic_get_customizer_options() {
 				'title'       => esc_html__( 'Line Height', 'onclinic' ),
 				'description' => esc_html__( 'Relative to the font-size of the element', 'onclinic' ),
 				'section'     => 'h4_typography',
-				'default'     => '1.33',
+				'default'     => '1.25',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 1.0,
@@ -800,7 +800,7 @@ function onclinic_get_customizer_options() {
 			'h5_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'onclinic' ),
 				'section' => 'h5_typography',
-				'default' => 'Cantata One, serif',
+				'default' => 'Gothic A1, serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -815,7 +815,7 @@ function onclinic_get_customizer_options() {
 			'h5_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'onclinic' ),
 				'section' => 'h5_typography',
-				'default' => '400',
+				'default' => '600',
 				'field'   => 'select',
 				'choices' => onclinic_get_font_weight(),
 				'type'    => 'control',
@@ -823,7 +823,7 @@ function onclinic_get_customizer_options() {
 			'h5_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'onclinic' ),
 				'section'     => 'h5_typography',
-				'default'     => '24',
+				'default'     => '20',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -836,7 +836,7 @@ function onclinic_get_customizer_options() {
 				'title'       => esc_html__( 'Line Height', 'onclinic' ),
 				'description' => esc_html__( 'Relative to the font-size of the element', 'onclinic' ),
 				'section'     => 'h5_typography',
-				'default'     => '1.33',
+				'default'     => '1.25',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 1.0,
@@ -892,7 +892,7 @@ function onclinic_get_customizer_options() {
 			'h6_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'onclinic' ),
 				'section' => 'h6_typography',
-				'default' => 'Cantata One, serif',
+				'default' => 'Gothic A1, serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -907,7 +907,7 @@ function onclinic_get_customizer_options() {
 			'h6_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'onclinic' ),
 				'section' => 'h6_typography',
-				'default' => '400',
+				'default' => '600',
 				'field'   => 'select',
 				'choices' => onclinic_get_font_weight(),
 				'type'    => 'control',
@@ -915,7 +915,7 @@ function onclinic_get_customizer_options() {
 			'h6_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'onclinic' ),
 				'section'     => 'h6_typography',
-				'default'     => '18',
+				'default'     => '16',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -928,7 +928,7 @@ function onclinic_get_customizer_options() {
 				'title'       => esc_html__( 'Line Height', 'onclinic' ),
 				'description' => esc_html__( 'Relative to the font-size of the element', 'onclinic' ),
 				'section'     => 'h6_typography',
-				'default'     => '1.2',
+				'default'     => '1.25',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 1.0,
@@ -984,7 +984,7 @@ function onclinic_get_customizer_options() {
 			'header_logo_font_family' => array(
 				'title'           => esc_html__( 'Font Family', 'onclinic' ),
 				'section'         => 'logo_typography',
-				'default'         => 'Cantata One, serif',
+				'default'         => 'Gothic A1, serif',
 				'field'           => 'fonts',
 				'type'            => 'control',
 			),
@@ -1035,7 +1035,7 @@ function onclinic_get_customizer_options() {
 			'menu_font_family' => array(
 				'title'           => esc_html__( 'Font Family', 'onclinic' ),
 				'section'         => 'menu_typography',
-				'default'         => 'Spartan, sans-serif',
+				'default'         => 'Gothic A1, serif',
 				'field'           => 'fonts',
 				'type'            => 'control',
 			),
@@ -1119,7 +1119,7 @@ function onclinic_get_customizer_options() {
 			'meta_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'onclinic' ),
 				'section' => 'meta_typography',
-				'default' => 'Spartan, sans-serif',
+				'default' => 'Gothic A1, serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -1192,7 +1192,7 @@ function onclinic_get_customizer_options() {
 				'choices' => onclinic_get_text_transform(),
 				'type'    => 'control',
 			),
-			
+
 			/** `Button` section */
 			'button_typography' => array(
 				'title' 			=> esc_html__( 'Button', 'onclinic' ),
@@ -1203,7 +1203,7 @@ function onclinic_get_customizer_options() {
 			'button_font_family' => array(
 				'title' 			=> esc_html__( 'Font Family', 'onclinic' ),
 				'section' 			=> 'button_typography',
-				'default' 			=> 'Spartan, sans-serif',
+				'default' 			=> 'Gothic A1, serif',
 				'field' 			=> 'fonts',
 				'type' 				=> 'control',
 			),
@@ -1292,7 +1292,7 @@ function onclinic_get_customizer_options() {
 			'header_layout_type' => array(
 				'title' 			=> esc_html__( 'Layout', 'onclinic' ),
 				'section' 			=> 'header_styles',
-				'default' 			=> 'style-2',
+				'default' 			=> 'style-3',
 				'choices' 			=> array(
 					'style-1' => esc_html__( 'Style 1 (Logo by Center)', 'onclinic' ),
 					'style-2' => esc_html__( 'Style 2 (Hamburger Menu)', 'onclinic' ),
@@ -1304,7 +1304,7 @@ function onclinic_get_customizer_options() {
 			'header_container_type' => array(
 				'title' 			=> esc_html__( 'Container Type', 'onclinic' ),
 				'section' 			=> 'header_styles',
-				'default' 			=> 'fullwidth',
+				'default' 			=> 'boxed',
 				'field' 			=> 'select',
 				'choices' 			=> array(
 					'boxed'     => esc_html__( 'Boxed', 'onclinic' ),
@@ -1795,7 +1795,7 @@ function onclinic_get_customizer_options() {
 				'conditions' 		=> array(
 					'related_posts_visible' => true,
 				),
-			),			
+			),
 			'related_posts_tags' => array(
 				'title' 			=> esc_html__( 'Show post tags', 'onclinic' ),
 				'section' 			=> 'related_posts',
