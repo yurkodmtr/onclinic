@@ -2,25 +2,10 @@
 .posted-on,
 .byline,
 .byline a,
-.post__tags,
-.post__tags a,
-.comments-link a,
-.tags-links,
-.tags-links a {
-	color: $secondary_text_color;
+.comments-link a {
+	color: $primary_text_color;
 }
 
-.posts-list__item .cat-links,
-.single-post .cat-links,
-.cat-links a {
-	color: $link_color;
-}
-.cat-links a:hover {
-	color: $link_hover_color;
-}
-.cat-links a:before {
-	background-color: $secondary_text_color;
-}
 
 .comments-button {
 	color: $secondary_text_color;
@@ -65,9 +50,8 @@
 .entry-meta .comments-link:hover .icon-svg path {
 	fill: $link_hover_color;
 }
-.entry-meta a:hover {
-	color: $primary_text_color;
-}
+
+
 
 .btn-style .post-categories a {
 	color: $invert_text_color;

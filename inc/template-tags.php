@@ -423,7 +423,7 @@ if ( ! function_exists( 'onclinic_post_link' ) ) :
 		}
 
 		$link 				= get_permalink();
-		$icon 				= '<svg class="svg-icon" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"><path d="M5.958 8.786L0.918 4.772L5.958 0.776V4.376H14.454V5.186H5.958V8.786Z"></path></svg>';
+		$icon 				= '<svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.57812 11.8906L0.8125 10.7812L6.8125 6.23438L0.8125 1.6875L1.57812 0.578125L8.28125 5.54688V6.90625L1.57812 11.8906Z" fill="#298CD3"/></svg>';
 		$title 				= onclinic_theme()->customizer->get_value( 'blog_read_more_text' );
 		$post_link_output 	= '<a href="' . esc_url( $link ) . '" class="btn-text-icon' . esc_attr( $args['class'] ) . '">' . esc_html( $title ) . '' . wp_unslash( $icon ) . '</a>';
 

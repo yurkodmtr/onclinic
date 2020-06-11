@@ -24,7 +24,38 @@
 ### Default Styles
 ---------------------*/
 .default-item .post-thumbnail {
-  margin-bottom: 40px; }
+  height: 270px;
+  position: relative;
+  margin-bottom: 36px; }
+  .default-item .post-thumbnail a {
+    position: absolute;
+    overflow: hidden;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%; }
+    .default-item .post-thumbnail a img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover; }
+
+.default-item .posts-list__item-content {
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 30px; }
+  .default-item .posts-list__item-content:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    height: 1px;
+    background: #DDE0E9; }
+  .default-item .posts-list__item-content__top {
+    padding-bottom: 42px; }
 
 @media (min-width: 940px) {
   .default-item {
@@ -34,47 +65,90 @@
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start; }
-    .default-item:nth-child(2n) {
-      -webkit-box-pack: end;
-      -ms-flex-pack: end;
-      justify-content: flex-end; }
-      .default-item:nth-child(2n) .posts-list__item-content {
-        -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-        order: -1; }
-      .default-item:nth-child(2n) .post-thumbnail + .posts-list__item-content {
-        margin-right: 60px; }
-    .default-item .post-thumbnail {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 39.131%;
-      flex: 0 0 39.131%;
-      max-width: 39.131%;
-      margin-bottom: 0; }
-      .sidebar_enabled .default-item .post-thumbnail {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 41.177%;
-        flex: 0 0 41.177%;
-        max-width: 41.177%; }
     .default-item .posts-list__item-content {
+      -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+      order: 0;
       -webkit-box-flex: 0;
-      -ms-flex: 0 0 39.131%;
-      flex: 0 0 39.131%;
-      max-width: 39.131%; }
-      .sidebar_enabled .default-item .posts-list__item-content {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 52.942%;
-        flex: 0 0 52.942%;
-        max-width: 52.942%; }
-    .default-item .post-thumbnail + .posts-list__item-content {
-      margin-left: 60px; } }
+      -ms-flex: 0 0 47.61904761904762%;
+      flex: 0 0 47.61904761904762%;
+      max-width: 47.61904761904762%;
+      margin-right: 4.761904761904762%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding-bottom: 0px;
+      margin-bottom: 0px; }
+      .default-item .posts-list__item-content:before {
+        bottom: -20px; }
+      .default-item .posts-list__item-content__top {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+    .default-item .post-thumbnail {
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 47.61904761904762%;
+      flex: 0 0 47.61904761904762%;
+      max-width: 47.61904761904762%;
+      height: 420px;
+      margin-bottom: 0px; } }
 
-.default-item .entry-header {
-  margin-top: -3px; }
-  .default-item .entry-header .entry-meta {
-    margin-top: 0; }
-
-.default-item .entry-meta .comments-link {
-  margin-top: 20px; }
+.default-item .entry-meta {
+  text-transform: none;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px; }
+  .default-item .entry-meta__footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    min-height: 0px; }
+    .default-item .entry-meta__footer .btn-text-icon {
+      margin-bottom: 0px; }
+  .default-item .entry-meta__left_side {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    min-width: 0px; }
+  .default-item .entry-meta__right_side {
+    white-space: nowrap;
+    margin-left: 20px; }
+    .default-item .entry-meta__right_side .comments-link svg {
+      position: relative;
+      top: -2px; }
+  .default-item .entry-meta .byline {
+    display: inline-block;
+    margin-right: 5px; }
+    .default-item .entry-meta .byline a {
+      text-transform: uppercase;
+      font-weight: 500; }
+      .default-item .entry-meta .byline a:hover {
+        text-decoration: underline; }
+  .default-item .entry-meta .posted-on {
+    display: inline-block; }
 
 /*--------------------------------------------------------------
 ### Posts List Formats

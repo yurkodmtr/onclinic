@@ -238,7 +238,8 @@
 			width: 100%;
 			margin-bottom: 0;
 
-			font-size: 12px;
+            font-size: 16px;
+            line-height: 20px;
 			text-align: center;
 
 			th,
@@ -249,17 +250,11 @@
 			}
 		}
 
-		caption,
-		tbody {
-			font-size: 12px;
-		}
 
 		thead {
-
 			th {
 				height: 34px;
 				font-weight: 400;
-				font-size: 12px;
 			}
 		}
 
@@ -267,6 +262,8 @@
 			margin: 0 10px;
 			padding: 20px 0 20px;
 			text-transform: uppercase;
+            background: #BCE0F7;
+            font-weight: 500;
 		}
 		th {
 			padding: 12px 5px;
@@ -279,6 +276,7 @@
 				height: 34px;
 				line-height: 34px;
 
+                border-radius: 6px;
 				.col-md-4.widget-area & {
 					line-height: 55px;
 					height: 55px;
@@ -286,11 +284,11 @@
 			}
 
 			a {
+                background: #E0F3FD;
 				display: block;
 				width: 100%;
 				max-width: 100%;
-				border-width: 1px;
-				border-style: solid;
+                border:none;
 			}
 		}
 	}

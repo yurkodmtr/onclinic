@@ -2889,15 +2889,23 @@ a {
   margin-bottom: 133px !important; }
   .pagination .page-numbers {
     display: inline-block;
-    vertical-align: top;
-    width: 30px;
+    vertical-align: middle;
+    width: 39px;
+    height: 64px;
+    line-height: 64px;
     margin-left: 2px;
     margin-right: 2px;
     text-align: center;
     font-weight: 500;
-    font-size: 18px;
-    color: #bfbfbf; }
+    font-size: 16px;
+    border-radius: 6px; }
+    .pagination .page-numbers.current {
+      background: #E0F3FD; }
+    .pagination .page-numbers.dots {
+      color: #E0F3FD; }
     .pagination .page-numbers.prev, .pagination .page-numbers.next {
+      line-height: 20px;
+      height: 20px;
       width: auto;
       margin: 0; }
       .pagination .page-numbers.prev svg, .pagination .page-numbers.next svg {
@@ -2991,12 +2999,12 @@ a {
   .breadcrumbs_item {
     display: inline-block;
     vertical-align: middle;
-    text-transform: uppercase;
-    line-height: 30px;
     font-size: 12px;
-    color: #888; }
+    line-height: 15px; }
     .breadcrumbs_item_sep {
-      margin: 0 12px; }
+      margin: 0 2px;
+      font-size: 8px;
+      padding-top: 2px; }
     .breadcrumbs_item_link {
       display: block; }
       .invert .breadcrumbs_item_link {
@@ -3570,6 +3578,89 @@ a {
 .site-header .main-navigation .social-list--header {
   display: none; }
 
+.reheader * {
+  vertical-align: middle; }
+
+.reheader__top {
+  background: #FFF;
+  padding: 21px 0px 21px; }
+  .reheader__top__wrap {
+    margin-left: -1.875rem;
+    margin-right: -1.875rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .reheader__top__wrap .right_side {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      min-width: 0px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      white-space: nowrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .reheader__top__wrap .right_side .address {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        margin-right: 30px; }
+        .reheader__top__wrap .right_side .address svg {
+          margin-right: 6px; }
+      .reheader__top__wrap .right_side .phone {
+        margin-right: 63px; }
+        .reheader__top__wrap .right_side .phone__text {
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 17px;
+          margin-right: 6px; }
+        .reheader__top__wrap .right_side .phone__number {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 25px;
+          color: #1E306E; }
+          .reheader__top__wrap .right_side .phone__number svg {
+            display: inline-block; }
+      .reheader__top__wrap .right_side .header__btn a {
+        padding: 19px 21px 19px 21px;
+        background: #8067BD;
+        border-radius: 6px;
+        cursor: pointer;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: #FFFFFF; }
+        .reheader__top__wrap .right_side .header__btn a:hover {
+          background: #BCE0F7;
+          color: #1E306E; }
+        .reheader__top__wrap .right_side .header__btn a svg {
+          display: inline-block;
+          margin-right: 7px;
+          position: relative;
+          top: -1px; }
+
+.reheader__bottom {
+  padding: 10px 0px 10px;
+  margin-left: -1.875rem;
+  margin-right: -1.875rem; }
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
@@ -3705,7 +3796,9 @@ a {
 .posts-list__item {
   position: relative; }
   .posts-list .posts-list__item {
-    margin-bottom: 130px; }
+    margin-bottom: 40px; }
+    .posts-list .posts-list__item:last-child {
+      margin-bottom: 0px; }
   .posts-list--default-small-image .posts-list__item:before {
     content: "";
     display: table;
@@ -3719,8 +3812,11 @@ a {
 /*--------------------------------------------------------------
 ### Entry
 --------------------------------------------------------------*/
+.entry-meta {
+  text-decoration: none; }
+
 .entry-header .cat-links {
-  margin-bottom: 24px; }
+  margin-bottom: 30px; }
 
 .entry-title {
   margin-top: 0; }
@@ -3737,23 +3833,19 @@ a {
 .entry-footer .btn-text-icon {
   display: inline-block;
   vertical-align: top;
-  margin-top: 29px;
   font-weight: 500;
-  font-size: 18px;
-  border-bottom: 1px solid transparent; }
-  .entry-footer .btn-text-icon:hover {
-    color: inherit; }
+  font-size: 16px;
+  line-height: 20px; }
   .entry-footer .btn-text-icon svg {
     display: inline-block;
     vertical-align: middle;
-    width: 14px;
-    height: 8px;
+    width: 10px;
+    height: 20px;
     margin-left: 5px;
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg); }
-  .entry-footer .btn-text-icon path:hover {
-    fill: inherit; }
+    position: relative;
+    top: -1px; }
+  .entry-footer .btn-text-icon:hover svg path {
+    fill: #8067BD; }
 
 /*--------------------------------------------------------------
 ### Meta
@@ -3763,21 +3855,31 @@ span.byline,
 span.cat-links {
   display: block; }
 
-.cat-links {
+.cat-links a {
+  position: relative;
+  display: inline-block;
+  margin-right: 6px;
+  padding-right: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  font-weight: 500; }
-  .cat-links a {
-    position: relative;
-    display: inline-block;
-    margin: 0 20px; }
-    .cat-links a + a:before {
-      content: '';
-      position: absolute;
-      left: -22px;
-      top: 8px;
-      width: 2.5px;
-      height: 2.5px;
-      border-radius: 50%; }
+  color: #8067BD; }
+  .cat-links a:before {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 6px;
+    height: 6px;
+    background: #DBDCDF;
+    border-radius: 50%; }
+  .cat-links a:last-child {
+    margin-right: 0px;
+    padding-right: 0px; }
+    .cat-links a:last-child:before {
+      display: none; }
 
 .comments-link,
 .comments-button {
@@ -3820,7 +3922,13 @@ span.cat-links {
 ### Posts list
 --------------------------------------------------------------*/
 .posts-list {
-  margin-bottom: 40px; }
+  margin-bottom: 60px; }
+
+.posts-list__item.default-item .entry-title {
+  margin: 0px 0px 30px 0px; }
+
+.posts-list__item.default-item .entry-content {
+  margin: 0px 0px 30px 0px; }
 
 /*--------------------------------------------------------------
 ### Post default item
@@ -3862,13 +3970,12 @@ body:not(.sidebar_enabled) .post-default {
 ### Page
 --------------------------------------------------------------*/
 .page-header {
-  margin-bottom: 60px; }
-  @media (min-width: 1200px) {
-    .page-header {
-      margin-bottom: 140px; } }
+  margin-bottom: 50px; }
   .page-header .archive-description {
     margin-top: 20px;
     font-size: 14px; }
+  .page-header__align_center {
+    text-align: center; }
 
 .page-title {
   margin: 0; }
@@ -4305,7 +4412,8 @@ body:not(.sidebar_enabled) .post-default {
   position: relative;
   width: 100%;
   margin-bottom: 0;
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center; }
   .widget_calendar table th,
   .widget_calendar table td,
@@ -4313,19 +4421,16 @@ body:not(.sidebar_enabled) .post-default {
   .widget_calendar table tbody + tbody {
     border: none; }
 
-.widget_calendar caption,
-.widget_calendar tbody {
-  font-size: 12px; }
-
 .widget_calendar thead th {
   height: 34px;
-  font-weight: 400;
-  font-size: 12px; }
+  font-weight: 400; }
 
 .widget_calendar caption {
   margin: 0 10px;
   padding: 20px 0 20px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  background: #BCE0F7;
+  font-weight: 500; }
 
 .widget_calendar th {
   padding: 12px 5px; }
@@ -4333,18 +4438,19 @@ body:not(.sidebar_enabled) .post-default {
 .widget_calendar tbody td,
 .widget_calendar tbody td a {
   height: 34px;
-  line-height: 34px; }
+  line-height: 34px;
+  border-radius: 6px; }
   .col-md-4.widget-area .widget_calendar tbody td, .col-md-4.widget-area
   .widget_calendar tbody td a {
     line-height: 55px;
     height: 55px; }
 
 .widget_calendar tbody td a {
+  background: #E0F3FD;
   display: block;
   width: 100%;
   max-width: 100%;
-  border-width: 1px;
-  border-style: solid; }
+  border: none; }
 
 .widget .wp-calendar-nav .wp-calendar-nav-prev,
 .widget .wp-calendar-nav .wp-calendar-nav-next {

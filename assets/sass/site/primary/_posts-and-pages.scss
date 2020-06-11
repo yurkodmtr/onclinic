@@ -8,9 +8,11 @@
 
 .posts-list__item {
 	position: relative;
-
 	.posts-list & {
-		margin-bottom: 130px;
+		margin-bottom: 40px;
+		&:last-child {
+			margin-bottom: 0px;
+		}
 	}
 
 	.posts-list--default-small-image & {
@@ -26,10 +28,14 @@
 --------------------------------------------------------------*/
 
 .entry {
+
+	&-meta {
+		text-decoration: none;
+	}
 	
 	&-header {
 		.cat-links {
-			margin-bottom: 24px;
+			margin-bottom: 30px;
 		}
 	}
 
@@ -50,31 +56,26 @@
 	}
 
 	&-footer {
-		
 		.btn-text-icon {
 			display: inline-block;
 			vertical-align: top;
-			margin-top: 29px;
 			font-weight: 500;
-			font-size: 18px;
-			border-bottom: 1px solid transparent;
-
-			&:hover {
-				color: inherit;
-			}
-
+			font-size: 16px;
+			line-height: 20px;
 			svg {
 				display: inline-block;
 				vertical-align: middle;
-				width: 14px;
-				height: 8px;
+				width: 10px;
+				height: 20px;
 				margin-left: 5px;
-				transform: rotate(180deg);
+				position:relative;
+				top:-1px;
 			}
-
-			path {
-				&:hover {
-					fill: inherit;
+			&:hover {
+				svg {
+					path {
+						fill:#8067BD;
+					}
 				}
 			}
 		}
@@ -92,23 +93,32 @@ span.cat-links {
 }
 
 .cat-links {
-	text-transform: uppercase;
-	font-weight: 500;
-
 	a {
 		position: relative;
 		display: inline-block;
-		margin: 0 20px;
-
-		& + a {
+		margin-right: 6px;
+		padding-right:16px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+		color: #8067BD;
+		&:before {
+			content: '';
+			position: absolute;
+			right:0px;
+			top: 5px;
+			width: 6px;
+			height: 6px;
+			background:#DBDCDF;
+			border-radius: 50%;
+		}
+		&:last-child {
+			margin-right: 0px;
+			padding-right:0px;
 			&:before {
-				content: '';
-				position: absolute;
-				left: -22px;
-				top: 8px;
-				width: 2.5px;
-				height: 2.5px;
-				border-radius: 50%;
+				display: none;
 			}
 		}
 	}
@@ -160,7 +170,16 @@ span.cat-links {
 --------------------------------------------------------------*/
 
 .posts-list {
-	margin-bottom: 40px;
+	margin-bottom: 60px;
+}
+
+.posts-list__item.default-item {
+	.entry-title {
+		margin:0px 0px 30px 0px;
+	}
+	.entry-content {
+		margin:0px 0px 30px 0px;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -220,15 +239,14 @@ span.cat-links {
 
 .page {
 	&-header {
-		margin-bottom: 60px;
-
-		@media (min-width: 1200px) {
-			margin-bottom: 140px;
-		}
+		margin-bottom: 50px;
 
 		.archive-description {
 			margin-top: 20px;
 			font-size: 14px;
+		}
+		&__align_center {
+			text-align: center;
 		}
 	}
 	&-title {

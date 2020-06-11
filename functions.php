@@ -479,7 +479,7 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 				'onclinic-theme-script',
 				get_theme_file_uri( 'assets/js/theme-script.js' ),
 				$scripts_depends,
-				$this->version(),
+				$this->version() . time(),
 				true
 			);
 

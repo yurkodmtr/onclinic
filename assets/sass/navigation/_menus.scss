@@ -1,12 +1,12 @@
 .main-navigation {
-	
+
 	&__default {
 
 		ul {
 			list-style: none;
 			margin: 0;
 			padding-left: 0;
-			
+
 			ul {
 				position: absolute;
 				z-index: 99999;
@@ -24,7 +24,7 @@
 					width: 100%;
 					height: 29px;
 				}
-				
+
 				ul {
 					left: -999em;
 					top: -28px;
@@ -64,7 +64,7 @@
 		li {
 			position: relative;
 			display: inline-block;
-			
+
 			&:after {
 				content: '';
 				position: absolute;
@@ -112,7 +112,7 @@
 	&__vertical {
 		min-width: 400px;
 		overflow: hidden;
-		
+
 		ul {
 			list-style: none;
 			margin: 0;
@@ -127,7 +127,7 @@
 			will-change: transform;
 
 			display: block !important;
-			
+
 			li {
 
 				&.menu-item-has-children a{
@@ -170,7 +170,7 @@
 			// Parent item
 			.menu-parent-item {
 				padding-left: 50px;
-				
+
 				> a {
 					line-height: 28px;
 					font-size: 18px;
@@ -183,7 +183,7 @@
 				position: absolute;
 				left: 0;
 				top: 18px;
-				
+
 				svg {
 					width: 27px;
 					height: 15px;
@@ -326,7 +326,7 @@
 		align-items: center;
 		justify-content: center;
 	}
-	
+
 	/* Mobile Styles */
 	@include media-breakpoint-down(xs) {
 		display: block;

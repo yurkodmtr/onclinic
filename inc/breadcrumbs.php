@@ -21,7 +21,7 @@ function onclinic_get_breadcrumbs_options() {
 
 	return apply_filters( 'onclinic-theme/breadcrumbs/options' , array(
 		'wrapper_format'    => '<div class="container"><div class="row"><div class="breadcrumbs_items">%2$s</div></div></div>',
-		'separator'         => '&#92;',
+		'separator'         => '&#62;',
 		'show_browse'       => false,
 		'show_on_front'     => onclinic_theme()->customizer->get_value( 'breadcrumbs_front_visibillity' ),
 		'show_title'        => false,

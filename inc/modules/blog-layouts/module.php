@@ -231,7 +231,7 @@ if ( ! class_exists( 'Onclinic_Blog_Layouts_Module' ) ) {
 				'blog-layouts-module',
 				get_theme_file_uri( 'inc/modules/blog-layouts/assets/css/blog-layouts-module.css' ),
 				false,
-				onclinic_theme()->version()
+				time()
 			);
 
 			if ( is_rtl() ) {

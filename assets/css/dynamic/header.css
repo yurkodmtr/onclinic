@@ -1,7 +1,16 @@
-/* #Header */
-.site-header__wrap {
-	
+.reheader__top__wrap .right_side .address {
+	color: $dark_blue_lighter_1_color;
 }
+.reheader__top__wrap .right_side .phone__text {
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__top__wrap .right_side .phone__number {
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__bottom {
+	background: $dark_blue_lighter_1_color;
+}
+
 
 /* Site Branding */
 .site-logo.retina-logo img {

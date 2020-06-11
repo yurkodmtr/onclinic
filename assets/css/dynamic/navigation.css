@@ -1,15 +1,7 @@
 /* #Breadcrumbs */
-.breadcrumbs_item,
-.breadcrumbs_item a:not(:hover){
-	color: $secondary_text_color;
-}
-.breadcrumbs_item a:hover {
-	color: $link_color;
-}
 
-.breadcrumbs.invert .breadcrumbs_item,
-.breadcrumbs.invert .breadcrumbs_item a:not(:hover) {
-	color: $invert_text_color;
+.breadcrumbs_item {
+	color: $primary_text_color;
 }
 
 
@@ -52,16 +44,11 @@
 	border-color: @darken($grey_color_1, 5.5);
 }
 
-/* #Posts List Pagination */
-.pagination a.page-numbers.prev,
-.pagination a.page-numbers.next,
-.pagination a.page-numbers:hover,
-.pagination .page-numbers.current{
-	color: $primary_text_color;
+.pagination .page-numbers.current {
+	color:$link_color;
 }
-.pagination .next path,
-.pagination .prev path{
-	fill: $primary_text_color;
+.pagination .page-numbers.dots {
+	color:$link_color;
 }
 
 

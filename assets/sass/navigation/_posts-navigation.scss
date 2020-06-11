@@ -185,20 +185,28 @@
 
 	.page-numbers {
 		display: inline-block;
-		vertical-align: top;
-		width: 30px;
+		vertical-align: middle;
+		width: 39px;
+		height: 64px;
+		line-height: 64px;
 		margin-left: 2px;
 		margin-right: 2px;
 		text-align: center;
 		font-weight: 500;
-		font-size: 18px;
-		color: #bfbfbf;
-
+		font-size: 16px;
+		border-radius: 6px;
+		&.current {
+			background: #E0F3FD;
+		}
+		&.dots {
+			color:#E0F3FD;
+		}
 		&.prev,
 		&.next {
+			line-height: 20px;
+			height: 20px;
 			width: auto;
 			margin: 0;
-
 			svg {
 				width: 14px;
 				height: 8px;
@@ -207,7 +215,6 @@
 
 		&.prev {
 			margin-right: 14px;
-
 			svg {
 				margin-right: 4px;
 				transform: translateY(-3px);
@@ -216,7 +223,6 @@
 
 		&.next {
 			margin-left: 14px;
-
 			svg {
 				margin-left: 4px;
 				transform: rotate(180deg) translateY(2px);

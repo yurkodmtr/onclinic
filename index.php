@@ -17,11 +17,11 @@ get_header();
 
 	<div <?php onclinic_content_class() ?>>
 		
-		<?php if ( is_home() && ! is_front_page() ) :
-							
-			onclinic_blog_page_title();
+		<?php if ( is_home() && ! is_front_page() ) : ?>
 
-		endif; ?>
+            <?php onclinic_blog_page_title() ;?>
+
+		<?php endif; ?>
 
 		<div class="row">
 
