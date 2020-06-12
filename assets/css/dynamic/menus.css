@@ -9,9 +9,9 @@
 	letter-spacing: $menu_letter_spacing{px};
 }
 
-.main-navigation a,
-.main-navigation a:hover {
-	color: $primary_text_color;
+.main-navigation ul li > a,
+.main-navigation ul li > a:hover {
+	color: #FFF;
 }
 
 .main-navigation li:after {

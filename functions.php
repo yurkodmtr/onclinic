@@ -515,7 +515,7 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 				'onclinic-theme-style',
 				get_stylesheet_uri(),
 				$styles_depends,
-				time()
+                $this->version() . time()
 			);
 
 			if ( is_rtl() ) {

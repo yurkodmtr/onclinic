@@ -294,9 +294,18 @@
 		}
 	}
 	&__bottom {
-		padding:10px 0px 10px;
-		margin-left: -1.875rem;
-		margin-right: -1.875rem;
+		&__wrap {
+			margin-left: -1.875rem;
+			margin-right: -1.875rem;
+			display:flex;
+			justify-content: space-between;
+			align-items: center;
+			.main-navigation {
+				flex-grow: 1;
+				min-width:0px;
+				margin-right: 20px;
+			}
+		}
 	}
 }
 

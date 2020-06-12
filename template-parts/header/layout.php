@@ -13,8 +13,7 @@ $visible_header_wc_cart 	= onclinic_theme()->customizer->get_value( 'woo_header_
 <div class="reheader">
     <div class="reheader__top">
         <div class="container">
-            <div class="row">
-                <div class="reheader__top__wrap">
+            <div class="reheader__top__wrap">
                     <?php onclinic_header_logo(); ?>
                     <div class="right_side">
                         <div class="address">
@@ -51,14 +50,13 @@ $visible_header_wc_cart 	= onclinic_theme()->customizer->get_value( 'woo_header_
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
     <div class="reheader__bottom">
         <div class="container">
             <div class="reheader__bottom__wrap">
                 <?php onclinic_main_menu(); ?>
-                <div class="right_side">
+                <div class="right_site">
                     <?php onclinic_header_search_toggle(); ?>
                     <?php if ( $visible_header_wc_cart ) :
                         onclinic_wc_header_cart();
@@ -67,9 +65,10 @@ $visible_header_wc_cart 	= onclinic_theme()->customizer->get_value( 'woo_header_
             </div>
         </div>
     </div>
+    <?php onclinic_header_search_popup(); ?>
 </div>
 
-<div <?php onclinic_header_class(); ?>>
+<div <?php onclinic_header_class(); ?> style="display: none;">
     <?php do_action( 'onclinic-theme/header/before' ); ?>
     <div class="space-between-content">
 
@@ -83,14 +82,14 @@ $visible_header_wc_cart 	= onclinic_theme()->customizer->get_value( 'woo_header_
         <div class="site-header__right_part">
             <?php onclinic_social_list( 'header' ); ?>
 
-            <?php onclinic_header_search_toggle(); ?>
+
 
             <?php if ( $visible_header_wc_cart ) :
                 onclinic_wc_header_cart();
             endif; ?>
         </div>
 
-        <?php onclinic_header_search_popup(); ?>
+
     </div>
     <?php do_action( 'onclinic-theme/header/after' ); ?>
 </div>

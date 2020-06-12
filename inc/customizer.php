@@ -1143,7 +1143,7 @@ function onclinic_get_customizer_options() {
 			'menu_font_size' => array(
 				'title'           => esc_html__( 'Font Size, px', 'onclinic' ),
 				'section'         => 'menu_typography',
-				'default'         => '18',
+				'default'         => '16',
 				'field'           => 'number',
 				'input_attrs'     => array(
 					'min'  => 6,
@@ -1156,7 +1156,7 @@ function onclinic_get_customizer_options() {
 				'title'       => esc_html__( 'Line Height', 'onclinic' ),
 				'description' => esc_html__( 'Relative to the font-size of the element', 'onclinic' ),
 				'section'     => 'menu_typography',
-				'default'     => '1.5',
+				'default'     => '1.25',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 1.0,
