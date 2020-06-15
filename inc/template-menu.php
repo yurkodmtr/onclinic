@@ -40,6 +40,34 @@ function onclinic_main_menu( $mode = 'default' ) {
 }
 
 /**
+ * Show main mobile menu.
+ *
+ * @since  1.0.0
+ * @param  string $mode Default or vertical.
+ * @return void
+ */
+function onclinic_main_menu_mobile( ) {
+    ?>
+    <nav class="stack-menu" role="navigation">
+        <?php
+            $args = apply_filters( 'onclinic-theme/menu/main-menu-args', array(
+                'theme_location'   => 'main',
+                'container'        => '',
+                'menu_id'          => 'main-menu-mobile',
+                'fallback_cb'      => 'onclinic_set_nav_menu',
+                'fallback_message' => esc_html__( 'Set main menu', 'onclinic' ),
+            ) );
+
+            wp_nav_menu( $args );
+        ?>
+        <?php onclinic_social_list( 'header' ); ?>
+    </nav><!-- #site-navigation -->
+    <?php
+}
+
+
+
+/**
  * Get social nav menu.
  *
  * @since  1.0.0

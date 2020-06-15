@@ -709,11 +709,11 @@ endif;
 if ( ! function_exists( 'onclinic_header_search_toggle' ) ) :
 	/**
 	 * Show header search toggle.
-	 *
+	 * $icon - search_black
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function onclinic_header_search_toggle() {
+	function onclinic_header_search_toggle($icon = null) {
 		$visible = onclinic_theme()->customizer->get_value( 'header_search_visible' );
 
 		if ( ! $visible ) {
@@ -721,8 +721,12 @@ if ( ! function_exists( 'onclinic_header_search_toggle' ) ) :
 		}
 
 		$format = apply_filters( 'onclinic_header_search_toggle_format', '<button class="header-search-toggle">%s</button>' );
+        if ( $icon === null ) {
+            printf( $format, onclinic_get_icon_svg( 'search' ) );
+        } else {
+            printf( $format, onclinic_get_icon_svg( $icon ) );
+        }
 
-		printf( $format, onclinic_get_icon_svg( 'search' ) );
 	}
 endif;
 

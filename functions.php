@@ -429,6 +429,14 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 				true
 			);
 
+            wp_register_script(
+                'jquery-stack-menu',
+                get_theme_file_uri( 'assets/lib/jquery-stack-menu/jquery-stack-menu.js' ),
+                array(),
+                '1.0.1',
+                true
+            );
+
 			// register style
 			wp_register_style(
 				'font-awesome',
@@ -450,6 +458,7 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 				array(),
 				'4.3.3'
 			);
+
 		}
 
 		/**
@@ -468,7 +477,7 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 			$scripts_depends = 	apply_filters( 'onclinic-theme/assets-depends/script', array(
 				'jquery',
 				'responsive-menu',
-				// 'onclinic-custom-stickysidebar'
+				'jquery-stack-menu'
 			) );
 
 			if ( $this->is_blog || is_singular( 'post' ) ) {
@@ -511,12 +520,12 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 				array_push($styles_depends, 'magnific-popup', 'jquery-swiper');
 			}
 
-			wp_enqueue_style(
-				'onclinic-theme-style',
-				get_stylesheet_uri(),
-				$styles_depends,
+            wp_enqueue_style(
+                'onclinic-theme-style',
+                get_stylesheet_uri(),
+                $styles_depends,
                 $this->version() . time()
-			);
+            );
 
 			if ( is_rtl() ) {
 				wp_enqueue_style(
