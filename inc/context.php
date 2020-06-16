@@ -36,24 +36,25 @@ function onclinic_get_container_classes( $classes = null, $fullwidth = false ) {
  * @return  void
  */
 function onclinic_header_class( $classes = null ) {
+
 	if ( $classes ) {
 		$classes .= ' ';
 	}
 
+    $classes .= ' reheader';
+
 	$layout = onclinic_theme()->customizer->get_value( 'header_layout_type' );
 
-	$classes .= ' site-header__' . esc_attr( $layout );
+	$classes .= ' reheader__' . esc_attr( $layout );
 
-	$classes .= ' site-header__wrap';
+    $header_color_scheme = onclinic_theme()->customizer->get_value( 'header_color_scheme' );
 
-	$header_container_type = onclinic_theme()->customizer->get_value( 'header_container_type' );
-
-	$classes .= 'fullwidth' != $header_container_type ? ' container' : ' container-fullwidth';
+	$classes .= ' reheader__style_' . esc_attr($header_color_scheme);
 
 	$sticky = onclinic_theme()->customizer->get_value( 'is_sticky_mode' );
 
 	if ( $sticky ) {
-		$classes .= ' header-sticky';
+		$classes .= ' reheader__sticky';
 	}
 
 	echo 'class="' . apply_filters( 'onclinic-theme/site-header/content-classes', $classes ) . '"';

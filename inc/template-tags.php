@@ -11,7 +11,10 @@ if ( ! function_exists( 'onclinic_post_excerpt' ) ) :
 	/**
 	 * Prints HTML with excerpt.
 	 */
-	function onclinic_post_excerpt( $args = array() ) {
+    /**
+     * @param array $args
+     */
+    function onclinic_post_excerpt($args = array() ) {
 		$default_args = array(
 			'before' => '<div class="entry-content">',
 			'after'  => '</div>',
@@ -709,23 +712,17 @@ endif;
 if ( ! function_exists( 'onclinic_header_search_toggle' ) ) :
 	/**
 	 * Show header search toggle.
-	 * $icon - search_black
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function onclinic_header_search_toggle($icon = null) {
+	function onclinic_header_search_toggle() {
 		$visible = onclinic_theme()->customizer->get_value( 'header_search_visible' );
 
 		if ( ! $visible ) {
 			return;
 		}
 
-		$format = apply_filters( 'onclinic_header_search_toggle_format', '<button class="header-search-toggle">%s</button>' );
-        if ( $icon === null ) {
-            printf( $format, onclinic_get_icon_svg( 'search' ) );
-        } else {
-            printf( $format, onclinic_get_icon_svg( $icon ) );
-        }
+        echo '<button class="header-search-toggle"></button>';
 
 	}
 endif;

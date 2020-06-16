@@ -256,3 +256,13 @@ function onclinic_is_meta_visible( $meta, $context = 'loop' ) {
 	}
 	return false;
 }
+
+/**
+ * Add a pingback url auto-discovery header for single posts, pages, or attachments.
+ */
+function onclinic_pingback_header() {
+    if ( is_singular() && pings_open() ) {
+        echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
+    }
+}
+add_action( 'wp_head', 'onclinic_pingback_header' );

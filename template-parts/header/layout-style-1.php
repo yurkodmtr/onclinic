@@ -10,13 +10,14 @@
 $visible_header_wc_cart 	= onclinic_theme()->customizer->get_value( 'woo_header_cart_icon' ) && class_exists( 'WooCommerce' );
 ?>
 
-<div class="reheader reheader__style_1 "> <!-- reheader__sticky -->
+<div <?php onclinic_header_class(); ?> >
     <div class="reheader__desktop">
         <div class="reheader__desktop__top">
             <div class="container">
                 <div class="reheader__desktop__top__wrap">
                     <?php onclinic_header_logo(); ?>
                     <div class="right_side">
+                        <?php onclinic_header_addres() ;?>
                         <div class="address">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 0C4.58881 0 1 3.44722 1 7.68442C1 9.47986 1.64439 11.1333 2.72263 12.4429L6.28085 16.7401C7.67183 18.42 10.3282 18.42 11.7191 16.7401L15.2774 12.4429C16.3556 11.1333 17 9.47986 17 7.68442C17 3.44722 13.4112 0 9 0ZM9 11.0409C7.0144 11.0409 5.39899 9.48922 5.39899 7.58194C5.39899 5.67466 7.0144 4.12296 9 4.12296C10.9856 4.12296 12.601 5.67466 12.601 7.58194C12.601 9.48922 10.9856 11.0409 9 11.0409Z" fill="#89CCF7"/>
