@@ -26,9 +26,7 @@ if( ( 'none' == $sidebar ) && ( '2-cols' == $columns ) ) {
 	<div class="posts-list__item-content">
 		<header class="entry-header">
 			<div class="entry-meta"><?php
-				onclinic_posted_in( array(
-					'prefix'  => '\\',
-				) );
+				onclinic_posted_in();
 			?></div><!-- .entry-meta -->
 			<h3 class="entry-title"><?php 
 				onclinic_sticky_label();

@@ -13,18 +13,28 @@
 				padding: 0;
 				& > a {
 					padding: 22px 20px 21px;
+                    @media (max-width: 1200px) and (min-width: 1025px) {
+                        padding: 22px 10px 21px;
+                    }
 				}
 				&.menu-item-has-children {
 					& > a {
-						padding-right: 51px;
+						padding-right: 36px;
+                        @media (max-width: 1200px) and (min-width: 1025px) {
+                            padding-right: 26px;
+                        }
 						&:after {
 							position: absolute;
 							right: 20px;
 							top:50%;
 							transform: translateY(-50%);
+                            margin-top:1px;
 							width: 11px;
 							height: 7px;
 							line-height: 0px;
+                            @media (max-width: 1200px) and (min-width: 1025px) {
+                                right: 10px;
+                            }
 						}
 					}
 				}

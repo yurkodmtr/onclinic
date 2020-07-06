@@ -18,7 +18,37 @@ if ( ! $author && ! $date && ! $comments ) {
 
 ?>
 
-<div class="post-by-author col-xs-12 col-md-4">
+<div class="post_by_author">
+    <div class="left_side">
+        <div class="post_by_author__ava">
+            <?php
+                onclinic_get_post_author_avatar( array(
+                    'size' => 64
+                ) );
+            ?>
+        </div>
+        <div class="post_by_author__by">
+            <?php
+                onclinic_get_post_author( array(
+                    'prefix' 	=> esc_html__( 'by', 'onclinic' )
+                ) );
+                onclinic_posted_on( array(
+                    'prefix' 	=> esc_html__( 'posted', 'onclinic' )
+                ) );
+            ?>
+        </div>
+    </div>
+    <div class="right_side">
+        <?php
+            onclinic_post_comments( array(
+                'prefix' => onclinic_get_icon_svg( 'comment' ),
+                'postfix' => ''
+            ));
+        ?>
+    </div>
+</div>
+
+<div class="post-by-author col-xs-12 col-md-4" style="display:none;">
 	<?php if( $author ) { ?>
 		<div class="post-by-author__avatar"><?php
 			onclinic_get_post_author_avatar( array(

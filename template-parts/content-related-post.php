@@ -29,7 +29,7 @@ $excerpt 		= wp_trim_words( get_the_excerpt(), $words_count, $more );
 			if ( $settings['categories_visible'] ) :
 				echo '<div class="entry-meta">';
 					onclinic_posted_in( array(
-						'prefix'  => '\\',
+						'prefix'  => '',
 						'visible' => $settings['categories_visible']
 					) );
 				echo '</div>';

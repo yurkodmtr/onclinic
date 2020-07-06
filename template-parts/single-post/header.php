@@ -15,7 +15,7 @@ $categories_visible = onclinic_theme()->customizer->get_value( 'single_post_cate
 	<div class="entry-meta">
 		<?php
 			onclinic_posted_in( array(
-				'prefix'  => '\\',
+				'prefix'  => '',
 				'visible' => $categories_visible
 			) );
 		?>
