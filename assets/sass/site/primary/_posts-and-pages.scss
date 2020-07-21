@@ -100,7 +100,6 @@ span.cat-links {
 		line-height: 17px;
 		letter-spacing: 0.5px;
 		text-transform: uppercase;
-		color: #8067BD;
 		&:before {
 			content: '';
 			position: absolute;
@@ -108,7 +107,6 @@ span.cat-links {
 			top: 5px;
 			width: 6px;
 			height: 6px;
-			background:#DBDCDF;
 			border-radius: 50%;
 		}
 		&:last-child {

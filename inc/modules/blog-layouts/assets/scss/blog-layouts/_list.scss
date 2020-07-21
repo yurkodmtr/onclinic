@@ -32,7 +32,6 @@
 			left:0px;
 			bottom:0px;
 			height:1px;
-			background: #DDE0E9;
 		}
 		&__top {
 			padding-bottom:42px;
@@ -153,8 +152,6 @@
 	.posts-list__item-content {
 		padding:40px;
 		position: relative;
-		background: #FFFFFF;
-		border: 1px solid #DDE0E9;
 		flex-grow: 1;
 		position: relative;
 		display: flex;
@@ -174,10 +171,8 @@
 		font-weight: 300;
 		font-size: 14px;
 		line-height: 17px;
-		color: #1E306E;
 		margin-top:38px;
 		padding-top:28px;
-		border-top:1px solid #DDE0E9;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;

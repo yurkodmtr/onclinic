@@ -284,3 +284,40 @@
 .related-post .entry-footer .btn-text-icon:hover {
 	border-bottom-color: $related_posts_color;
 }
+
+
+
+
+
+
+
+.single-post .post_by_author {
+	border-bottom: 1px solid $dark_blue_lighter_2_color;
+}
+.single-post .post_by_author .left_side .post_by_author__ava {
+	color: $dark_blue_lighter_1_color;
+}
+.single-post .post_by_author .left_side .post_by_author__by {
+	color: $dark_blue_lighter_1_color;
+}
+.single-post .post_by_author .left_side .post_by_author__by .author a {
+	color: $dark_blue_lighter_1_color;
+}
+
+.related-posts .related-post {
+	background: @white;
+	border: 1px solid $dark_blue_lighter_2_color;
+}
+.related-posts .related-post .entry-meta {
+	border-top: 1px solid $dark_blue_lighter_2_color;
+}
+.related-posts .related-post__img {
+	background-color: $blue_color_lighter_4;
+}
+
+.cat-links a {
+	color: $purple_color;
+}
+.cat-links a:before {
+	background: #DBDCDF;
+}

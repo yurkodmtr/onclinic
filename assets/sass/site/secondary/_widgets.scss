@@ -2,7 +2,6 @@
 	.widget {
 		padding-bottom:40px;
 		margin-bottom:40px;
-		border-bottom:1px solid #DDE0E9;
 		&:last-child {
 			padding-bottom: 0px;
 			margin-bottom: 0px;
@@ -80,10 +79,6 @@
 						margin-left: 25px;
 					}
 				}
-				
-				.post_count {
-					color: #89ccf6;
-				}
 			}
 		}
 	}
@@ -133,7 +128,6 @@
 				font-weight: 600;
 				font-size: 12px;
 				line-height: 15px;
-				color: #1E306E;
 			}
 			& > a {
 				font-weight: 500;
@@ -196,7 +190,6 @@
 				font-weight: 300;
 				font-size: 12px;
 				line-height: 15px;
-				color: #1E306E;
 				padding:10px 0px;
 			}
 
@@ -204,14 +197,12 @@
 				font-weight: 300;
 				font-size: 16px;
 				line-height: 20px;
-				color: #1E306E;
 			}
 
 			cite {
 				font-weight: 600;
 				font-size: 12px;
 				line-height: 15px;
-				color: #1E306E;
 				font-style: normal;
 			}
 
@@ -262,7 +253,6 @@
 			margin: 0 10px;
 			padding: 20px 0 20px;
 			text-transform: uppercase;
-            background: #BCE0F7;
             font-weight: 500;
 		}
 		th {
@@ -284,7 +274,6 @@
 			}
 
 			a {
-                background: #E0F3FD;
 				display: block;
 				width: 100%;
 				max-width: 100%;
@@ -338,14 +327,12 @@
 			font-weight: 300;
 			font-size: 16px;
 			line-height: 20px;
-			color: #1E306E;
 		}
 		strong {
 			display: block;
 			font-weight: 500;
 			font-size: 16px;
 			line-height: 20px;
-			color: #1E306E;
 		}
 		img {
 			display: block;
@@ -371,10 +358,6 @@
 
 				a {
 					display: inline-block;
-				}
-
-				.post_count {
-					color: #89ccf6;
 				}
 
 				& + li {

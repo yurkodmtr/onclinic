@@ -201,7 +201,7 @@ function onclinic_get_customizer_options() {
             'white' => array(
                 'title'   => esc_html__( 'White', 'onclinic' ),
                 'section' => 'color_scheme',
-                'default' => '#FFF',
+                'default' => '#FFFFFF',
                 'field'   => 'hex_color',
                 'type'    => 'control',
             ),

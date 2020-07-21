@@ -49,8 +49,7 @@
     width: 100%;
     left: 0px;
     bottom: 0px;
-    height: 1px;
-    background: #DDE0E9; }
+    height: 1px; }
   .default-item .posts-list__item-content__top {
     padding-bottom: 42px; }
 
@@ -183,8 +182,6 @@
   .grid-item .posts-list__item-content {
     padding: 40px;
     position: relative;
-    background: #FFFFFF;
-    border: 1px solid #DDE0E9;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
@@ -204,10 +201,8 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 17px;
-    color: #1E306E;
     margin-top: 38px;
     padding-top: 28px;
-    border-top: 1px solid #DDE0E9;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

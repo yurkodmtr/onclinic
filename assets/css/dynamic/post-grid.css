@@ -17,3 +17,16 @@
 .posts-list.posts-list--grid .posted-by a:not(:hover){
 	color: $primary_text_color;
 }
+
+.default-item .posts-list__item-content:before {
+	background: $dark_blue_lighter_2_color;
+}
+
+.grid-item .posts-list__item-content {
+	background: $white;
+	border: 1px solid $dark_blue_lighter_2_color;
+}
+.grid-item .entry-footer {
+	color: #1E306E;
+	border-top: 1px solid $dark_blue_lighter_2_color;
+}

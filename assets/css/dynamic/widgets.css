@@ -71,3 +71,43 @@
 	color: $invert_text_color;
 	background-color: $primary_text_color;
 }
+
+
+
+.widget-area .widget {
+	border-bottom: 1px solid $dark_blue_lighter_2_color;
+}
+
+.widget_archive ul li .post_count, .widget_categories ul li .post_count, .widget_nav_menu div ul li .post_count, .widget_meta ul li .post_count, .widget_pages ul li .post_count {
+	color: #89ccf6;
+}
+.widget_recent_comments li span a {
+	color: $dark_blue_lighter_1_color;
+}
+.widget_rss ul li .rss-date {
+	color: $dark_blue_lighter_1_color;
+}
+.widget_rss ul li .rssSummary {
+	color: $dark_blue_lighter_1_color;
+}
+.widget_rss ul li cite {
+	color: $dark_blue_lighter_1_color;
+}
+.widget_calendar caption {
+	background: $blue_color_lighter_2;
+}
+.widget_calendar tbody td a {
+	background: $blue_color_lighter_3;
+}
+.widget_text p {
+	color: $dark_blue_lighter_1_color;
+}
+.widget_text strong {
+	color: $dark_blue_lighter_1_color;
+}
+
+.entry-content .wp-block-archives-list li .post_count, .entry-content .wp-block-categories-list li .post_count,
+.page-content .wp-block-archives-list li .post_count,
+.page-content .wp-block-categories-list li .post_count {
+	color: #89ccf6;
+}

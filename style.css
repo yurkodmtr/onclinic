@@ -4338,8 +4338,7 @@ span.cat-links {
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: #8067BD; }
+  text-transform: uppercase; }
   .cat-links a:before {
     content: '';
     position: absolute;
@@ -4347,7 +4346,6 @@ span.cat-links {
     top: 5px;
     width: 6px;
     height: 6px;
-    background: #DBDCDF;
     border-radius: 50%; }
   .cat-links a:last-child {
     margin-right: 0px;
@@ -4542,8 +4540,7 @@ body:not(.sidebar_enabled) .post-default {
     .single-post .post .entry-content {
       font-weight: 300;
       font-size: 22px;
-      line-height: 27px;
-      color: #1E306E; } }
+      line-height: 27px; } }
   .single-post .post .entry-content figure {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4622,7 +4619,6 @@ body:not(.sidebar_enabled) .post-default {
   -ms-flex-align: center;
   align-items: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid #DDE0E9;
   margin-bottom: 50px; }
   .single-post .post_by_author .left_side {
     -webkit-box-flex: 1;
@@ -4643,8 +4639,7 @@ body:not(.sidebar_enabled) .post-default {
       margin-right: 20px;
       font-weight: 300;
       font-size: 14px;
-      line-height: 17px;
-      color: #1E306E; }
+      line-height: 17px; }
       .single-post .post_by_author .left_side .post_by_author__ava img {
         display: block;
         width: 100%; }
@@ -4657,14 +4652,12 @@ body:not(.sidebar_enabled) .post-default {
       align-items: center;
       font-weight: 300;
       font-size: 14px;
-      line-height: 17px;
-      color: #1E306E; }
+      line-height: 17px; }
       .single-post .post_by_author .left_side .post_by_author__by .author {
         margin-right: 5px; }
         .single-post .post_by_author .left_side .post_by_author__by .author a {
           text-transform: uppercase;
-          font-weight: 600;
-          color: #1E306E; }
+          font-weight: 600; }
           .single-post .post_by_author .left_side .post_by_author__by .author a:hover {
             text-decoration: underline; }
 
@@ -4692,8 +4685,6 @@ body:not(.sidebar_enabled) .post-default {
     max-width: 47.6%;
     min-width: 47.6%;
     width: 47.6%;
-    background: #FFFFFF;
-    border: 1px solid #DDE0E9;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-box-shadow: 0px 34px 40px rgba(30, 48, 110, 0);
@@ -4719,7 +4710,6 @@ body:not(.sidebar_enabled) .post-default {
     .related-posts .related-post .entry-meta {
       margin-top: 38px;
       padding-top: 27px;
-      border-top: 1px solid #DDE0E9;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -4739,8 +4729,7 @@ body:not(.sidebar_enabled) .post-default {
       margin: 0px;
       width: 100%;
       height: 300px;
-      position: relative;
-      background-color: #cecece; }
+      position: relative; }
       .related-posts .related-post__img .post-thumbnail {
         margin: 0px;
         position: absolute;
@@ -4815,8 +4804,7 @@ body:not(.sidebar_enabled) .post-default {
 --------------------------------------------------------------*/
 .widget-area .widget {
   padding-bottom: 40px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid #DDE0E9; }
+  margin-bottom: 40px; }
   .widget-area .widget:last-child {
     padding-bottom: 0px;
     margin-bottom: 0px;
@@ -4873,9 +4861,6 @@ body:not(.sidebar_enabled) .post-default {
       .widget_archive ul li > ul, .widget_categories ul li > ul,
       .widget_nav_menu div ul li > ul, .widget_meta ul li > ul, .widget_pages ul li > ul {
         margin-left: 25px; } }
-  .widget_archive ul li .post_count, .widget_categories ul li .post_count,
-  .widget_nav_menu div ul li .post_count, .widget_meta ul li .post_count, .widget_pages ul li .post_count {
-    color: #89ccf6; }
 
 .widget_recent_entries ul li a {
   display: inline-block;
@@ -4903,8 +4888,7 @@ body:not(.sidebar_enabled) .post-default {
   .widget_recent_comments li span a {
     font-weight: 600;
     font-size: 12px;
-    line-height: 15px;
-    color: #1E306E; }
+    line-height: 15px; }
   .widget_recent_comments li > a {
     font-weight: 500;
     font-size: 16px;
@@ -4939,20 +4923,17 @@ body:not(.sidebar_enabled) .post-default {
   font-weight: 300;
   font-size: 12px;
   line-height: 15px;
-  color: #1E306E;
   padding: 10px 0px; }
 
 .widget_rss ul li .rssSummary {
   font-weight: 300;
   font-size: 16px;
-  line-height: 20px;
-  color: #1E306E; }
+  line-height: 20px; }
 
 .widget_rss ul li cite {
   font-weight: 600;
   font-size: 12px;
   line-height: 15px;
-  color: #1E306E;
   font-style: normal; }
 
 .widget_rss ul li + li {
@@ -4986,7 +4967,6 @@ body:not(.sidebar_enabled) .post-default {
   margin: 0 10px;
   padding: 20px 0 20px;
   text-transform: uppercase;
-  background: #BCE0F7;
   font-weight: 500; }
 
 .widget_calendar th {
@@ -5003,7 +4983,6 @@ body:not(.sidebar_enabled) .post-default {
     height: 55px; }
 
 .widget_calendar tbody td a {
-  background: #E0F3FD;
   display: block;
   width: 100%;
   max-width: 100%;
@@ -5044,15 +5023,13 @@ body:not(.sidebar_enabled) .post-default {
 .widget_text p {
   font-weight: 300;
   font-size: 16px;
-  line-height: 20px;
-  color: #1E306E; }
+  line-height: 20px; }
 
 .widget_text strong {
   display: block;
   font-weight: 500;
   font-size: 16px;
-  line-height: 20px;
-  color: #1E306E; }
+  line-height: 20px; }
 
 .widget_text img {
   display: block; }
@@ -5072,10 +5049,6 @@ body:not(.sidebar_enabled) .post-default {
     .page-content .wp-block-archives-list li a,
     .page-content .wp-block-categories-list li a {
       display: inline-block; }
-    .entry-content .wp-block-archives-list li .post_count, .entry-content .wp-block-categories-list li .post_count,
-    .page-content .wp-block-archives-list li .post_count,
-    .page-content .wp-block-categories-list li .post_count {
-      color: #89ccf6; }
     .entry-content .wp-block-archives-list li + li, .entry-content .wp-block-categories-list li + li,
     .page-content .wp-block-archives-list li + li,
     .page-content .wp-block-categories-list li + li {
