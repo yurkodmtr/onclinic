@@ -1,20 +1,20 @@
 ul,
 ol {
-	margin: 0 0 1.5em 1.5em;
 	padding-left:0;
 	padding-right:0;
+	margin-left:35px;
+
+	& > ul, & > ol {
+		margin-left: 35px;
+		margin-bottom:0px!important;
+	}
 
 	.entry-content &,
 	.page-content & {
-		margin-left: 30px;
 
 		&.wp-block-gallery,
 		&.blocks-gallery-grid {
 			margin-left: 0;
-		}
-
-		@include media-breakpoint-up(xl) {
-			margin-left: 80px;
 		}
 
 		li {
@@ -50,13 +50,6 @@ ol {
 	list-style: decimal;
 }
 
-li > ul,
-li > ol {
-	margin-top: 6px;
-	margin-bottom: 0;
-	margin-left: 1.5em;
-}
-
 dt {
 	font-weight: bold;
 }
@@ -87,17 +80,35 @@ dd {
 
 		li {
 			position: relative;
-			padding-left: 25px;
+			padding-left: 19px;
+			font-weight: 300;
+			font-size: 22px;
+			line-height: 27px;
 
 			&:before {
 				content: '';
 				position: absolute;
 				left: 0;
-				top: 10px;
+				top: 9px;
 				width: 10px;
 				height: 10px;
 				border-radius: 50%;
-				background-color: #bfbfbf;
+				border: 2px solid #89CCF7;
+			}
+			ul, ol {
+				li {
+					&:before {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 10px;
+						width: 10px;
+						height: 10px;
+						border-radius: 50%;
+						border: none;
+						background-color: #89CCF7;
+					}
+				}
 			}
 		}
 	}

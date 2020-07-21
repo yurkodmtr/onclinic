@@ -164,7 +164,6 @@ if ( ! class_exists( 'CX_Breadcrumbs' ) ) {
 				$wrapper_classes[] = 'hidden-sm';
 			}
 
-			$wrapper_classes = apply_filters( 'cx_breadcrumbs/wrapper_classes', $wrapper_classes );
 			$wrapper_classes = array_unique( $wrapper_classes );
 			$wrapper_classes = array_map( 'sanitize_html_class', $wrapper_classes );
 			$wrapper_css     = implode( ' ', $wrapper_classes );

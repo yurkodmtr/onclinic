@@ -10,9 +10,6 @@
 	position: relative;
 	.posts-list & {
 		margin-bottom: 40px;
-		&:last-child {
-			margin-bottom: 0px;
-		}
 	}
 
 	.posts-list--default-small-image & {

@@ -46,7 +46,7 @@ if ( $the_query->have_posts() ) { ?>
 	<nav class="navigation post-navigation">
 		<h2 class="screen-reader-text"><?php echo esc_html__( 'Post navigation', 'onclinic' ); ?></h2>
 		
-		<div class="nav-links row">
+		<div class="nav-links">
 			
 			<?php
 			
@@ -59,25 +59,27 @@ if ( $the_query->have_posts() ) { ?>
 				$title 			= get_the_title();
 
 				if ( $previous_post && get_the_ID() === $previous_post->ID ) {
-					$nav_label 			= 'previous';
+					$nav_label 			= '< Previous post';
+                    $nav_class = 'nav-previous ';
 				} elseif ( $next_post && get_the_ID() === $next_post->ID ) {
-					$nav_label 			= 'next';
+					$nav_label 			= 'Next post >';
+                    $nav_class = 'nav-next ';
 				}
 
-				$classes 		= ( ! $previous_post ) ? 'col-md-push-6' : '';
 
-				$nav_class = 'nav-' . $nav_label . ' ';
 				?>
-				
-				<div class="col-md-6 <?php echo esc_attr( $classes ); ?>">
-					<div class="<?php echo esc_attr( $nav_class ); ?>">
-						<h5 class="h6-style"><a href="<?php echo esc_url( $permalink ); ?>"><?php echo wp_kses_post( wp_unslash( $title ) ); ?></a></h5>
-						<a class="nav-links__label" href="<?php echo esc_url( $permalink ); ?>">
-							<svg class="icon-svg" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"><path d="M5.958 8.786L0.918 4.772L5.958 0.776V4.376H14.454V5.186H5.958V8.786Z"/></svg>
-							<?php echo esc_html( $nav_label . ' Post' ); ?>
-						</a>
+
+					<div class="nav-links__item <?php echo esc_attr( $nav_class ); ?>">
+                        <?php  onclinic_post_thumbnail(); ?>
+                        <div class="nav-description">
+                            <h5 class="h6-style">
+                                <a href="<?php echo esc_url( $permalink ); ?>"><?php echo wp_kses_post( wp_unslash( $title ) ); ?></a>
+                            </h5>
+                            <a class="nav-links__label" href="<?php echo esc_url( $permalink ); ?>">
+                                <?php echo esc_html( $nav_label ); ?>
+                            </a>
+                        </div>
 					</div>
-				</div>
 
 			<?php endwhile; ?>
 

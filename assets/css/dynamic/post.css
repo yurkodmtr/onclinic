@@ -129,7 +129,7 @@
 	color: $link_hover_color;
 }
 .invert .post-author__title a {
-	color: $invert_text_color; 
+	color: $dark_blue_lighter_1_color;
 }
 .invert .post-author__title a:hover {
 	opacity: 0.7;
@@ -221,7 +221,7 @@
 }
 
 .comment-form .comment-notes {
-	color: $secondary_text_color;
+	color: $dark_blue_lighter_1_color;
 }
 
 /* #Comment Reply Link */
@@ -238,15 +238,15 @@
 }
 
 /* #Post Author Bio */
-.post-author-bio .post-author__overlay {
-	background-color: $post_authorbio_bg;
+.post-author-bio {
+	background-color: $blue_color_lighter_3;
 }
 .post-author-bio .post-author__title,
 .post-author-bio .post-author__title a,
 .post-author-bio .post-author__title a:hover,
 .post-author-bio .post-author__content,
 .post-author-bio .post-author__social a {
-	color: $post_authorbio_color;
+	color: $dark_blue_lighter_1_color;
 }
 .post-author-bio .post-author__social a:after {
 	background-color: $post_authorbio_color;
@@ -266,13 +266,13 @@
 .related-post__content .entry-meta span,
 .related-post .btn-text-icon,
 .related-post .btn-text-icon:hover {
-	color: $related_posts_color;
+	color: $dark_blue_lighter_1_color;
 }
 .related-post .btn-text-icon path{
 	fill: $related_posts_color;
 }
-.related-post__content .cat-links a:before {
-	background-color: $related_posts_color;
+.related-post__content .cat-links a {
+	color:$purple_color;
 }
 .related-posts .entry-title a:hover {
 	color: $link_hover_color;

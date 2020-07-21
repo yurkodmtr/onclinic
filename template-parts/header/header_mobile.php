@@ -1,3 +1,7 @@
+<?php
+$visible_header_wc_cart 	= onclinic_theme()->customizer->get_value( 'woo_header_cart_icon' ) && class_exists( 'WooCommerce' );
+?>
+
 <div class="reheader__mobile">
         <div class="reheader__mobile__top">
             <div class="reheader__mobile__wrapper">

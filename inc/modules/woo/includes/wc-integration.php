@@ -191,13 +191,13 @@ if ( ! function_exists( 'onclinic_wc_header_cart' ) ) {
 		?>
 			<div class="header-cart">
 				<div class="header-cart__link-wrap <?php echo esc_attr( $class ); ?>">
-			<?php onclinic_wc_cart_link(); ?>
+			        <?php onclinic_wc_cart_link(); ?>
 				</div>
 				<div class="header-cart__content">
-			<?php
-			$instance = array( 'title' => esc_html__( 'My cart', 'onclinic' ) );
-			the_widget( 'WC_Widget_Cart', $instance );
-			?>
+                    <?php
+                    $instance = array( 'title' => esc_html__( 'My cart', 'onclinic' ) );
+                    the_widget( 'WC_Widget_Cart', $instance );
+                    ?>
 				</div>
 			</div>
 		<?php

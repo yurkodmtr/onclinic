@@ -121,15 +121,6 @@ function onclinic_get_customizer_options() {
 				),
 				'type'    => 'control',
 			),
-			'breadcrumbs_text_color' => array(
-				'title'       => esc_html__( 'Text Color', 'onclinic' ),
-				'description' => esc_html__( 'Here you can choose whether your text should be light or dark. If you are working with a dark background, then your text should be light. If your background is light, then your text should be set to dark.', 'onclinic' ),
-				'section'     => 'breadcrumbs',
-				'default'     => 'dark',
-				'field'       => 'select',
-				'choices'     => onclinic_get_text_color(),
-				'type'        => 'control',
-			),
 
 			/** `Page Layout` section */
 			'page_layout' => array(
@@ -207,7 +198,13 @@ function onclinic_get_customizer_options() {
 				'priority'    => 40,
 				'type'        => 'section',
 			),
-
+            'white' => array(
+                'title'   => esc_html__( 'White', 'onclinic' ),
+                'section' => 'color_scheme',
+                'default' => '#FFF',
+                'field'   => 'hex_color',
+                'type'    => 'control',
+            ),
             'dark_blue_color' => array(
                 'title'   => esc_html__( 'Dark blue', 'onclinic' ),
                 'section' => 'color_scheme',
@@ -1378,24 +1375,16 @@ function onclinic_get_customizer_options() {
 				'title' 			=> esc_html__( 'Layout', 'onclinic' ),
 				'section' 			=> 'header_styles',
 				'default' 			=> 'layout-1',
-				'choices' 			=> array(
-					'layout-1' => esc_html__( 'Style 1 (Logo by Left)', 'onclinic' ),
-					'layout-2' => esc_html__( 'Style 2 (Logo by Center)', 'onclinic' ),
-				),
+				'choices' 			=> onclinic_header_layout_type(),
 				'field' 			=> 'select',
 				'type' 				=> 'control',
 			),
 			'header_color_scheme' => array(
 				'title' 			=> esc_html__( 'Color Scheme', 'onclinic' ),
 				'section' 			=> 'header_styles',
-				'default' 			=> 'default',
+				'default' 			=> 'color_scheme_1',
 				'field' 			=> 'select',
-				'choices' 			=> array(
-					'default'     => esc_html__( 'Default', 'onclinic' ),
-					'invert' => esc_html__( 'Invert', 'onclinic' ),
-                    'invert_menu' => esc_html__( 'Invert Menu', 'onclinic' ),
-                    'overlay' => esc_html__( 'Overlay', 'onclinic' ),
-				),
+				'choices' 			=> onclinic_header_color_scheme(),
 				'type' 				=> 'control',
 			),
             'is_sticky_mode' => array(
@@ -1468,14 +1457,6 @@ function onclinic_get_customizer_options() {
                 'type' 				=> 'control',
             ),
 
-			'header_social_links' => array(
-				'title' 			=> esc_html__( 'Show Social Links', 'onclinic' ),
-				'section' 			=> 'header_styles',
-				'default' 			=> false,
-				'field' 			=> 'checkbox',
-				'type' 				=> 'control',
-			),
-
 			'header_search_section' => array(
 				'title' 			=> esc_html__( 'Search Popup', 'onclinic' ),
 				'panel' 			=> 'header_panel',
@@ -1538,13 +1519,6 @@ function onclinic_get_customizer_options() {
 				'field' 			=> 'textarea',
 				'type' 				=> 'control',
 			),
-			'footer_logo' => array(
-				'title' 			=> esc_html__( 'Footer Logo', 'onclinic' ),
-				'section' 			=> 'footer_options',
-				'field' 			=> 'image',
-				'type' 				=> 'control',
-				'dynamic_css' 		=> true,
-			),
 
 			/** `Blog Settings` panel */
 			'blog_settings' => array(
@@ -1567,13 +1541,6 @@ function onclinic_get_customizer_options() {
 				'section' 			=> 'blog',
 				'default' 			=> true,
 				'field' 			=> 'checkbox',
-				'type' 				=> 'control',
-			),
-			'blog_page_subtitle' => array(
-				'title' 			=> esc_html__( 'Blog Page Subtitle', 'onclinic' ),
-				'section' 			=> 'blog',
-				'default' 			=> '',
-				'field' 			=> 'textarea',
 				'type' 				=> 'control',
 			),
 
@@ -2167,6 +2134,35 @@ function onclinic_get_text_color() {
 		'dark'  => esc_html__( 'Dark', 'onclinic' ),
 	) );
 }
+
+/**
+ * Get header layout type
+ *
+ * @since 1.0.0
+ * @return array
+ */
+function onclinic_header_layout_type() {
+    return apply_filters( 'onclinic_header_layout_type', array(
+        'layout-1' => esc_html__( 'Style 1 (Logo by Left)', 'onclinic' ),
+        'layout-2' => esc_html__( 'Style 2 (Logo by Center)', 'onclinic' ),
+    ) );
+}
+
+/**
+ * Get header color scheme
+ *
+ * @since 1.0.0
+ * @return array
+ */
+function onclinic_header_color_scheme() {
+    return apply_filters( 'onclinic_header_color_scheme', array(
+        'color_scheme_1'     => esc_html__( 'Color Scheme 1', 'onclinic' ),
+        'color_scheme_2' => esc_html__( 'Color Scheme 2', 'onclinic' ),
+        'color_scheme_3' => esc_html__( 'Color Scheme 3', 'onclinic' ),
+        'overlay' => esc_html__( 'Overlay', 'onclinic' ),
+    ) );
+}
+
 
 
 /**

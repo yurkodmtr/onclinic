@@ -72,7 +72,7 @@ function onclinic_related_posts() {
 	}
 
 	$settings['grid_count'] 	= ( int ) 12 / $settings[ 'layout_columns' ];
-	$grid_class 				= ' col-xs-12 col-sm-6 col-md-6 col-lg-' . $settings['grid_count'] . ' ';
+	$grid_class 				= ' col-xs-12 col-sm-6 col-md-6 col-lg-6';
 	$thumb_class 				= $settings['image_visible'] ? 'has-thumb' : 'no-thumb';
 	
 	if ( $holder_view_dir ) {
@@ -81,7 +81,7 @@ function onclinic_related_posts() {
 
 		echo '<div class="related-posts hentry posts-list">'
 				. $block_title .
-				'<div class="row" >';
+				'<div class="related-posts__list" >';
 
 		foreach ( $posts as $post ) {
 
@@ -91,7 +91,6 @@ function onclinic_related_posts() {
 		}
 
 		echo '</div>
-			<div class="related-posts__overlay"></div>
 		</div>';
 	}
 

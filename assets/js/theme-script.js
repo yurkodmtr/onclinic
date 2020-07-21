@@ -141,6 +141,11 @@
 		},
 
 		stickyMenuFunc: function(){
+
+			if ( !$('.reheader').hasClass('reheader__sticky') ) {
+				return false;
+			}
+
 			var startPosition;
 
 			if ( $('.reheader__desktop:visible').length > 0 ) {

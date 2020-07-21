@@ -25,9 +25,6 @@ add_filter( 'comment_form_defaults', 'onclinic_modify_comment_form' );
 add_filter( 'cherry_css_variables', 'onclinic_modify_bg_img_variables', 10, 2 );
 
 
-// Add invert classes if breadcrumbs sections is darken.
-add_filter( 'cx_breadcrumbs/wrapper_classes', 'onclinic_breadcrumbs_wrapper_classes' );
-
 // Add dynamic css function.
 add_filter( 'cx_dynamic_css/func_list', 'onclinic_add_dynamic_css_function' );
 
@@ -59,23 +56,6 @@ function onclinic_post_thumb_classes( $classes ) {
 	$classes[] = $thumb;
 
 	return $classes;
-}
-
-/**
- *  Add invert classes if breadcrumbs sections is darken.
- *
- * @param array $wrapper_classes Classes array.
- *
- * @return array
- */
-function onclinic_breadcrumbs_wrapper_classes( $wrapper_classes = array() ) {
-	$breadcrumbs_color = get_theme_mod( 'breadcrumbs_text_color', onclinic_theme()->customizer->get_default( 'breadcrumbs_text_color' ) );
-
-	if ( 'light' === $breadcrumbs_color ) {
-		$wrapper_classes[] = 'invert';
-	}
-
-	return $wrapper_classes;
 }
 
 /**

@@ -16,15 +16,26 @@
 		max-width: 100%;
 		min-width: 50px;
 		padding-right: 60px;
-		text-transform: uppercase;
+		padding:17px 60px 15px 20px;
+		background: #F6F7F9;
+		border-radius: 6px;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 22px;
+		color: #1E306E;
 	}
 	
 	&__submit.btn {
 		position: absolute;
-		top: 16px;
+		top: 12px;
 		right: 20px;
 		z-index: 1;
 		color: #888;
 		background-color: transparent;
+		svg {
+			path {
+				fill:#1E306E;
+			}
+		}
 	}
 }

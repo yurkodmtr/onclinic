@@ -1,17 +1,24 @@
 .reheader {
+	.header-cart__link {
+		svg {
+			path {
+				transition: 0.2s;
+			}
+		}
+	}
 	.container {
 		padding-left: 0;
 		padding-right: 0;
 
 		@include media-breakpoint-down(xl) {
 			max-width: 100%;
-			padding-left: 20px;
-			padding-right: 20px;
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 
 		@media (max-width: 1024px) {
-			padding-left: 20px;
-			padding-right: 20px;
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 
 		body.layout-fullwidth &,
@@ -149,6 +156,9 @@
 						svg {
 							width:18px;
 							height: 18px;
+							path {
+								transition: 0.2s;
+							}
 						}
 					}
 				}
@@ -231,6 +241,9 @@
 								svg {
 									width:18px;
 									height: 18px;
+									path {
+										transition: 0.2s;
+									}
 								}
 							}
 						}
@@ -256,6 +269,9 @@
 								svg {
 									display: inline-block;
 									margin-right: 7px;
+									path {
+										transition: 0.2s;
+									}
 								}
 							}
 						}
@@ -378,6 +394,11 @@
 					cursor: pointer;
 					&:focus {
 						outline: 0;
+					}
+					svg {
+						path {
+							fill:#1E306E;
+						}
 					}
 				}
 			}
@@ -588,98 +609,11 @@
 }
 
 .reheader {
-	&__style_default {
-		&.reheader__layout-1 {
-			.reheader {
-				&__desktop {
-					&__top {
-						background: #FFF;
-						&__wrap {
-							.right_side {
-								.address {
-									color: #1E306E;
-								}
-								.phone {
-									&__number {
-										color: #1E306E;
-									}
-								}
-								.header__btn {
-									a {
-										background: #8067BD;
-										color: #FFFFFF;
-										&:hover {
-											background: #BCE0F7;
-											color:#1E306E;
-										}
-									}
-								}
-							}
-						}
-					}
-					&__bottom {
-						background:#1E306E;
-						.header-search-toggle {
-							svg {
-								path {
-									fill:#FFF;
-								}
-							}
-						}
-					}
-				}
-				&__mobile {
-					&__top {
-						background: #F6F7F9;
-						.phone {
-							&__number {
-								color: #1E306E;
-							}
-						}
-						.header__btn {
-							a {
-								background: #8067BD;
-								color: #FFFFFF;
-								&:hover {
-									background: #BCE0F7;
-									color:#1E306E;
-								}
-							}
-						}
-					}
-					&__bottom {
-						background-color: #FFF;
-					}
-				}
-			}
-		}
+	&__color_scheme_1 {
 		&.reheader__layout-2 {
 			.reheader {
 				&__desktop {
-					&__top {
-						background: #FFF;
-						&__wrap {
-							.address {
-								color: #1E306E;
-							}
-							.right_side {
-								.phone {
-									&__number {
-										color: #1E306E;
-									}
-								}
-								.header-search-toggle {
-									svg {
-										path {
-											fill:#1E306E;
-										}
-									}
-								}
-							}
-						}
-					}
 					&__bottom {
-						background:#1E306E;
 						.header__btn {
 							a {
 								font-weight: 500;
@@ -689,286 +623,18 @@
 						}
 					}
 				}
-				&__mobile {
-					&__top {
-						background: #F6F7F9;
-						.phone {
-							&__number {
-								color: #1E306E;
-							}
-						}
-						.header__btn {
-							a {
-								background: #8067BD;
-								color: #FFFFFF;
-								&:hover {
-									background: #BCE0F7;
-									color:#1E306E;
-								}
-							}
-						}
-					}
-					&__bottom {
-						background-color: #FFF;
-					}
-				}
 			}
 		}
 	}
-	&__style_invert {
-		&.reheader__layout-1 {
-			.reheader {
-				&__desktop {
-					&__top {
-						background: #FFF;
-						&__wrap {
-							.right_side {
-								.phone {
-									&__number {
-										color: #1E306E;
-									}
-								}
-								.header__btn {
-									a {
-										background: #BCE0F7;
-										color: #1E306E;
-										&:hover {
-											background: #8067BD;
-											color:#FFF;
-										}
-									}
-								}
-							}
-						}
-					}
-					&__bottom {
-						background:#FFF;
-						.header-search-toggle {
-							svg {
-								path {
-									fill:#1E306E;
-								}
-							}
-						}
-					}
-				}
-				&__mobile {
-					&__top {
-						background: #F6F7F9;
-						.phone {
-							&__number {
-								color: #1E306E;
-							}
-						}
-						.header__btn {
-							a {
-								background: #BCE0F7;
-								color: #1E306E;
-								&:hover {
-									background: #8067BD;
-									color:#FFF;
-								}
-							}
-						}
-					}
-					&__bottom {
-						background-color: #FFF;
-					}
-				}
-			}
-		}
-		&.reheader__layout-2 {
-			.reheader {
-				&__desktop {
-					&__top {
-						background: #FFF;
-						&__wrap {
-							.right_side {
-								.phone {
-									&__number {
-										color: #1E306E;
-									}
-								}
-								.header__btn {
-									a {
-										background: #BCE0F7;
-										color: #1E306E;
-										&:hover {
-											background: #8067BD;
-											color:#FFF;
-										}
-									}
-								}
-							}
-						}
-					}
-					&__bottom {
-						background:#FFF;
-						.header-search-toggle {
-							svg {
-								path {
-									fill:#1E306E;
-								}
-							}
-						}
-					}
-				}
-				&__mobile {
-					&__top {
-						background: #F6F7F9;
-						.phone {
-							&__number {
-								color: #1E306E;
-							}
-						}
-						.header__btn {
-							a {
-								background: #BCE0F7;
-								color: #1E306E;
-								&:hover {
-									background: #8067BD;
-									color:#FFF;
-								}
-							}
-						}
-					}
-					&__bottom {
-						background-color: #FFF;
-					}
-				}
-			}
-		}
-	}
-	&__style_invert_menu {
-		&.reheader__layout-1 {
-			.reheader {
-				&__desktop {
-					&__top {
-						background: #FFF;
-						&__wrap {
-							.right_side {
-								.phone {
-									&__number {
-										color: #1E306E;
-									}
-								}
-								.header__btn {
-									a {
-										background: #BCE0F7;
-										color: #1E306E;
-										&:hover {
-											background: #8067BD;
-											color:#FFF;
-										}
-									}
-								}
-							}
-						}
-					}
-					&__bottom {
-						background:#E0F3FD;
-						.header-search-toggle {
-							svg {
-								path {
-									fill:#1E306E;
-								}
-							}
-						}
-					}
-				}
-				&__mobile {
-					&__top {
-						background: #F6F7F9;
-						.phone {
-							&__number {
-								color: #1E306E;
-							}
-						}
-						.header__btn {
-							a {
-								background: #BCE0F7;
-								color: #1E306E;
-								&:hover {
-									background: #8067BD;
-									color:#FFF;
-								}
-							}
-						}
-					}
-					&__bottom {
-						background-color: #FFF;
-					}
-				}
-			}
-		}
-		&.reheader__layout-2 {
-			.reheader {
-				&__desktop {
-					&__top {
-						background: #FFF;
-						&__wrap {
-							.right_side {
-								.phone {
-									&__number {
-										color: #1E306E;
-									}
-								}
-								.header__btn {
-									a {
-										background: #BCE0F7;
-										color: #1E306E;
-										&:hover {
-											background: #8067BD;
-											color:#FFF;
-										}
-									}
-								}
-							}
-						}
-					}
-					&__bottom {
-						background:#E0F3FD;
-						.header-search-toggle {
-							svg {
-								path {
-									fill:#1E306E;
-								}
-							}
-						}
-					}
-				}
-				&__mobile {
-					&__top {
-						background: #F6F7F9;
-						.phone {
-							&__number {
-								color: #1E306E;
-							}
-						}
-						.header__btn {
-							a {
-								background: #BCE0F7;
-								color: #1E306E;
-								&:hover {
-									background: #8067BD;
-									color:#FFF;
-								}
-							}
-						}
-					}
-					&__bottom {
-						background-color: #FFF;
-					}
-				}
-			}
-		}
-	}
-	&__style_overlay {
+	&__overlay {
 		position:absolute;
 		left:0px;
 		top:0px;
 		width: 100%;
 		z-index: 99;
+		@media (max-width: 1024px) {
+			position: relative;
+		}
 	}
 }
 

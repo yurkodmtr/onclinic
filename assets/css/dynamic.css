@@ -119,7 +119,7 @@ a:hover {
 
 /* #Blockquote */
 blockquote {
-	background-color: $grey_color_1;
+	background-color: $blue_color_lighter_3;
 }
 blockquote p {
 	font-style: $h5_font_style !important;

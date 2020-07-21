@@ -20,3 +20,345 @@
 .site-header .site-header__mobile .header-search-form__field {
 	font-family: @font_family( $body_font_family );
 }
+
+
+.reheader__mobile__top {
+	background: $dark_blue_lighter_3_color;
+}
+.reheader__mobile__top .phone_number {
+	 color: $dark_blue_lighter_1_color;
+}
+.reheader__mobile__top .header__btn a {
+	background: $purple_color;
+	color: $white;
+}
+.reheader__mobile__top .header__btn a:hover {
+	background: $blue_color_lighter_2;
+	color:$dark_blue_lighter_1_color;
+}
+.reheader__mobile__bottom {
+	background-color: $white;
+}
+
+
+.reheader__color_scheme_1.reheader__layout-1 .reheader__desktop__top {
+	background: $white;
+}
+.reheader__color_scheme_1.reheader__layout-1 .reheader__desktop__top__wrap .right_side .address {
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_1.reheader__layout-1 .reheader__desktop__top__wrap .right_side .phone__number {
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_1.reheader__layout-1 .reheader__desktop__top__wrap .right_side .header__btn a {
+	background: $purple_color;
+	color: $white;
+}
+.reheader__color_scheme_1.reheader__layout-1 .reheader__desktop__top__wrap .right_side .header__btn a:hover {
+	background: $blue_color_lighter_2;
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_1.reheader__layout-1 .reheader__desktop__bottom {
+	background: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_1.reheader__layout-1 .reheader__desktop__bottom .header-search-toggle svg path {
+	fill: $white;
+}
+.reheader__color_scheme_1.reheader__layout-1 .reheader__desktop__bottom .header-search-toggle:hover svg path {
+	fill: $blue_color;
+}
+.reheader__color_scheme_1.reheader__layout-1 .reheader__desktop__bottom .header-cart__link svg path {
+	fill: $white;
+}
+.reheader__color_scheme_1.reheader__layout-1 .reheader__desktop__bottom .header-cart__link:hover svg path {
+	fill: $blue_color;
+}
+.reheader__color_scheme_1.reheader__layout-1 .reheader__desktop__bottom .header-cart__link-count {
+	background: $blue_color_lighter_1;
+	color:$white;
+ }
+.reheader__color_scheme_1.reheader__layout-2 .reheader__desktop__top {
+	background: $blue_color_lighter_3;
+}
+.reheader__color_scheme_1.reheader__layout-2 .reheader__desktop__top__wrap .address {
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_1.reheader__layout-2 .reheader__desktop__top__wrap .right_side .phone__number {
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_1.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-search-toggle svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_1.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-search-toggle:hover svg path {
+	fill: $blue_color;
+}
+.reheader__color_scheme_1.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-cart__link svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_1.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-cart__link:hover svg path {
+	fill: $blue_color;
+}
+.reheader__color_scheme_1.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-cart__link-count {
+	background: $blue_color_lighter_1;
+	color:$white;
+}
+.reheader__color_scheme_1.reheader__layout-2 .reheader__desktop__bottom {
+	background: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_1.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a {
+	color: $purple_color;
+}
+.reheader__color_scheme_1.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a:hover {
+	color: $blue_color;
+}
+.reheader__color_scheme_1.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a svg path {
+	fill: $purple_color;
+}
+.reheader__color_scheme_1.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a:hover svg path {
+	fill: $blue_color;
+}
+.reheader__color_scheme_2.reheader__layout-1 .reheader__desktop__top {
+	background: $white;
+}
+.reheader__color_scheme_2.reheader__layout-1 .reheader__desktop__top__wrap .right_side .phone__number {
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_2.reheader__layout-1 .reheader__desktop__top__wrap .right_side .header__btn a {
+	background: $blue_color_lighter_2;
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_2.reheader__layout-1 .reheader__desktop__top__wrap .right_side .header__btn a:hover {
+	background: $purple_color;
+	color: $white;
+}
+.reheader__color_scheme_2.reheader__layout-1 .reheader__desktop__bottom {
+	background: $white;
+}
+.reheader__color_scheme_2.reheader__layout-1 .reheader__desktop__bottom .header-search-toggle svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_2.reheader__layout-1 .reheader__desktop__bottom .header-search-toggle:hover svg path {
+	fill: $blue_color;
+}
+.reheader__color_scheme_2.reheader__layout-1 .reheader__desktop__bottom .header-cart__link svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_2.reheader__layout-1 .reheader__desktop__bottom .header-cart__link:hover svg path {
+	fill: $blue_color;
+}
+.reheader__color_scheme_2.reheader__layout-1 .reheader__desktop__bottom .header-cart__link-count {
+	background: $purple_color_lighter_1;
+	color:$white;
+}
+
+
+.reheader__color_scheme_2.reheader__layout-1 .reheader__mobile__top {
+	background: #F6F7F9;
+}
+.reheader__color_scheme_2.reheader__layout-1 .reheader__mobile__top .phone__number {
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_2.reheader__layout-1 .reheader__mobile__top .header__btn a {
+	background: $blue_color_lighter_2;
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_2.reheader__layout-1 .reheader__mobile__top .header__btn a:hover {
+	background: $purple_color;
+	color: $white;
+}
+.reheader__color_scheme_2.reheader__layout-1 .reheader__mobile__bottom {
+	background-color: $white;
+}
+.reheader__color_scheme_2.reheader__layout-2 .reheader__desktop__top {
+	background: $white;
+}
+.reheader__color_scheme_2.reheader__layout-2 .reheader__desktop__top__wrap .right_side .phone__number {
+	color: $dark_blue_lighter_1_color;
+}
+
+.reheader__color_scheme_2.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-search-toggle svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_2.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-search-toggle:hover svg path {
+	fill: $blue_color;
+}
+.reheader__color_scheme_2.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-cart__link svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_2.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-cart__link:hover svg path {
+	fill: $blue_color;
+}
+.reheader__color_scheme_2.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-cart__link-count {
+	background: $purple_color_lighter_1;
+	color:$white;
+}
+
+.reheader__color_scheme_2.reheader__layout-2 .reheader__desktop__bottom {
+	background: $white;
+}
+.reheader__color_scheme_2.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a {
+	color: $purple_color;
+}
+.reheader__color_scheme_2.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a:hover {
+	color: $blue_color;
+}
+.reheader__color_scheme_2.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a svg path {
+	fill: $purple_color;
+}
+.reheader__color_scheme_2.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a:hover svg path {
+	fill: $blue_color;
+}
+.reheader__color_scheme_2.reheader__layout-2 .reheader__desktop__bottom .header-search-toggle svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_3.reheader__layout-1 .reheader__desktop__top {
+	background: $white;
+}
+.reheader__color_scheme_3.reheader__layout-1 .reheader__desktop__top__wrap .right_side .phone__number {
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_3.reheader__layout-1 .reheader__desktop__top__wrap .right_side .header__btn a {
+	background: $blue_color_lighter_2;
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_3.reheader__layout-1 .reheader__desktop__top__wrap .right_side .header__btn a:hover {
+	background: $purple_color;
+	color: $white;
+}
+.reheader__color_scheme_3.reheader__layout-1 .reheader__desktop__bottom {
+	background: $blue_color_lighter_3
+}
+.reheader__color_scheme_3.reheader__layout-1 .reheader__desktop__bottom .header-search-toggle svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_3.reheader__layout-1 .reheader__desktop__bottom .header-search-toggle:hover svg path {
+	fill: $blue_color;
+}
+.reheader__color_scheme_3.reheader__layout-1 .reheader__desktop__bottom .header-cart__link svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_3.reheader__layout-1 .reheader__desktop__bottom .header-cart__link:hover svg path {
+	fill: $blue_color;
+}
+.reheader__color_scheme_3.reheader__layout-1 .reheader__desktop__bottom .header-cart__link-count {
+	background: $purple_color_lighter_1;
+	color:$white;
+}
+
+.reheader__color_scheme_3.reheader__layout-2 .reheader__desktop__top {
+	background: $white;
+}
+.reheader__color_scheme_3.reheader__layout-2 .reheader__desktop__top__wrap .right_side .phone__number {
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_3.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-search-toggle svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_3.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-search-toggle:hover svg path {
+	fill: $blue_color;
+}
+.reheader__color_scheme_3.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-cart__link svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__color_scheme_3.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-cart__link:hover svg path {
+	fill: $blue_color;
+}
+.reheader__color_scheme_3.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-cart__link-count {
+	background: $purple_color_lighter_1;
+	color:$white;
+}
+.reheader__color_scheme_3.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a {
+	color: $purple_color;
+}
+.reheader__color_scheme_3.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a:hover {
+	color: $blue_color;
+}
+.reheader__color_scheme_3.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a svg path {
+	fill: $purple_color;
+}
+.reheader__color_scheme_3.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a:hover svg path {
+	fill: $blue_color;
+}
+
+.reheader__color_scheme_3.reheader__layout-2 .reheader__desktop__bottom {
+	background: $blue_color_lighter_3
+}
+.reheader__overlay.reheader__layout-1 .reheader__desktop__top {
+	background: transparent;
+}
+.reheader__overlay.reheader__layout-1 .reheader__desktop__top__wrap .right_side .phone__number {
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__overlay.reheader__layout-1 .reheader__desktop__top__wrap .right_side .header__btn a {
+	background: $purple_color;
+	color: $white;
+}
+.reheader__overlay.reheader__layout-1 .reheader__desktop__top__wrap .right_side .header__btn a:hover {
+	background: $dark_blue_lighter_1_color;
+	color: $white;
+}
+.reheader__overlay.reheader__layout-1 .reheader__desktop__bottom {
+	background: transparent;
+}
+.reheader__overlay.reheader__layout-1 .reheader__desktop__bottom .header-search-toggle svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__overlay.reheader__layout-1 .reheader__desktop__bottom .header-search-toggle:hover svg path {
+	fill: $blue_color;
+}
+.reheader__overlay.reheader__layout-1 .reheader__desktop__bottom .header-cart__link svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__overlay.reheader__layout-1 .reheader__desktop__bottom .header-cart__link:hover svg path {
+	fill: $blue_color;
+}
+.reheader__overlay.reheader__layout-1 .reheader__desktop__bottom .header-cart__link-count {
+	background: $blue_color_lighter_1;
+	color:$white;
+}
+.reheader__overlay.reheader__layout-1.is_sticky .reheader__desktop__bottom {
+	background: $white;
+}
+.reheader__overlay.reheader__layout-2 .reheader__desktop__top {
+	background: transparent;
+}
+.reheader__overlay.reheader__layout-2 .reheader__desktop__top__wrap .right_side .phone__number {
+	color: $dark_blue_lighter_1_color;
+}
+.reheader__overlay.reheader__layout-2 .reheader__desktop__bottom {
+	background: transparent;
+}
+.reheader__overlay.reheader__layout-2 .reheader__desktop__bottom .header-search-toggle svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__overlay.reheader__layout-2.is_sticky .reheader__desktop__bottom {
+	background: $white;
+}
+.reheader__overlay.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-search-toggle svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__overlay.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-search-toggle:hover svg path {
+	fill: $blue_color;
+}
+.reheader__overlay.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-cart__link svg path {
+	fill: $dark_blue_lighter_1_color;
+}
+.reheader__overlay.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-cart__link:hover svg path {
+	fill: $blue_color;
+}
+.reheader__overlay.reheader__layout-2 .reheader__desktop__top__wrap .right_side .header-cart__link-count {
+	background: $blue_color_lighter_1;
+	color:$white;
+}
+.reheader__overlay.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a {
+	color: $purple_color;
+}
+.reheader__overlay.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a:hover {
+	color: $blue_color;
+}
+.reheader__overlay.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a svg path {
+	fill: $purple_color;
+}
+.reheader__overlay.reheader__layout-2 .reheader__desktop__bottom .reheader__desktop__bottom__wrap .header__btn a:hover svg path {
+	fill: $blue_color;
+}

@@ -1,7 +1,3 @@
-/*-------------------
-### Default Styles
----------------------*/
-
 .default-item {
 
 	.post-thumbnail{
@@ -118,6 +114,73 @@
 		.posted-on {
 			display:inline-block;
 		}
+	}
+}
+
+.grid-item {
+	display: flex;
+	flex-direction: column;
+	&:last-child {
+		margin-bottom: 40px;
+	}
+
+
+	.post-thumbnail{
+		height: 270px;
+		position: relative;
+		margin-bottom: 0px;
+		a {
+			position:absolute;
+			overflow: hidden;
+			left:0px;
+			top:0px;
+			width:100%;
+			height:100%;
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	.posts-list__item-top {
+		flex-grow: 1;
+		min-height: 0px;
+		min-width: 0px;
+	}
+	.posts-list__item-content {
+		padding:40px;
+		position: relative;
+		background: #FFFFFF;
+		border: 1px solid #DDE0E9;
+		flex-grow: 1;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		&__top {
+			padding-bottom:42px;
+		}
+	}
+
+	.entry-meta {
+		margin-top:20px;
+	}
+	.entry-footer {
+		&:before, &:after {
+			display: none;
+		}
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: #1E306E;
+		margin-top:38px;
+		padding-top:28px;
+		border-top:1px solid #DDE0E9;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 }
 

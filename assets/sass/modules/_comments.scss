@@ -2,13 +2,18 @@
 	&-area {
 		position: relative;
 		margin-top: 50px;
-		margin-bottom: 140px;
+		margin-bottom: 0px;
+
 
 		.post-navigation + &,
 		.related-posts + &,
 		.post-author-bio + & {
 			margin-top: 131px;
+			@include media-breakpoint-down(xs) {
+				margin-top: 70px;
+			}
 		}
+
 
 		.elementor-page.position-fullwidth & {
 			margin-bottom: 50px;
@@ -21,24 +26,22 @@
 }
 
 .comment {
+
 	
 	&-list {
 		list-style: none;
 		overflow: hidden;
 		margin-left: 0;
-		margin-bottom: 10px;
-		
 		.comment {
-			margin-bottom: 10px;
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0px;
+			}
 		}
 
 		.children {
 			margin-left: 0;
-			margin-top: 10px;
-			margin-bottom: 30px;
-			padding-left: 10px;
 			list-style: none;
-			
 			@include media-breakpoint-up(md) {
 				padding-left: 30px;
 			}
@@ -61,52 +64,43 @@
 	}
 
 	&-body {
-		
+		margin-bottom: 20px;
+		&:last-child {
+			margin-bottom: 0px;
+		}
 		&__holder {
+			background:transparent!important;
 			position: relative;
 			display: flex;
 			flex-wrap: wrap;
-			padding: 25px 30px 23px;
-
-			@include media-breakpoint-up(xl) {
-				padding: 40px 40px 43px;
-			}
-		}
-
-		.avatar {
-			margin-right: 20px;
-			border-radius: 50%;
-			margin-bottom: 10px;
-
-			@include media-breakpoint-down(sm) {
-				width: 40px;
-			}
+			align-items: flex-start;
 		}
 
 		.reply {
-			margin-top: -20px;
-			margin-right: -20px;
-
-			.icon-svg__comments {
-				width: 16px;
-				height: 16px;
-				margin-right: 7px;
-			}
-			
 			.comment-reply-link {
 				font-weight: 500;
-				font-size: 18px;
-
-				@include media-breakpoint-down(sm) {
-					font-size: 15px;
+				font-size: 14px;
+				line-height: 17px;
+				color: #298CD3;
+				&:hover {
+					text-decoration: underline;
 				}
 			}
+		}
+	}
 
-			@include media-breakpoint-down(sm) {
-				position: absolute;
-				top: 10px;
-				right: 10px;
-				margin: 0;
+	&-metadata {
+		span {
+			display: inline-block!important;
+			margin-right: 5px;
+			text-transform: none;
+			&.fn {
+				a {
+					text-transform: uppercase;
+				}
+			}
+			&:last-child {
+				margin-right: 0px;
 			}
 		}
 	}
@@ -114,19 +108,59 @@
 	&-meta {
 		display: flex;
 		justify-content: space-between;
-		margin-top: 8px;
-		margin-bottom: 9px;
+		margin-top: 0px;
+		margin-bottom: 13px;
 
 		span {
 			display: block;
 		}
 	}
+	&-content {
+		background: #F6F7F9;
+		border-radius: 0px 15px 15px 15px;
+		padding:30px;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 22px;
+		color: #1E306E;
+		position: relative;
+		margin-bottom: 13px;
+		&:before {
+			content: '';
+			display: block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 18px 18px 0;
+			border-color: transparent #f6f7f9 transparent transparent;
+			position: absolute;
+			left:-18px;
+			top:0px;
+		}
+	}
 
 	&-content-wrap {
-		flex: 1 1 200px;
-		max-width: 100%;
+		flex-grow: 1;
+		min-width: 0px;
+
 	}
 	&-author {
-		flex-shrink: 0;
+		flex-basis: 64px;
+		max-width: 64px;
+		width: 64px;
+		min-width: 64px;
+		margin-right: 36px;
+		border-radius: 50%;
+		overflow: hidden;
+		@include media-breakpoint-down(md) {
+			flex-basis: 40px;
+			max-width: 40px;
+			width: 40px;
+			min-width: 40px;
+		}
+		img {
+			display: block;
+			width: 100%;
+		}
 	}
 }

@@ -200,18 +200,86 @@
 	padding-top: 97px;
 	padding-bottom: 0;
 
-	.related-post {
-		margin-bottom: 130px;
-	}
-
-	.post-navigation + & {
-		margin-top: 140px;
-	}
-
-	[class*="col-"] {
-		position: relative;
-		z-index: 2;
+	&__list {
 		display: flex;
+		justify-content: space-between;
+		@include media-breakpoint-down(xs) {
+			display: block;
+		}
+	}
+
+	.related-post {
+		flex-basis: 47.6%;
+		max-width: 47.6%;
+		min-width: 47.6%;
+		width: 47.6%;
+		background: #FFFFFF;
+		border: 1px solid #DDE0E9;
+		box-sizing: border-box;
+		box-shadow: 0px 34px 40px rgba(30, 48, 110, 0);
+		transition: 0.2s;
+		@include media-breakpoint-down(xs) {
+			flex-basis: 100%;
+			max-width: 100%;
+			min-width: 100%;
+			width: 100%;
+			margin-bottom: 40px;
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+		&:hover {
+			box-shadow: 0px 34px 40px rgba(30, 48, 110, 0.06);
+		}
+		.cat-links {
+			margin-bottom: 24px;
+		}
+		.entry-meta {
+			margin-top:38px;
+			padding-top:27px;
+			border-top:1px solid #DDE0E9;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&__content {
+			padding:37px 40px 40px;
+			@include media-breakpoint-down(xs) {
+				padding:37px 15px 40px;
+			}
+		}
+		&__img {
+			display: block;
+			margin:0px;
+			width: 100%;
+			height: 300px;
+			position: relative;
+			background-color: #cecece;
+			.post-thumbnail {
+				margin: 0px;
+				position:absolute;
+				left:0px;
+				top:0px;
+				width:100%;
+				height:100%;
+				&__link {
+					position:absolute;
+					left:0px;
+					top:0px;
+					width:100%;
+					height:100%;
+					overflow:hidden;
+					img {
+						display: block;
+						width: 100%;
+						height: 100%;
+						-o-object-fit: cover;
+						object-fit: cover;
+						margin:0px;
+					}
+				}
+			}
+		}
 	}
 
 	&__title {
@@ -234,44 +302,4 @@
 		}
 	}
 
-	.entry-meta:first-child {
-		margin-top: 0;
-	}
-
-	.entry-header {
-		
-		.entry-title {
-			margin-bottom: 0;
-			margin-top: 24px;
-
-			@include media-breakpoint-up(xl) {
-				font-size: 36px;
-			}
-		}
-
-		& + .entry-meta:not(:empty){
-			margin-top: 27px;
-		}
-	}
-
-	.entry-content {
-		margin-top: 15px;
-
-		& + .entry-meta:not(:empty){
-			margin-top: 27px;
-		}
-	}
-
-	&__overlay {
-		position: absolute;
-		z-index: 1;
-		left: -200%;
-		top: 0;
-		bottom: 0;
-		right: -200%;
-	}
-
-	.entry-footer {
-		margin-top: 0;
-	}
 }

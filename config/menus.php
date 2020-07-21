@@ -11,6 +11,5 @@ function onclinic_register_menus() {
 	register_nav_menus( array(
 		'main'   => esc_html__( 'Main', 'onclinic' ),
 		'footer' => esc_html__( 'Footer', 'onclinic' ),
-		'social' => esc_html__( 'Social', 'onclinic' ),
 	) );
 }

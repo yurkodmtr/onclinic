@@ -49,7 +49,7 @@ function onclinic_header_class( $classes = null ) {
 
     $header_color_scheme = onclinic_theme()->customizer->get_value( 'header_color_scheme' );
 
-	$classes .= ' reheader__style_' . esc_attr($header_color_scheme);
+	$classes .= ' reheader__' . esc_attr($header_color_scheme);
 
 	$sticky = onclinic_theme()->customizer->get_value( 'is_sticky_mode' );
 

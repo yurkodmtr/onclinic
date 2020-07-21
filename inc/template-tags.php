@@ -771,30 +771,6 @@ function onclinic_site_description() {
 }
 endif;
 
-if ( ! function_exists( 'onclinic_social_list' ) ) :
-/**
- * Show Social list.
- *
- * @since  1.0.0
- * @since  1.0.1 Added new param - $type.
- * @return void
- */
-function onclinic_social_list( $context = '', $type = 'icon' ) {
-	$visibility_in_header = onclinic_theme()->customizer->get_value( 'header_social_links' );
-	$visibility_in_footer = onclinic_theme()->customizer->get_value( 'footer_social_links' );
-
-	if ( ! $visibility_in_header && ( 'header' === $context ) ) {
-		return;
-	}
-
-	if ( ! $visibility_in_footer && ( 'footer' === $context ) ) {
-		return;
-	}
-
-	echo onclinic_get_social_list( $context, $type );
-}
-endif;
-
 if ( ! function_exists( 'onclinic_footer_copyright' ) ) :
 	/**
 	 * Show footer copyright text.
@@ -804,13 +780,8 @@ if ( ! function_exists( 'onclinic_footer_copyright' ) ) :
 	 */
 	function onclinic_footer_copyright() {
 		$copyright 		= onclinic_theme()->customizer->get_value( 'footer_copyright' );
-		$logo_url 		= onclinic_theme()->customizer->get_value( 'footer_logo' );
-		$logo_alt 		= get_bloginfo( 'name', 'display' );
-		
+
 		$logo = '';
-		if( !empty( $logo_url ) ) {
-			$logo = '<a class="footer-logo__link" href="' . esc_url( home_url( '/' ) ) . '" rel="home"><img src="' . esc_url( $logo_url ) . '" alt="' . esc_attr( $logo_alt ) . '" /></a>';
-		}
 
 		$format = apply_filters(
 			'onclinic-theme/footer/copyright-format',

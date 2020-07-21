@@ -164,7 +164,7 @@
     }
 }
 
-.reheader__style_default {
+.reheader__color_scheme_1 {
     .main-navigation {
         &__default {
             .menu {
@@ -220,9 +220,34 @@
     }
 }
 
-.reheader__style_invert {
+.reheader__color_scheme_2, .reheader__overlay{
     .main-navigation {
         &__default {
+            .menu {
+                & > li {
+                    margin-right: 40px;
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                    @media (max-width: 1200px) and (min-width: 1025px) {
+                        margin-right: 20px;
+                    }
+                    & > a {
+                        padding: 22px 0px 21px;
+                    }
+                    &.menu-item-has-children {
+                        & > a {
+                            padding-right: 16px;
+                            @media (max-width: 1200px) and (min-width: 1025px) {
+                                padding-right: 16px;
+                            }
+                            &:after {
+                                right: 0px;
+                            }
+                        }
+                    }
+                }
+            }
             .menu {
                 & > li {
                     a {
@@ -278,7 +303,7 @@
     }
 }
 
-.reheader__style_invert_menu {
+.reheader__color_scheme_3 {
     .main-navigation {
         &__default {
             .menu {
@@ -330,6 +355,43 @@
                     }
                     a {
                         color:#1E306E;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.reheader__layout-2 {
+    &.reheader__color_scheme_1, &.reheader__color_scheme_3 {
+        .main-navigation {
+            &__default {
+                .menu {
+                    & > li {
+                        margin-right: 0px;
+                        &:last-child {
+                            margin-right: 0px;
+                        }
+                        @media (max-width: 1200px) and (min-width: 1025px) {
+                            margin-right: 0px;
+                        }
+                        & > a {
+                            padding: 22px 15px 21px 15px;
+                            @media (max-width: 1200px) and (min-width: 1025px) {
+                                padding: 22px 10px 21px 10px;
+                            }
+                        }
+                        &.menu-item-has-children {
+                            & > a {
+                                padding-right: 31px;
+                                @media (max-width: 1200px) and (min-width: 1025px) {
+                                    padding-right: 26px;
+                                }
+                                &:after {
+                                    right: 10px;
+                                }
+                            }
+                        }
                     }
                 }
             }

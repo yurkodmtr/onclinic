@@ -30,6 +30,12 @@ get_header();
 
 				<?php do_action( 'onclinic-theme/site/main-after', 'single' ); ?>
 
+                <?php get_template_part( 'template-parts/single-post/content-author-bio' ); ?>
+
+                <?php onclinic_related_posts(); ?>
+
+                <?php get_template_part( 'template-parts/single-post/comments' ); ?>
+
 			</div><!-- #primary -->
 
 			<?php do_action( 'onclinic-theme/site/primary-after', 'single' ); ?>
@@ -37,11 +43,11 @@ get_header();
 			<?php get_sidebar(); // Loads the sidebar.php template.  ?>
 		</div>
 
-		<?php get_template_part( 'template-parts/single-post/content-author-bio' ); ?>
 
-		<?php onclinic_related_posts(); ?>
 
-		<?php get_template_part( 'template-parts/single-post/comments' ); ?>
+
+
+
 
 	</div>
 

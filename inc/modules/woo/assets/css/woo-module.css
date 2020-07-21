@@ -2968,21 +2968,25 @@ header .elementor-widget-wp-widget-woocommerce_widget_cart .woocommerce-mini-car
   .header-cart__link {
     position: relative;
     display: block;
-    margin-left: 15px; }
+    margin-left: 20px;
+    padding-right:18px;
+  }
     .header-cart__link svg {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       margin-top: -1px; }
     .header-cart__link-count {
       position: absolute;
-      top: -16px;
-      right: 0;
-      width: 20px;
-      height: 20px;
+      top: -14px;
+      right: 0px;
+      width: 24px;
+      height: 24px;
       text-align: center;
-      font-weight: 700;
-      font-size: 10px;
-      line-height: 20px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      background: #89CCF7;
+      border-radius: 50%;
       overflow: hidden;
       -o-text-overflow: ellipsis;
       text-overflow: ellipsis; }
