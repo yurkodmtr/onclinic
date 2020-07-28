@@ -2,8 +2,30 @@
  * Products widget
  */
 .elementor-widget-wp-widget-woocommerce_products,
-.widget_products {
+.widget_products, .woocommerce {
 	.product_list_widget {
 		@extend %product-list-widget;
+		a {
+			padding-top:0px!important;
+		}
+		img {
+			max-width:80px!important;
+			margin-top:0px!important;
+		}
+		.product-title {
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 20px;
+			color: #1E306E;
+		}
+		.amount {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 22px;
+			color: #1E306E;
+		}
+		.star-rating {
+			margin: 6px 0px;
+		}
 	}
 }

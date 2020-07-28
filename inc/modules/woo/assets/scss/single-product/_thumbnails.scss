@@ -3,18 +3,13 @@
  */
 .woocommerce-product-gallery {
 	position: relative;
-	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 80px;
-
-	@include media-breakpoint-up(md) {
-		display: block;
-		margin: 0 0 140px;
-	}
+	margin-bottom: 0px;
 
 	@include media-breakpoint-down(md) {
 		max-width: 600px;
+		margin-bottom: 40px;
 	}
 
 	@media (max-width: 640px) {
@@ -24,9 +19,9 @@
 	//gallery trigger
 	&__trigger {
 		display: inline-block;
-		height: 50px;
-		width:  50px;
-		border-radius: 5px;
+		height: 44px;
+		width:  44px;
+		border-radius: 50%;
 		border: $wc-single-product-gallery-trigger-b;
 		position: absolute;
 		top: 20px;
@@ -34,17 +29,25 @@
 		z-index: 1;
 		text-align: center;
 		font-size: 0;
-
-		&::before {
-			content: $wc-single-product-gallery-trigger-icon;
-			@extend %icon-font-default;
-			font-size: $wc-single-product-gallery-trigger-fz;
-			line-height:  50px;
-			color: #b3b9bf;
+		&:before {
+			content: url("data:image/svg+xml; utf8, %3Csvg%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M8.11709%200C12.5931%200%2016.2347%203.64155%2016.2347%208.11757C16.2347%209.70382%2015.777%2011.185%2014.9872%2012.4366L17.4711%2014.9206C18.1756%2015.625%2018.1756%2016.7672%2017.4711%2017.4716C16.7666%2018.1761%2015.6245%2018.1761%2014.9201%2017.4716L12.4361%2014.9877C11.1844%2015.7775%209.70327%2016.2351%208.11709%2016.2351C3.64106%2016.2351%20-0.000488281%2012.5936%20-0.000488281%208.11757C-0.000488281%203.64155%203.64099%200%208.11709%200ZM8.11709%2014.4312C11.5984%2014.4312%2014.4308%2011.5989%2014.4308%208.11757C14.4308%204.63623%2011.5985%201.8039%208.11709%201.8039C4.6357%201.8039%201.80341%204.63623%201.80341%208.11757C1.80341%2011.5989%204.63567%2014.4312%208.11709%2014.4312Z%22%20fill%3D%22%231E306E%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+			position:absolute;
+			left:0px;
+			top:0px;
+			right:0px;
+			bottom:0px;
+			margin:auto;
+			line-height: 0px;
+			width:18px;
+			height:18px;
 		}
-
 		img {
 			display: none !important;
+		}
+		&:hover {
+			&:before {
+				content: url("data:image/svg+xml; utf8, %3Csvg%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M8.11709%200C12.5931%200%2016.2347%203.64155%2016.2347%208.11757C16.2347%209.70382%2015.777%2011.185%2014.9872%2012.4366L17.4711%2014.9206C18.1756%2015.625%2018.1756%2016.7672%2017.4711%2017.4716C16.7666%2018.1761%2015.6245%2018.1761%2014.9201%2017.4716L12.4361%2014.9877C11.1844%2015.7775%209.70327%2016.2351%208.11709%2016.2351C3.64106%2016.2351%20-0.000488281%2012.5936%20-0.000488281%208.11757C-0.000488281%203.64155%203.64099%200%208.11709%200ZM8.11709%2014.4312C11.5984%2014.4312%2014.4308%2011.5989%2014.4308%208.11757C14.4308%204.63623%2011.5985%201.8039%208.11709%201.8039C4.6357%201.8039%201.80341%204.63623%201.80341%208.11757C1.80341%2011.5989%204.63567%2014.4312%208.11709%2014.4312Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+			}
 		}
 	}
 
@@ -64,7 +67,8 @@
 		margin-left: 0;
 		display: flex;
 		flex-wrap: wrap;
-		margin-top: 40px;
+		margin-top: 20px;
+		margin-bottom: 0px;
 
 		li {
 
@@ -92,15 +96,40 @@
 .woocommerce-product-gallery--columns-6{
 	li{
 		display: block;
-		width: calc( (100%/5) - (40px/5));
+		width: 55px;
+		height:55px;
+		img {
+			box-sizing: border-box;
+			border-radius: 6px!important;
+			padding:3px;
+			display: block;
+			border: 2px solid transparent!important;
+			&.flex-active {
+				background: #FFFFFF;
+				border: 2px solid #298CD3!important;
+			}
+		}
 	}
 }
 
 .product-gallery__wrap {
 	text-align: center;
+}
 
-	@include media-breakpoint-up(md) {
-		order: 1;
-		text-align: left;
+.single_product_row {
+	position:relative;
+	&:before {
+		content:'';
+		display: block;
+		width: 1px;
+		height:100%;
+		background-color: #DDE0E9;
+		position:absolute;
+		left:50%;
+		top:0px;
+		transform: translateX(-50%);
+		@media screen and (max-width:939px) {
+			display: none;
+		}
 	}
 }

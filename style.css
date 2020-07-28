@@ -2275,22 +2275,19 @@ a {
   .edit-link a {
     display: inline-block;
     font-weight: 500;
-    font-size: 18px; }
+    font-size: 18px;
+    background-color: transparent !important; }
     .edit-link a:before {
-      content: '';
+      content: url("data:image/svg+xml; utf8, %3Csvg%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M0.78125%206.90625V5.54688L7.45312%200.578125L8.25%201.6875L2.23438%206.23438L8.25%2010.7812L7.45312%2011.8906L0.78125%206.90625Z%22%20fill%3D%22%23298CD3%22%2F%3E%0A%3C%2Fsvg%3E%0A");
       display: inline-block;
       vertical-align: middle;
-      margin-right: 6px;
-      margin-top: -3px;
-      width: 15px;
-      height: 9px;
-      background-position: center;
-      background-repeat: no-repeat;
-      -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"><path d="M5.958 8.786L0.918 4.772L5.958 0.776V4.376H14.454V5.186H5.958V8.786Z"/></svg>');
-      mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"><path d="M5.958 8.786L0.918 4.772L5.958 0.776V4.376H14.454V5.186H5.958V8.786Z"/></svg>');
-      -webkit-transition: background-color 0.2s ease-out;
-      -o-transition: background-color 0.2s ease-out;
-      transition: background-color 0.2s ease-out; }
+      width: 9px;
+      height: 12px;
+      background-color: transparent !important;
+      line-height: 0px;
+      margin-right: 5px;
+      position: relative;
+      top: -2px; }
 
 /*--------------------------------------------------------------
 ## Menus

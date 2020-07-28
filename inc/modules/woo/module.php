@@ -204,7 +204,7 @@ if ( ! class_exists( 'Onclinic_Woo_Module' ) ) {
 
 			wp_enqueue_style(
 				'onclinic-woocommerce-style',
-				get_template_directory_uri() . '/inc/modules/woo/assets/css/woo-module' . ( is_rtl() ? '-rtl' : '' ) . '.css',
+				get_template_directory_uri() . '/inc/modules/woo/assets/css/woo-module' . ( is_rtl() ? '-rtl' : '' ) . '.css?v='.time(),
 				false,
 				onclinic_theme()->version()
 			);

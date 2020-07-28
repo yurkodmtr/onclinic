@@ -4,7 +4,8 @@
 .elementor-widget-wp-widget-woocommerce_layered_nav,
 .elementor-widget-wp-widget-woocommerce_layered_nav_filters,
 .widget_layered_nav,
-.widget_layered_nav_filters {
+.widget_layered_nav_filters,
+.woocommerce.widget_product_categories {
 	
 	.select2{
 		.select2-selection--single{
@@ -29,41 +30,59 @@
 		li{
 			position: relative;
 
-			> a{
+			> a {
 				position: relative;
 				display: inline-block;
-				vertical-align: top;
-				padding-left: 40px;
+				vertical-align: middle;
+				padding-left: 33px;
 				text-transform: none;
-				line-height: 30px;
-				font-size: 14px;
-			
+				font-weight: 500;
+				font-size: 16px;
+				color:#298cd3;
 				&:before{
 					content: "";
 					position: absolute;
 					left: 0;
 					top: 0;
-					width: 30px;
-					height: 30px;
+					width: 24px;
+					height: 24px;
 					display: block;
 					border: 0;
-					border-radius: 0;
-					background-color: #F8F8F8;
+					border-radius: 2px;
+					background-color: #F6F7F9;
+				}
+				&:hover {
+					color:#8067BD!important;
+				}
+			}
+			> span {
+				font-weight: 500;
+				font-size: 16px;
+				color: #89CCF7;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			&.chosen, &.current-cat{
+				a {
+					color: #8067BD;
+					&:after{
+						position: absolute;
+						left: 6px;
+						top: 8px;
+						width:12px;
+						height:9px;
+						background-color: transparent;
+						line-height: 9px;
+						mask-image:none;
+						content: url("data:image/svg+xml; utf8, %3Csvg%20width%3D%2212%22%20height%3D%229%22%20viewBox%3D%220%200%2012%209%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M4.45337%209C4.09271%209%203.74673%208.85516%203.49168%208.59751L0.398332%205.47176C-0.132777%204.93508%20-0.132777%204.0649%200.398332%203.52822C0.929442%202.99155%201.79052%202.99155%202.32171%203.52822L4.45337%205.68221L9.67829%200.402546C10.2094%20-0.134129%2011.0705%20-0.134209%2011.6017%200.402466C12.1328%200.939141%2012.1328%201.80932%2011.6017%202.346L5.41506%208.59735C5.16009%208.85524%204.8141%209%204.45337%209Z%22%20fill%3D%22%231E306E%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+					}
 				}
 			}
 
-			&.chosen{
-				a:after{	
-					position: absolute;
-					left: 4px;
-					top: 6px;
-					
-					@extend %icon-svg-check;
-				}
-			}
 			
 			+ li{
-				margin-top: 15px;
+				margin-top: 10px;
 			}
 			
 		}

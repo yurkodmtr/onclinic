@@ -41,7 +41,7 @@
 .woocommerce.widget .woocs_price_code,
 .woocommerce div.product p.price ins,
 .woocommerce div.product span.price ins{
-	color: $primary_text_color;
+	color: $blue_color;
 }
 
 /* product list title */
@@ -60,7 +60,7 @@
 }
 
 .woocommerce-loop-product__description {
-	color: $secondary_text_color !important;
+	color: $dark_blue_lighter_1_color !important;
 }
 
 /* archive title */
@@ -114,11 +114,13 @@
 .single-product .quantity input {
 	color: $primary_text_color;
 }
+
 .single-product .single_add_to_cart_button.button {
 	color: $invert_text_color;
 	background-color: $btn_bg_color;
 	border-color: $btn_bg_color;
 }
+
 .single-product .single_add_to_cart_button.button:hover {
 	color: $primary_text_color;
 	background-color: $invert_text_color;
@@ -197,11 +199,21 @@
 	text-align: $h5_text_align;
 	color: $h5_color;
 }
-.star-rating:before,
-.star-rating span:before,
-.stars a:before {
-	background-color: $primary_text_color;
+
+.star-rating:before{
+	background-color: $dark_blue_lighter_2_color;
 }
+.star-rating span:before {
+	background-color: #F8BD4B;
+}
+.stars a:before {
+	background-color: $dark_blue_lighter_2_color;
+}
+
+
+
+
+
 #review_form .comment-form-comment textarea,
 #review_form .comment-form-author input,
 #review_form .comment-form-email input,
@@ -251,16 +263,13 @@
 	line-height: $button_line_height;
 	font-family: @font_family( $button_font_family );
 	letter-spacing: $button_letter_spacing{px};
-	color: $invert_text_color;
-	background-color: $btn_bg_color;
-	border-color: $btn_bg_color;
+	color: $white;
+	background-color: $dark_blue_color;
 }
 .added_to_cart.wc-forward:hover,
 .woocommerce .button:hover,
 .elementor-widget-wp-widget-woocommerce_widget_cart .button:hover {
-	color: $primary_text_color;
-	background-color: transparent;
-	border-color: $btn_border_color;
+	background-color: $purple_color;
 }
 .button.ajax_add_to_cart.added:before {
 	background-color: $invert_text_color;
@@ -269,21 +278,17 @@
 	background-color: $primary_text_color;
 }
 
+.woocommerce-mini-cart__buttons .wc-forward:not(.checkout),
+.woocommerce .widget_price_filter .price_slider_amount .button,
 .woocommerce .products .button.add_to_cart_button {
-	color: $primary_text_color;
-	background-color: transparent;
-	border-color: $btn_border_color;
+	color: $white;
+	background-color: $dark_blue_color!important;
 }
+.woocommerce-mini-cart__buttons .wc-forward:not(.checkout):hover,
+.woocommerce .widget_price_filter .price_slider_amount .button:hover,
 .woocommerce .products .button.add_to_cart_button:hover {
-	color: $invert_text_color;
-	background-color: $btn_bg_color;
-	border-color: $btn_bg_color;
-}
-.woocommerce .products .button.add_to_cart_button:before {
-	background-color: $btn_bg_color;
-}
-.woocommerce .products .button.add_to_cart_button:hover:before {
-	background-color: $invert_text_color;
+	color: $white!important;
+	background-color: $purple_color!important;
 }
 
 .added_to_cart.wc-forward:hover,
