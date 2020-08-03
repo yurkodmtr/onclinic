@@ -4,14 +4,14 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Onclinic
+ * @package Ocularis
  * @subpackage single-post
  */
 
-$columns 		= onclinic_theme()->customizer->get_value( 'related_posts_grid' );
-$thumb 			= ( '3' != $columns ) ? 'onclinic-thumb-related2' : 'onclinic-thumb-related';
+$columns 		= ocularis_theme()->customizer->get_value( 'related_posts_grid' );
+$thumb 			= ( '3' != $columns ) ? 'ocularis-thumb-related2' : 'ocularis-thumb-related';
 $words_count 	= $settings['excerpt_length'];
-$more 			= apply_filters( 'onclinic_post_excerpt_more_text', '&hellip;' );
+$more 			= apply_filters( 'ocularis_post_excerpt_more_text', '&hellip;' );
 $excerpt 		= wp_trim_words( get_the_excerpt(), $words_count, $more );
 ?>
 
@@ -20,7 +20,7 @@ $excerpt 		= wp_trim_words( get_the_excerpt(), $words_count, $more );
     <div class="related-post__img">
         <?php
         if ( has_post_thumbnail() && $settings['image_visible'] ) {
-            onclinic_post_thumbnail(
+            ocularis_post_thumbnail(
                 $thumb,
                 array( 'visible' => $settings['image_visible'] )
             );
@@ -29,7 +29,7 @@ $excerpt 		= wp_trim_words( get_the_excerpt(), $words_count, $more );
     </div>
     <div class="related-post__content">
         <?php
-            onclinic_posted_in( array(
+            ocularis_posted_in( array(
                 'prefix'  => '',
                 'visible' => $settings['categories_visible']
             ) );
@@ -47,12 +47,12 @@ $excerpt 		= wp_trim_words( get_the_excerpt(), $words_count, $more );
 
         <div class="entry-meta">
             <?php
-                onclinic_posted_on( array(
+                ocularis_posted_on( array(
                     'visible' => $settings['date_visible']
                 ));
-                onclinic_post_comments( array(
+                ocularis_post_comments( array(
                     'visible' => true,
-                    'postfix' => onclinic_get_icon_svg( 'comment' )
+                    'postfix' => ocularis_get_icon_svg( 'comment' )
                 ));
              ?>
         </div>

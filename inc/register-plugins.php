@@ -4,7 +4,7 @@
  *
  * @package Storycle
  */
-add_action( 'tgmpa_register', 'onclinic_register_required_plugins' );
+add_action( 'tgmpa_register', 'ocularis_register_required_plugins' );
 /**
  * Register the required plugins for this theme.
  *
@@ -19,14 +19,14 @@ add_action( 'tgmpa_register', 'onclinic_register_required_plugins' );
  * This function is hooked into tgmpa_init, which is fired within the
  * TGM_Plugin_Activation class constructor.
  */
-function onclinic_register_required_plugins() {
+function ocularis_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
 	$plugins = array(
 		array(
-			'name'   => esc_html__( 'Jet Plugins Wizard', 'onclinic' ),
+			'name'   => esc_html__( 'Jet Plugins Wizard', 'ocularis' ),
 			'slug'   => 'jet-plugins-wizard',
 			'source' => 'https://github.com/ZemezLab/jet-plugins-wizard/archive/master.zip',
 		),
@@ -42,7 +42,7 @@ function onclinic_register_required_plugins() {
 	 * Only uncomment the strings in the config array if you want to customize the strings.
 	 */
 	$config = array(
-		'id'           => 'onclinic',            // Unique ID for hashing notices for multiple instances of TGMPA.
+		'id'           => 'ocularis',            // Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',                      // Default absolute path to bundled plugins.
 		'menu'         => 'tgmpa-install-plugins', // Menu slug.
 		'has_notices'  => true,                    // Show admin notices or not.

@@ -5,6 +5,6 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.34855 9L0 1.65145L1.65145 0L9 7.34855L16.3485 0L18 1.65145L10.6515 9L18 16.3485L16.3485 18L9 10.6515L1.65145 18L0 16.3485L7.34855 9Z" fill="#1E306E"/>
             </svg>
         </button>
-        <?php onclinic_main_menu_mobile(); ?>
+        <?php ocularis_main_menu_mobile(); ?>
     </div>
 </div>

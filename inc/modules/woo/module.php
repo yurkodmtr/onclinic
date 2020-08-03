@@ -8,12 +8,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! class_exists( 'Onclinic_Woo_Module' ) ) {
+if ( ! class_exists( 'Ocularis_Woo_Module' ) ) {
 
 	/**
-	 * Define Onclinic_Woo_Module class
+	 * Define Ocularis_Woo_Module class
 	 */
-	class Onclinic_Woo_Module extends Onclinic_Module_Base {
+	class Ocularis_Woo_Module extends Ocularis_Module_Base {
 
 		/**
 		 * Module ID
@@ -41,17 +41,17 @@ if ( ! class_exists( 'Onclinic_Woo_Module' ) ) {
 			 */
 			add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
-			add_filter( 'onclinic-theme/assets-depends/script', array( $this, 'assets_depends_script' ) );
+			add_filter( 'ocularis-theme/assets-depends/script', array( $this, 'assets_depends_script' ) );
 
-			add_filter( 'onclinic-theme/customizer/options', array( $this, 'customizer_options' ) );
+			add_filter( 'ocularis-theme/customizer/options', array( $this, 'customizer_options' ) );
 
-			add_filter( 'cx_customizer/core_sections', array(  $this, 'onclinic_customizer_core_sections' ) );
+			add_filter( 'cx_customizer/core_sections', array(  $this, 'ocularis_customizer_core_sections' ) );
 		}
 
 		/**
 		 * Add WooCommerce customizer sections
 		*/
-		public function onclinic_customizer_core_sections( $sections ) {
+		public function ocularis_customizer_core_sections( $sections ) {
 			$sections[] = 'woocommerce_settings';
 			return $sections;
 		}
@@ -67,7 +67,7 @@ if ( ! class_exists( 'Onclinic_Woo_Module' ) ) {
 
 			$new_options = array(
 				'woocommerce_accent_color' => array(
-					'title' 			=> esc_html__( 'WooCommerce Accent color', 'onclinic' ),
+					'title' 			=> esc_html__( 'WooCommerce Accent color', 'ocularis' ),
 					'section' 			=> 'color_scheme',
 					'priority' 			=> 10,
 					'default' 			=> '#27d18b',
@@ -77,19 +77,19 @@ if ( ! class_exists( 'Onclinic_Woo_Module' ) ) {
 
 				/* `Woocommerce Settings` panel */
 				'woocommerce_settings' => array(
-					'title' 			=> esc_html__( 'WooCommerce Options', 'onclinic' ),
+					'title' 			=> esc_html__( 'WooCommerce Options', 'ocularis' ),
 					'priority' 			=> 200,
 					'type' 				=> 'panel',
 				),
 				
 				'woo_general' => array(
-					'title' 			=> esc_html__( 'General', 'onclinic' ),
+					'title' 			=> esc_html__( 'General', 'ocularis' ),
 					'panel' 			=> 'woocommerce_settings',
 					'priority' 			=> 1,
 					'type' 				=> 'section',
 				),
 				'woo_header_cart_icon' => array(
-					'title' 			=> esc_html__( 'Header Cart Icon', 'onclinic' ),
+					'title' 			=> esc_html__( 'Header Cart Icon', 'ocularis' ),
 					'section' 			=> 'woo_general',
 					'default' 			=> true,
 					'field' 			=> 'checkbox',
@@ -97,24 +97,24 @@ if ( ! class_exists( 'Onclinic_Woo_Module' ) ) {
 				),
 
 				'single_product_layout' => array(
-					'title' 			=> esc_html__( 'Single product layout', 'onclinic' ),
+					'title' 			=> esc_html__( 'Single product layout', 'ocularis' ),
 					'panel' 			=> 'woocommerce_settings',
 					'priority' 			=> 1,
 					'type' 				=> 'section',
 				),
 				'single_product_container_type' => array(
-					'title' 			=> esc_html__( 'Single product container type', 'onclinic' ),
+					'title' 			=> esc_html__( 'Single product container type', 'ocularis' ),
 					'section' 			=> 'single_product_layout',
 					'default' 			=> 'boxed',
 					'field' 			=> 'select',
 					'choices' 			=> array(
-						'boxed' 	=> esc_html__( 'Boxed', 'onclinic' ),
-						'fullwidth' => esc_html__( 'Fullwidth', 'onclinic' ),
+						'boxed' 	=> esc_html__( 'Boxed', 'ocularis' ),
+						'fullwidth' => esc_html__( 'Fullwidth', 'ocularis' ),
 					),
 					'type' 				=> 'control',	 
 				),
 				'single_product_sharing' => array(
-					'title' 			=> esc_html__( 'Product Sharing', 'onclinic' ),
+					'title' 			=> esc_html__( 'Product Sharing', 'ocularis' ),
 					'section' 			=> 'single_product_layout',
 					'default' 			=> true,
 					'field' 			=> 'checkbox',
@@ -158,7 +158,7 @@ if ( ! class_exists( 'Onclinic_Woo_Module' ) ) {
 		 * @return int
 		 */
 		public function assets_depends_script( $scripts_depends ) {
-			array_push( $scripts_depends, 'onclinic-woo-module-script' );
+			array_push( $scripts_depends, 'ocularis-woo-module-script' );
 
 			return $scripts_depends;
 		}
@@ -171,10 +171,10 @@ if ( ! class_exists( 'Onclinic_Woo_Module' ) ) {
 		public function enqueue_scripts() {
 			// register scripts
 			wp_register_script(
-				'onclinic-woo-module-script',
+				'ocularis-woo-module-script',
 				get_theme_file_uri( 'inc/modules/woo/assets/js/woo-module-script.js' ),
 				array( 'jquery' ),
-				onclinic_theme()->version(),
+				ocularis_theme()->version(),
 				true
 			);
 		}
@@ -198,15 +198,15 @@ if ( ! class_exists( 'Onclinic_Woo_Module' ) ) {
 			}';
 
 			wp_add_inline_style(
-				'onclinic-woocommerce-style',
+				'ocularis-woocommerce-style',
 				$inline_font
 			);
 
 			wp_enqueue_style(
-				'onclinic-woocommerce-style',
+				'ocularis-woocommerce-style',
 				get_template_directory_uri() . '/inc/modules/woo/assets/css/woo-module' . ( is_rtl() ? '-rtl' : '' ) . '.css?v='.time(),
 				false,
-				onclinic_theme()->version()
+				ocularis_theme()->version()
 			);
 
 		}

@@ -2,7 +2,7 @@
 /**
  * Theme Breadcrumbs.
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
 /**
@@ -12,20 +12,20 @@
  * @return array
  */
 
-function onclinic_get_breadcrumbs_options() {
+function ocularis_get_breadcrumbs_options() {
 	/**
 	 * Filter a holder for breadcrumbs options.
 	 *
 	 * @since 1.0.0
 	 */
 
-	return apply_filters( 'onclinic-theme/breadcrumbs/options' , array(
+	return apply_filters( 'ocularis-theme/breadcrumbs/options' , array(
 		'wrapper_format'    => '<div class="container"><div class="row"><div class="breadcrumbs_items">%2$s</div></div></div>',
 		'separator'         => '&#62;',
 		'show_browse'       => false,
-		'show_on_front'     => onclinic_theme()->customizer->get_value( 'breadcrumbs_front_visibillity' ),
+		'show_on_front'     => ocularis_theme()->customizer->get_value( 'breadcrumbs_front_visibillity' ),
 		'show_title'        => false,
-		'path_type'         => onclinic_theme()->customizer->get_value( 'breadcrumbs_path_type' ),
+		'path_type'         => ocularis_theme()->customizer->get_value( 'breadcrumbs_path_type' ),
 		'css_namespace'     => array(
 			'module'    => 'breadcrumbs',
 			'content'   => 'breadcrumbs_content',

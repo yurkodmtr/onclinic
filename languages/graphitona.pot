@@ -69,7 +69,7 @@ msgstr ""
 #: config/plugins-wizard.php:150
 #: config/plugins-wizard.php:156
 #: functions.php:627
-msgid "Onclinic"
+msgid "Ocularis"
 msgstr ""
 
 #: config/import.php:20
@@ -234,7 +234,7 @@ msgstr ""
 #: functions.php:632
 msgid ""
 "Learn More About "
-"Onclinic"
+"Ocularis"
 msgstr ""
 
 #: functions.php:635
@@ -1682,7 +1682,7 @@ msgstr ""
 #, php-format
 msgid ""
 "Copyright &copy; %%year"
-"%% Onclinic. Powered "
+"%% Ocularis. Powered "
 "by "
 msgstr ""
 

@@ -2,13 +2,13 @@
 /**
  * Class for widget areas registration.
  *
- * @package    Onclinic
+ * @package    Ocularis
  * @subpackage Class
  */
 
-if ( ! class_exists( 'Onclinic_Widget_Area' ) ) {
+if ( ! class_exists( 'Ocularis_Widget_Area' ) ) {
 
-	class Onclinic_Widget_Area {
+	class Ocularis_Widget_Area {
 
 		/**
 		 * A reference to an instance of this class.
@@ -42,7 +42,7 @@ if ( ! class_exists( 'Onclinic_Widget_Area' ) ) {
 		 */
 		function __construct() {
 			add_action( 'widgets_init',            array( $this, 'register' ) );
-			add_action( 'onclinic-theme/widget-area/render', array( $this, 'render' ) );
+			add_action( 'ocularis-theme/widget-area/render', array( $this, 'render' ) );
 		}
 
 		/**
@@ -110,12 +110,12 @@ if ( ! class_exists( 'Onclinic_Widget_Area' ) ) {
 				}
 			}
 
-			$area_id        = apply_filters( 'onclinic-theme/widget_area/rendering_current', $area_id );
+			$area_id        = apply_filters( 'ocularis-theme/widget_area/rendering_current', $area_id );
 			$before_wrapper = isset( $this->widgets_settings[ $area_id ]['before_wrapper'] ) ? $this->widgets_settings[ $area_id ]['before_wrapper'] : '<div id="%1$s" %2$s>';
 			$after_wrapper  = isset( $this->widgets_settings[ $area_id ]['after_wrapper'] ) ? $this->widgets_settings[ $area_id ]['after_wrapper'] : '</div>';
 
 			$classes = array( $area_id, 'widget-area' );
-			$classes = apply_filters( 'onclinic-theme/widget_area/classes', $classes, $area_id );
+			$classes = apply_filters( 'ocularis-theme/widget_area/classes', $classes, $area_id );
 
 			if ( is_array( $classes ) ) {
 				$classes = 'class="' . join( ' ', $classes ) . '"';
@@ -159,9 +159,9 @@ if ( ! class_exists( 'Onclinic_Widget_Area' ) ) {
 		}
 	}
 
-	function onclinic_widget_area() {
-		return Onclinic_Widget_Area::get_instance();
+	function ocularis_widget_area() {
+		return Ocularis_Widget_Area::get_instance();
 	}
 
-	onclinic_widget_area();
+	ocularis_widget_area();
 }

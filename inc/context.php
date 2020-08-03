@@ -2,7 +2,7 @@
 /**
  * Contextual functions for the header, footer, content and sidebar classes.
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
 /**
@@ -12,13 +12,13 @@
  * @param  string  $classes Additional classes.
  * @return string
  */
-function onclinic_get_container_classes( $classes = null, $fullwidth = false ) {
+function ocularis_get_container_classes( $classes = null, $fullwidth = false ) {
 	if ( $classes ) {
 		$classes .= ' ';
 	}
 
-	if ( ! apply_filters( 'onclinic-theme/site/fullwidth', $fullwidth ) ) {
-		$layout_type = onclinic_theme()->customizer->get_value( 'container_type' );
+	if ( ! apply_filters( 'ocularis-theme/site/fullwidth', $fullwidth ) ) {
+		$layout_type = ocularis_theme()->customizer->get_value( 'container_type' );
 
 		if ( 'boxed' == $layout_type ) {
 			$classes .= 'container';
@@ -35,7 +35,7 @@ function onclinic_get_container_classes( $classes = null, $fullwidth = false ) {
  * @param   string  $classes Additional classes.
  * @return  void
  */
-function onclinic_header_class( $classes = null ) {
+function ocularis_header_class( $classes = null ) {
 
 	if ( $classes ) {
 		$classes .= ' ';
@@ -43,21 +43,21 @@ function onclinic_header_class( $classes = null ) {
 
     $classes .= ' reheader';
 
-	$layout = onclinic_theme()->customizer->get_value( 'header_layout_type' );
+	$layout = ocularis_theme()->customizer->get_value( 'header_layout_type' );
 
 	$classes .= ' reheader__' . esc_attr( $layout );
 
-    $header_color_scheme = onclinic_theme()->customizer->get_value( 'header_color_scheme' );
+    $header_color_scheme = ocularis_theme()->customizer->get_value( 'header_color_scheme' );
 
 	$classes .= ' reheader__' . esc_attr($header_color_scheme);
 
-	$sticky = onclinic_theme()->customizer->get_value( 'is_sticky_mode' );
+	$sticky = ocularis_theme()->customizer->get_value( 'is_sticky_mode' );
 
 	if ( $sticky ) {
 		$classes .= ' reheader__sticky';
 	}
 
-	echo 'class="' . apply_filters( 'onclinic-theme/site-header/content-classes', $classes ) . '"';
+	echo 'class="' . apply_filters( 'ocularis-theme/site-header/content-classes', $classes ) . '"';
 }
 
 /**
@@ -66,14 +66,14 @@ function onclinic_header_class( $classes = null ) {
  * @since  1.0.0
  * @return string
  */
-function onclinic_content_class( $classes = null ) {
+function ocularis_content_class( $classes = null ) {
 	if ( $classes ) {
 		$classes .= ' ';
 	}
 	
 	$classes .= 'site-content__wrap';
 
-	echo 'class="' . apply_filters( 'onclinic-theme/site-content/content-classes', $classes ) . '"';
+	echo 'class="' . apply_filters( 'ocularis-theme/site-content/content-classes', $classes ) . '"';
 }
 
 /**
@@ -82,20 +82,20 @@ function onclinic_content_class( $classes = null ) {
  * @since  1.0.0
  * @return string
  */
-function onclinic_footer_class( $classes = null ) {
+function ocularis_footer_class( $classes = null ) {
 	if ( $classes ) {
 		$classes .= ' ';
 	}
 	
 	$classes .= 'site-footer__wrap';
 
-	$site_content_container = apply_filters( 'onclinic-theme/site-footer/container-enabled', true );
+	$site_content_container = apply_filters( 'ocularis-theme/site-footer/container-enabled', true );
 
 	if ( $site_content_container ) {
 		$classes .= ' container';
 	}
 
-	echo 'class="' . apply_filters( 'onclinic-theme/site-footer/content-classes', $classes ) . '"';
+	echo 'class="' . apply_filters( 'ocularis-theme/site-footer/content-classes', $classes ) . '"';
 }
 
 /**
@@ -105,8 +105,8 @@ function onclinic_footer_class( $classes = null ) {
  * @param  array $classes Additional classes.
  * @return void
  */
-function onclinic_primary_content_class( $classes = array() ) {
-	echo onclinic_get_layout_classes( 'content', $classes );
+function ocularis_primary_content_class( $classes = array() ) {
+	echo ocularis_get_layout_classes( 'content', $classes );
 }
 
 /**
@@ -116,8 +116,8 @@ function onclinic_primary_content_class( $classes = array() ) {
  * @param  array $classes Additional classes.
  * @return void
  */
-function onclinic_secondary_content_class( $classes = array() ) {
-	echo onclinic_get_layout_classes( 'sidebar', $classes );
+function ocularis_secondary_content_class( $classes = array() ) {
+	echo ocularis_get_layout_classes( 'sidebar', $classes );
 }
 
 /**
@@ -128,16 +128,16 @@ function onclinic_secondary_content_class( $classes = array() ) {
  * @param  array  $classes Additional classes.
  * @return string
  */
-function onclinic_get_layout_classes( $layout = 'content', $classes = array() ) {
-	$sidebar_position = onclinic_theme()->sidebar_position;
-	$sidebar_width    = onclinic_theme()->customizer->get_value( 'sidebar_width' );
+function ocularis_get_layout_classes( $layout = 'content', $classes = array() ) {
+	$sidebar_position = ocularis_theme()->sidebar_position;
+	$sidebar_width    = ocularis_theme()->customizer->get_value( 'sidebar_width' );
 
 	if ( 'none' === $sidebar_position || !is_active_sidebar( 'sidebar' ) ) {
 		$sidebar_position = is_singular( 'post' ) ? 'single-post-fullwidth' : 'fullwidth';
 		$sidebar_width = 0;
 	}
 
-	$layout_classes = ! empty( onclinic_theme()->layout[ $sidebar_position ][ $sidebar_width ][ $layout ] ) ? onclinic_theme()->layout[ $sidebar_position ][ $sidebar_width ][ $layout ] : array();
+	$layout_classes = ! empty( ocularis_theme()->layout[ $sidebar_position ][ $sidebar_width ][ $layout ] ) ? ocularis_theme()->layout[ $sidebar_position ][ $sidebar_width ][ $layout ] : array();
 
 	if ( ! empty( $classes ) ) {
 		$layout_classes = array_merge( $layout_classes, $classes );
@@ -147,7 +147,7 @@ function onclinic_get_layout_classes( $layout = 'content', $classes = array() ) 
 		return '';
 	}
 
-	$layout_classes = apply_filters( "onclinic-theme/wrapper/{$layout}_classes", $layout_classes );
+	$layout_classes = apply_filters( "ocularis-theme/wrapper/{$layout}_classes", $layout_classes );
 
 	return 'class="' . join( ' ', $layout_classes ) . '"';
 }
@@ -159,14 +159,14 @@ function onclinic_get_layout_classes( $layout = 'content', $classes = array() ) 
  * @param  string       $classes Additional classes.
  * @return string|void
  */
-function onclinic_posts_list_class( $classes = null ) {
+function ocularis_posts_list_class( $classes = null ) {
 	if ( $classes ) {
 		$classes .= ' ';
 	}
 
 	$classes .= 'posts-list';
 
-	echo 'class="' . apply_filters( 'onclinic-theme/posts/list-class', $classes ) . '"';
+	echo 'class="' . apply_filters( 'ocularis-theme/posts/list-class', $classes ) . '"';
 }
 
 
@@ -177,7 +177,7 @@ function onclinic_posts_list_class( $classes = null ) {
  * @param  array $classes Additional classes.
  * @return void
  */
-function onclinic_site_branding_class( $classes = array() ) {
+function ocularis_site_branding_class( $classes = array() ) {
 	$classes[] = 'site-branding';
 
 	echo 'class="' . join( ' ', $classes ) . '"';

@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
-if ( ! get_theme_mod( 'single_post_navigation', onclinic_theme()->customizer->get_default( 'single_post_navigation' ) ) ) {
+if ( ! get_theme_mod( 'single_post_navigation', ocularis_theme()->customizer->get_default( 'single_post_navigation' ) ) ) {
 	return;
 }
 
@@ -44,7 +44,7 @@ $the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ) { ?>
 
 	<nav class="navigation post-navigation">
-		<h2 class="screen-reader-text"><?php echo esc_html__( 'Post navigation', 'onclinic' ); ?></h2>
+		<h2 class="screen-reader-text"><?php echo esc_html__( 'Post navigation', 'ocularis' ); ?></h2>
 		
 		<div class="nav-links">
 			
@@ -70,7 +70,7 @@ if ( $the_query->have_posts() ) { ?>
 				?>
 
 					<div class="nav-links__item <?php echo esc_attr( $nav_class ); ?>">
-                        <?php  onclinic_post_thumbnail(); ?>
+                        <?php  ocularis_post_thumbnail(); ?>
                         <div class="nav-description">
                             <h5 class="h6-style">
                                 <a href="<?php echo esc_url( $permalink ); ?>"><?php echo wp_kses_post( wp_unslash( $title ) ); ?></a>

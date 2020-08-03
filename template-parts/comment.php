@@ -1,8 +1,8 @@
-<?php do_action( 'onclinic-theme/comments/comment-before' ); ?>
+<?php do_action( 'ocularis-theme/comments/comment-before' ); ?>
 <div class="comment-body__holder">
-	<?php if ( ! empty( onclinic_comment_author_avatar() ) ) : ?>
+	<?php if ( ! empty( ocularis_comment_author_avatar() ) ) : ?>
 		<div class="comment-author vcard">
-			<?php echo onclinic_comment_author_avatar( array(
+			<?php echo ocularis_comment_author_avatar( array(
 				'size' => 60
 			) ); ?>
 		</div>
@@ -10,21 +10,21 @@
 	<div class="comment-content-wrap">
 		<footer class="comment-meta">
 			<div class="comment-metadata">
-				<?php echo onclinic_get_comment_author_link(); ?>
-				<?php echo onclinic_get_comment_date(); ?>
+				<?php echo ocularis_get_comment_author_link(); ?>
+				<?php echo ocularis_get_comment_date(); ?>
 			</div>
 		</footer>
 		<div class="comment-content">
-			<?php echo onclinic_get_comment_text(); ?>
+			<?php echo ocularis_get_comment_text(); ?>
 		</div>
         <div class="reply">
-            <?php echo onclinic_get_comment_reply_link( array(
+            <?php echo ocularis_get_comment_reply_link( array(
                 'before' 		=> '',
-                'reply_text' 	=> esc_html__( '< Reply', 'onclinic' ),
+                'reply_text' 	=> esc_html__( '< Reply', 'ocularis' ),
             ) ); ?>
         </div>
 	</div>
 </div>
 
 
-<?php do_action( 'onclinic-theme/comments/comment-after' ); ?>
+<?php do_action( 'ocularis-theme/comments/comment-after' ); ?>

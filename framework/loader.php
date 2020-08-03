@@ -31,12 +31,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! class_exists( 'Onclinic_CX_Loader' ) ) {
+if ( ! class_exists( 'Ocularis_CX_Loader' ) ) {
 
 	/**
-	 * Define Onclinic_CX_Loader class
+	 * Define Ocularis_CX_Loader class
 	 */
-	class Onclinic_CX_Loader {
+	class Ocularis_CX_Loader {
 
 		/**
 		 * Key for object cache where are stored information about all modules in current environment

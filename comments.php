@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
 /*
@@ -20,24 +20,24 @@ if ( post_password_required() ) {
 }
 ?>
 
-<?php do_action( 'onclinic-theme/comments/comments-area-before' ); ?>
+<?php do_action( 'ocularis-theme/comments/comments-area-before' ); ?>
 
 <div id="comments" class="comments-area"><?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
 
-		<?php do_action( 'onclinic-theme/comments/title-before' ); ?>
+		<?php do_action( 'ocularis-theme/comments/title-before' ); ?>
 
 		<h5 class="comments-title h3-style">
 			<?php
 				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One Comment', '%1$s Comments', get_comments_number(), 'comments title', 'onclinic' ) ),
+					esc_html( _nx( 'One Comment', '%1$s Comments', get_comments_number(), 'comments title', 'ocularis' ) ),
 					number_format_i18n( get_comments_number() )
 				);
 			?>
 		</h5><!-- .comments-title -->
 
-		<?php do_action( 'onclinic-theme/comments/comment-list-before' ); ?>
+		<?php do_action( 'ocularis-theme/comments/comment-list-before' ); ?>
 
 		<ol class="comment-list">
 			<?php
@@ -45,26 +45,26 @@ if ( post_password_required() ) {
 					'style'       => 'ol',
 					'avatar_size' => 85,
 					'short_ping'  => true,
-					'callback'    => 'onclinic_rewrite_comment_item',
+					'callback'    => 'ocularis_rewrite_comment_item',
 				) );
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php do_action( 'onclinic-theme/comments/comments-navigation-before' ); ?>
+		<?php do_action( 'ocularis-theme/comments/comments-navigation-before' ); ?>
 
 		<?php the_comments_navigation();
 
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) : ?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'onclinic' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'ocularis' ); ?></p>
 		<?php
 		endif;
 
 	endif; // Check for have_comments().
 
-	do_action( 'onclinic-theme/comments/comment-form-before' );
+	do_action( 'ocularis-theme/comments/comment-form-before' );
 
 	comment_form();
 ?></div><!-- #comments -->
 
-<?php do_action( 'onclinic-theme/comments/comments-area-after' ); ?>
+<?php do_action( 'ocularis-theme/comments/comments-area-after' ); ?>

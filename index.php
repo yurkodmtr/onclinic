@@ -9,32 +9,32 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Onclinic
+ * @package Ocularis
  */
 get_header();
 
-	do_action( 'onclinic-theme/site/site-content-before', 'index' ); ?>
+	do_action( 'ocularis-theme/site/site-content-before', 'index' ); ?>
 
-	<div <?php onclinic_content_class() ?>>
+	<div <?php ocularis_content_class() ?>>
 		
 		<?php if ( is_home() && ! is_front_page() ) : ?>
 
-            <?php onclinic_blog_page_title() ;?>
+            <?php ocularis_blog_page_title() ;?>
 
 		<?php endif; ?>
 
 		<div class="row">
 
-			<?php do_action( 'onclinic-theme/site/primary-before', 'index' ); ?>
+			<?php do_action( 'ocularis-theme/site/primary-before', 'index' ); ?>
 
-			<div id="primary" <?php onclinic_primary_content_class(); ?>>
+			<div id="primary" <?php ocularis_primary_content_class(); ?>>
 
-				<?php do_action( 'onclinic-theme/site/main-before', 'index' ); ?>
+				<?php do_action( 'ocularis-theme/site/main-before', 'index' ); ?>
 
 				<main id="main" class="site-main"><?php
 					if ( have_posts() ) :
 
-						onclinic_theme()->do_location( 'archive', 'template-parts/posts-loop' );
+						ocularis_theme()->do_location( 'archive', 'template-parts/posts-loop' );
 
 					else :
 
@@ -43,11 +43,11 @@ get_header();
 					endif;
 				?></main><!-- #main -->
 
-				<?php do_action( 'onclinic-theme/site/main-after', 'index' ); ?>
+				<?php do_action( 'ocularis-theme/site/main-after', 'index' ); ?>
 
 			</div><!-- #primary -->
 
-			<?php do_action( 'onclinic-theme/site/primary-after', 'index' ); ?>
+			<?php do_action( 'ocularis-theme/site/primary-after', 'index' ); ?>
 
 			<?php
 				get_sidebar(); // Loads the sidebar.php template.
@@ -55,6 +55,6 @@ get_header();
 		</div>
 	</div>
 
-	<?php do_action( 'onclinic-theme/site/site-content-after', 'index' );
+	<?php do_action( 'ocularis-theme/site/site-content-after', 'index' );
 
 get_footer();

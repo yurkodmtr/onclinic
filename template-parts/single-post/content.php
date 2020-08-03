@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
 ?>
@@ -12,7 +12,7 @@
 <div class="entry-content">
 	<?php the_content(); ?>
 	<?php wp_link_pages( array(
-		'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'onclinic' ),
+		'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'ocularis' ),
 		'after'       => '</div>',
 		'link_before' => '<span>',
 		'link_after'  => '</span>',

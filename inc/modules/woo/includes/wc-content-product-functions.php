@@ -2,10 +2,10 @@
 /**
  * WooCommerce content product hooks.
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
-add_action( 'woocommerce_before_shop_loop_item', 'onclinic_wc_loop_product_content_open', 1 );
+add_action( 'woocommerce_before_shop_loop_item', 'ocularis_wc_loop_product_content_open', 1 );
 
 remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
 add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 20 );
@@ -13,53 +13,53 @@ add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loo
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
 add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_rating', 20 );
 
-add_action( 'woocommerce_after_shop_loop_item', 'onclinic_wc_loop_product_content_close', 20 );
+add_action( 'woocommerce_after_shop_loop_item', 'ocularis_wc_loop_product_content_close', 20 );
 
 remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
-add_action( 'woocommerce_shop_loop_item_title', 'onclinic_wc_template_loop_product_title', 10 );
+add_action( 'woocommerce_shop_loop_item_title', 'ocularis_wc_template_loop_product_title', 10 );
 
-add_action( 'woocommerce_after_shop_loop_item_title', 'onclinic_woocommerce_list_description', 40 );
+add_action( 'woocommerce_after_shop_loop_item_title', 'ocularis_woocommerce_list_description', 40 );
 
-add_filter( 'woocommerce_loop_add_to_cart_link', 'onclinic_wc_loop_add_to_cart_link', 10, 3 );
+add_filter( 'woocommerce_loop_add_to_cart_link', 'ocularis_wc_loop_add_to_cart_link', 10, 3 );
 
-add_action( 'woocommerce_before_subcategory', 'onclinic_wc_loop_category_content_open', 1 );
-add_action( 'woocommerce_after_subcategory', 'onclinic_wc_loop_category_content_close', 40 );
+add_action( 'woocommerce_before_subcategory', 'ocularis_wc_loop_category_content_open', 1 );
+add_action( 'woocommerce_after_subcategory', 'ocularis_wc_loop_category_content_close', 40 );
 
-if ( ! function_exists( 'onclinic_wc_loop_product_content_open' ) ) {
+if ( ! function_exists( 'ocularis_wc_loop_product_content_open' ) ) {
 
 	/**
 	 * Content product wrapper open
 	 */
-	function onclinic_wc_loop_product_content_open() {
+	function ocularis_wc_loop_product_content_open() {
 		echo '<div class="product-content">';
 	}
 
 }
 
-if ( ! function_exists( 'onclinic_wc_loop_product_content_close' ) ) {
+if ( ! function_exists( 'ocularis_wc_loop_product_content_close' ) ) {
 
 	/**
 	 * Content product wrapper close
 	 */
-	function onclinic_wc_loop_product_content_close() {
+	function ocularis_wc_loop_product_content_close() {
 		echo '</div>';
 	}
 
 }
 
-if ( ! function_exists( 'onclinic_wc_template_loop_product_title' ) ) {
+if ( ! function_exists( 'ocularis_wc_template_loop_product_title' ) ) {
 
 	/**
 	 * Show the product title in the product loop. By default this is an H2.
 	 */
-	function onclinic_wc_template_loop_product_title() {
-		echo onclinic_woocommerce_list_categories();
+	function ocularis_wc_template_loop_product_title() {
+		echo ocularis_woocommerce_list_categories();
 		echo '<h2 class="woocommerce-loop-product__title"><a href="' . esc_url( get_the_permalink() ) . '">' . get_the_title() . '</a></h2>';
 	}
 }
 
 
-if ( ! function_exists( 'onclinic_wc_loop_add_to_cart_link' ) ){
+if ( ! function_exists( 'ocularis_wc_loop_add_to_cart_link' ) ){
 
 	/**
 	 *  Override product loop add to cart button
@@ -70,7 +70,7 @@ if ( ! function_exists( 'onclinic_wc_loop_add_to_cart_link' ) ){
 	 *
 	 * @return string
 	 */
-	function onclinic_wc_loop_add_to_cart_link( $html, $product, $args ) {
+	function ocularis_wc_loop_add_to_cart_link( $html, $product, $args ) {
 		$html = sprintf( '<a href="%s" data-quantity="%s" class="%s" %s><span class="button-text">%s</span></a>',
 			esc_url( $product->add_to_cart_url() ),
 			esc_attr( isset( $args['quantity'] ) ? $args['quantity'] : 1 ),
@@ -84,23 +84,23 @@ if ( ! function_exists( 'onclinic_wc_loop_add_to_cart_link' ) ){
 
 }
 
-if ( ! function_exists( 'onclinic_wc_loop_category_content_open' ) ) {
+if ( ! function_exists( 'ocularis_wc_loop_category_content_open' ) ) {
 
 	/**
 	 * Content category wrapper open
 	 */
-	function onclinic_wc_loop_category_content_open() {
+	function ocularis_wc_loop_category_content_open() {
 		echo '<div class="category-content">';
 	}
 
 }
 
-if ( ! function_exists( 'onclinic_wc_loop_category_content_close' ) ) {
+if ( ! function_exists( 'ocularis_wc_loop_category_content_close' ) ) {
 
 	/**
 	 * Content category wrapper close
 	 */
-	function onclinic_wc_loop_category_content_close() {
+	function ocularis_wc_loop_category_content_close() {
 		echo '</div>';
 	}
 
@@ -112,7 +112,7 @@ if ( ! function_exists( 'onclinic_wc_loop_category_content_close' ) ) {
  *
  * @return string
  */
-function onclinic_woocommerce_list_categories() {
+function ocularis_woocommerce_list_categories() {
 	$sep    = '</li> <li>';
 	$before = '<ul class="product-categories"><li>';
 	$after  = '</li></ul>';
@@ -132,7 +132,7 @@ function onclinic_woocommerce_list_categories() {
  *
  * @return string
  */
-function onclinic_woocommerce_list_description() {
+function ocularis_woocommerce_list_description() {
 	
 	global $product;
 

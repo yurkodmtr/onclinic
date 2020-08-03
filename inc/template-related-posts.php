@@ -2,7 +2,7 @@
 /**
  * Related Posts Template Functions.
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
 /**
@@ -11,13 +11,13 @@
  * @since  1.0.0
  * @return array
  */
-function onclinic_related_posts() {
+function ocularis_related_posts() {
 
 	if ( ! is_singular( 'post' ) ) {
 		return;
 	}
 
-	$visible = onclinic_theme()->customizer->get_value( 'related_posts_visible' );
+	$visible = ocularis_theme()->customizer->get_value( 'related_posts_visible' );
 
 	if ( false === $visible ) {
 		return;
@@ -33,7 +33,7 @@ function onclinic_related_posts() {
 	}
 
 	$post_terms  = array();
-	$post_number = onclinic_theme()->customizer->get_value( 'related_posts_count' );
+	$post_number = ocularis_theme()->customizer->get_value( 'related_posts_count' );
 
 	$post_terms = wp_list_pluck( $terms, 'term_id' );
 
@@ -68,7 +68,7 @@ function onclinic_related_posts() {
 	);
 
 	foreach ( $settings as $setting_key => $setting_value ) {
-		$settings[ $setting_key ] = onclinic_theme()->customizer->get_value( $setting_value );
+		$settings[ $setting_key ] = ocularis_theme()->customizer->get_value( $setting_value );
 	}
 
 	$settings['grid_count'] 	= ( int ) 12 / $settings[ 'layout_columns' ];

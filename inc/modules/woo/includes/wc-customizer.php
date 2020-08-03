@@ -2,10 +2,10 @@
 /**
  * WooCommerce customizer options
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
-if ( ! function_exists( 'onclinic_set_wc_dynamic_css_options' ) ) {
+if ( ! function_exists( 'ocularis_set_wc_dynamic_css_options' ) ) {
 
 	/**
 	 * Add dynamic WooCommerce styles
@@ -14,7 +14,7 @@ if ( ! function_exists( 'onclinic_set_wc_dynamic_css_options' ) ) {
 	 *
 	 * @return mixed
 	 */
-	function onclinic_set_wc_dynamic_css_options( $options ) {
+	function ocularis_set_wc_dynamic_css_options( $options ) {
 
 		array_push( $options['css_files'], get_theme_file_path( 'inc/modules/woo/assets/css/dynamic/woo-module-dynamic.css' ) );
 
@@ -23,4 +23,4 @@ if ( ! function_exists( 'onclinic_set_wc_dynamic_css_options' ) ) {
 	}
 
 }
-add_filter( 'onclinic-theme/dynamic_css/options', 'onclinic_set_wc_dynamic_css_options' );
+add_filter( 'ocularis-theme/dynamic_css/options', 'ocularis_set_wc_dynamic_css_options' );

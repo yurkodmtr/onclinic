@@ -8,12 +8,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! class_exists( 'Onclinic_Woo_Page_Title_Module' ) ) {
+if ( ! class_exists( 'Ocularis_Woo_Page_Title_Module' ) ) {
 
 	/**
-	 * Define Onclinic_Woo_Page_Title_Module class
+	 * Define Ocularis_Woo_Page_Title_Module class
 	 */
-	class Onclinic_Woo_Page_Title_Module extends Onclinic_Module_Base {
+	class Ocularis_Woo_Page_Title_Module extends Ocularis_Module_Base {
 
 		/**
 		 * Module ID

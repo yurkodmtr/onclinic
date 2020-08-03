@@ -2,7 +2,7 @@
 /**
  * SVG Icons class
  *
- * @package Onclinic
+ * @package Ocularis
  * @since 1.0.0
  */
 
@@ -18,7 +18,7 @@
  *
  * @since 1.0.0
  */
-class Onclinic_SVG_Icons {
+class Ocularis_SVG_Icons {
 
 	/**
 	 * Gets the SVG code for a given icon.
@@ -79,6 +79,6 @@ class Onclinic_SVG_Icons {
  * @param  array|string $classes Additional CSS classes
  * @return null|string
  */
-function onclinic_get_icon_svg( $icon = '', $classes = array() ) {
-	return Onclinic_SVG_Icons::get_svg( $icon, $classes );
+function ocularis_get_icon_svg( $icon = '', $classes = array() ) {
+	return Ocularis_SVG_Icons::get_svg( $icon, $classes );
 }

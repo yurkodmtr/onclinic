@@ -2,7 +2,7 @@
 /**
  * Functions for handling how comments are displayed and used on the site.
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
 /**
@@ -13,10 +13,10 @@
  * @param array  $args     An array of arguments.
  * @param int    $depth    Depth of comment.
  */
-function onclinic_rewrite_comment_item( $_comment, $args, $depth ) {
+function ocularis_rewrite_comment_item( $_comment, $args, $depth ) {
 	global $comment;
 
-	$_comment->onclinic_comment_list_args = $args;
+	$_comment->ocularis_comment_list_args = $args;
 	$comment = $_comment;
 
 	$tag = ( 'div' === $args['style'] ) ? 'div' : 'li'; ?>
@@ -35,11 +35,11 @@ function onclinic_rewrite_comment_item( $_comment, $args, $depth ) {
  * @param  array  $args   Arguments.
  * @return string $output Avatar of the author of the comment.
  */
-function onclinic_comment_author_avatar( $args = array() ) {
+function ocularis_comment_author_avatar( $args = array() ) {
 	global $comment;
 
-	if ( ! empty( $comment->onclinic_comment_list_args['avatar_size'] ) ) {
-		$size = $comment->onclinic_comment_list_args['avatar_size'];
+	if ( ! empty( $comment->ocularis_comment_list_args['avatar_size'] ) ) {
+		$size = $comment->ocularis_comment_list_args['avatar_size'];
 	}
 
 	if ( ! empty( $args['size'] ) ) {
@@ -53,7 +53,7 @@ function onclinic_comment_author_avatar( $args = array() ) {
 	 * @param array $output Avatar.
 	 * @param array $args   Arguments.
 	 */
-	return apply_filters( 'onclinic-theme/comments/author-avatar', get_avatar( $comment, $size ), $args );
+	return apply_filters( 'ocularis-theme/comments/author-avatar', get_avatar( $comment, $size ), $args );
 }
 
 /**
@@ -63,7 +63,7 @@ function onclinic_comment_author_avatar( $args = array() ) {
  * @param  array  $args   Arguments.
  * @return string $output URL of the author of the comment.
  */
-function onclinic_get_comment_author_link( $args = array() ) {
+function ocularis_get_comment_author_link( $args = array() ) {
 	/**
 	 * Filter a URL of the author of the current comment.
 	 *
@@ -71,7 +71,7 @@ function onclinic_get_comment_author_link( $args = array() ) {
 	 * @param array $output URL of the author of the comment.
 	 * @param array $args   Arguments.
 	 */
-	return apply_filters( 'onclinic_get_comment_author_link', sprintf( '<span class="fn">%1$s %2$s</span>', esc_html__( 'by', 'onclinic' ), get_comment_author_link() ), $args );
+	return apply_filters( 'ocularis_get_comment_author_link', sprintf( '<span class="fn">%1$s %2$s</span>', esc_html__( 'by', 'ocularis' ), get_comment_author_link() ), $args );
 }
 
 /**
@@ -81,8 +81,8 @@ function onclinic_get_comment_author_link( $args = array() ) {
  * @param  array  $args   Arguments.
  * @return string $output The comment date of the current comment.
  */
-function onclinic_get_comment_date( $args = array() ) {
-	$format = get_option( 'date_format' ) . ' ' . esc_attr_x( '\a\t', 'time prefix in comment date', 'onclinic' ) . ' ' . get_option( 'time_format' );
+function ocularis_get_comment_date( $args = array() ) {
+	$format = get_option( 'date_format' ) . ' ' . esc_attr_x( '\a\t', 'time prefix in comment date', 'ocularis' ) . ' ' . get_option( 'time_format' );
 
 	if ( ! empty( $args['format'] ) ) {
 		$format = esc_attr( $args['format'] );
@@ -95,15 +95,15 @@ function onclinic_get_comment_date( $args = array() ) {
 	 * @param string $output The comment date.
 	 * @param array  $args   Arguments.
 	 */
-	return apply_filters( 'onclinic-theme/comments/date', sprintf(
+	return apply_filters( 'ocularis-theme/comments/date', sprintf(
 		'<span class="comment-date"><a href="%4$s" class="comment-date__link"><time datetime="%2$s" class="comment-date__time">%1$s %3$s</time></a></span>',
-		esc_html__( 'posted', 'onclinic' ),
+		esc_html__( 'posted', 'ocularis' ),
 		get_comment_time( 'c' ),
 		get_comment_date( $format ),
 		get_comment_link()
 	), $args );
 
-	return apply_filters( 'onclinic_get_comment_date', sprintf( '<span class="comment-date"><a href="%4$s" class="comment-date__link"><time datetime="%2$s" class="comment-date__time">%1$s %3$s</time></a></span>', esc_html__( 'posted', 'onclinic' ), get_comment_time( 'c' ), get_comment_date( $format ), get_comment_link() ), $args );
+	return apply_filters( 'ocularis_get_comment_date', sprintf( '<span class="comment-date"><a href="%4$s" class="comment-date__link"><time datetime="%2$s" class="comment-date__time">%1$s %3$s</time></a></span>', esc_html__( 'posted', 'ocularis' ), get_comment_time( 'c' ), get_comment_date( $format ), get_comment_link() ), $args );
 }
 
 /**
@@ -114,7 +114,7 @@ function onclinic_get_comment_date( $args = array() ) {
  * @param  array  $args          Arguments.
  * @return string $output        Comment's text.
  */
-function onclinic_get_comment_text( $args = array() ) {
+function ocularis_get_comment_text( $args = array() ) {
 	global $comment_depth;
 
 	ob_start();
@@ -135,7 +135,7 @@ function onclinic_get_comment_text( $args = array() ) {
 	 * @param string $comment_text Comment's text.
 	 * @param array  $args         Arguments.
 	 */
-	return apply_filters( 'onclinic-theme/comments/text', $comment_text, $args );
+	return apply_filters( 'ocularis-theme/comments/text', $comment_text, $args );
 }
 
 /**
@@ -146,7 +146,7 @@ function onclinic_get_comment_text( $args = array() ) {
  * @param  array  $args          Arguments.
  * @return string $output        `Reply` link.
  */
-function onclinic_get_comment_reply_link( $args = array() ) {
+function ocularis_get_comment_reply_link( $args = array() ) {
 	global $comment_depth;
 
 	$args = wp_parse_args( $args, array(
@@ -166,7 +166,7 @@ function onclinic_get_comment_reply_link( $args = array() ) {
 	 * @param string $reply `reply` link.
 	 * @param array  $args  Arguments.
 	 */
-	return apply_filters( 'onclinic-theme/comments/reply_link', $reply, $args );
+	return apply_filters( 'ocularis-theme/comments/reply_link', $reply, $args );
 }
 
 /**
@@ -176,10 +176,10 @@ function onclinic_get_comment_reply_link( $args = array() ) {
  * @param  array  $args   Arguments.
  * @return string $output HTML-link to edit the current comment.
  */
-function onclinic_get_comment_link_edit( $args = array() ) {
+function ocularis_get_comment_link_edit( $args = array() ) {
 	global $comment;
 
-	$text = esc_html__( 'Edit', 'onclinic' );
+	$text = esc_html__( 'Edit', 'ocularis' );
 
 	if ( ! empty( $args['text'] ) ) {
 		$text = esc_attr( $args['text'] );
@@ -201,5 +201,5 @@ function onclinic_get_comment_link_edit( $args = array() ) {
 	 * @param int    $comment_id Comment ID.
 	 * @param array  $args       Arguments.
 	 */
-	return apply_filters( 'onclinic-theme/comments/link-edit', $link, $comment->comment_ID, $args );
+	return apply_filters( 'ocularis-theme/comments/link-edit', $link, $comment->comment_ID, $args );
 }

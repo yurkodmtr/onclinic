@@ -1,13 +1,13 @@
 <?php
-$visible_header_wc_cart 	= onclinic_theme()->customizer->get_value( 'woo_header_cart_icon' ) && class_exists( 'WooCommerce' );
+$visible_header_wc_cart 	= ocularis_theme()->customizer->get_value( 'woo_header_cart_icon' ) && class_exists( 'WooCommerce' );
 ?>
 
 <div class="reheader__mobile">
         <div class="reheader__mobile__top">
             <div class="reheader__mobile__wrapper">
-                <?php onclinic_header_address(); ?>
-                <?php onclinic_header_phone(); ?>
-                <?php onclinic_header_button(); ?>
+                <?php ocularis_header_address(); ?>
+                <?php ocularis_header_phone(); ?>
+                <?php ocularis_header_button(); ?>
             </div>
         </div>
         <div class="reheader__mobile__bottom">
@@ -21,11 +21,11 @@ $visible_header_wc_cart 	= onclinic_theme()->customizer->get_value( 'woo_header_
                             </svg>
                         </button>
                     </div>
-                    <?php onclinic_header_logo(); ?>
+                    <?php ocularis_header_logo(); ?>
                     <div class="right_side">
-                        <?php onclinic_header_search_toggle('search_black'); ?>
+                        <?php ocularis_header_search_toggle('search_black'); ?>
                         <?php if ( $visible_header_wc_cart ) :
-                            onclinic_wc_header_cart();
+                            ocularis_wc_header_cart();
                         endif; ?>
                     </div>
                 </div>

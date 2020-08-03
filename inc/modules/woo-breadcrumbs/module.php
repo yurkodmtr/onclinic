@@ -8,12 +8,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! class_exists( 'Onclinic_Woo_Breadcrumbs_Module' ) ) {
+if ( ! class_exists( 'Ocularis_Woo_Breadcrumbs_Module' ) ) {
 
 	/**
-	 * Define Onclinic_Woo_Breadcrumbs_Module class
+	 * Define Ocularis_Woo_Breadcrumbs_Module class
 	 */
-	class Onclinic_Woo_Breadcrumbs_Module extends Onclinic_Module_Base {
+	class Ocularis_Woo_Breadcrumbs_Module extends Ocularis_Module_Base {
 
 		/**
 		 * Module ID
@@ -63,7 +63,7 @@ if ( ! class_exists( 'Onclinic_Woo_Breadcrumbs_Module' ) ) {
 				return $is_custom_breadcrumbs;
 			}
 
-			$wc_breadcrumbs = new Onclinic_WC_Breadcrumbs( $args );
+			$wc_breadcrumbs = new Ocularis_WC_Breadcrumbs( $args );
 
 			return array( 'items' => $wc_breadcrumbs->items, 'page_title' => $wc_breadcrumbs->page_title );
 

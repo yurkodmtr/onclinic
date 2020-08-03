@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
 ?>
@@ -14,13 +14,13 @@
 		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 	</header><!-- .page-header -->
 
-	<?php onclinic_post_thumbnail(); ?>
+	<?php ocularis_post_thumbnail(); ?>
 
 	<div class="page-content">
 		<?php
 			the_content();
 			wp_link_pages( array(
-				'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'onclinic' ),
+				'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'ocularis' ),
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
@@ -35,7 +35,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers */
-							esc_html__( 'Edit', 'onclinic' ) . ' <span class="screen-reader-text">%s</span>',
+							esc_html__( 'Edit', 'ocularis' ) . ' <span class="screen-reader-text">%s</span>',
 							array(
 								'span' => array(
 									'class' => array(),

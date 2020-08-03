@@ -4,17 +4,17 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
-if ( ! function_exists( 'onclinic_post_excerpt' ) ) :
+if ( ! function_exists( 'ocularis_post_excerpt' ) ) :
 	/**
 	 * Prints HTML with excerpt.
 	 */
     /**
      * @param array $args
      */
-    function onclinic_post_excerpt($args = array() ) {
+    function ocularis_post_excerpt($args = array() ) {
 		$default_args = array(
 			'before' => '<div class="entry-content">',
 			'after'  => '</div>',
@@ -22,13 +22,13 @@ if ( ! function_exists( 'onclinic_post_excerpt' ) ) :
 		);
 		$args = wp_parse_args( $args, $default_args );
 
-		$post_excerpt_enable = onclinic_theme()->customizer->get_value( 'blog_post_excerpt' );
+		$post_excerpt_enable = ocularis_theme()->customizer->get_value( 'blog_post_excerpt' );
 
 		if ( ! $post_excerpt_enable ) {
 			return;
 		}
 
-		$words_count = onclinic_theme()->customizer->get_value( 'blog_post_excerpt_words_count' );
+		$words_count = ocularis_theme()->customizer->get_value( 'blog_post_excerpt_words_count' );
 
 		if ( has_excerpt() ) {
 			$excerpt = wp_trim_words( get_the_excerpt(), $words_count, '...' );
@@ -44,7 +44,7 @@ if ( ! function_exists( 'onclinic_post_excerpt' ) ) :
 		}
 
 		$excerpt_output = apply_filters(
-			'onclinic-theme/post/excerpt-output',
+			'ocularis-theme/post/excerpt-output',
 			$args['before'] .'<p>'. $excerpt .'</p>'. $args['after']
 		);
 
@@ -56,11 +56,11 @@ if ( ! function_exists( 'onclinic_post_excerpt' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_posted_on' ) ) :
+if ( ! function_exists( 'ocularis_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function onclinic_posted_on( $args = array() ) {
+	function ocularis_posted_on( $args = array() ) {
 		if ( 'post' === get_post_type() ) {
 
 			$default_args = array(
@@ -69,11 +69,11 @@ if ( ! function_exists( 'onclinic_posted_on' ) ) :
 				'before' 	=> '<span class="posted-on">',
 				'after' 	=> '</span>',
 				'echo' 		=> true,
-				'visible' 	=> ! is_singular( 'post' ) ? onclinic_theme()->customizer->get_value( 'blog_post_publish_date' ) : onclinic_theme()->customizer->get_value( 'single_post_publish_date' ),
+				'visible' 	=> ! is_singular( 'post' ) ? ocularis_theme()->customizer->get_value( 'blog_post_publish_date' ) : ocularis_theme()->customizer->get_value( 'single_post_publish_date' ),
 			);
 			
 			$args = wp_parse_args( $args, $default_args );
-			$args = apply_filters( 'onclinic_posted_on_args', $args );
+			$args = apply_filters( 'ocularis_posted_on_args', $args );
 
 			$visible = filter_var( $args['visible'], FILTER_VALIDATE_BOOLEAN );
 
@@ -90,12 +90,12 @@ if ( ! function_exists( 'onclinic_posted_on' ) ) :
 
 			$posted_on = sprintf(
 				/* translators: %s: post date. */
-				esc_html_x( '%s', 'post date', 'onclinic' ),
+				esc_html_x( '%s', 'post date', 'ocularis' ),
 				$time_string
 			);
 
 			$date_output = apply_filters(
-				'onclinic-theme/post/date-output',
+				'ocularis-theme/post/date-output',
 				$args['before'] . $args['prefix'] . ' ' . $posted_on . $args['after']
 			);
 
@@ -119,7 +119,7 @@ if ( ! function_exists( 'onclinic_posted_on' ) ) :
 			);
 
 			if ( $args['echo'] ) {
-				echo wp_kses( $date_output, onclinic_kses_post_allowed_html( $allowed_html ) );
+				echo wp_kses( $date_output, ocularis_kses_post_allowed_html( $allowed_html ) );
 			} else {
 				return $date_output;
 			}
@@ -127,23 +127,23 @@ if ( ! function_exists( 'onclinic_posted_on' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_posted_by' ) ) :
+if ( ! function_exists( 'ocularis_posted_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
-	function onclinic_posted_by( $args = array() ) {
+	function ocularis_posted_by( $args = array() ) {
 		if ( 'post' === get_post_type() ) {
 
 			$default_args = array(
-				'prefix' => esc_html__( 'by', 'onclinic' ),
+				'prefix' => esc_html__( 'by', 'ocularis' ),
 				'before' => '<span class="byline">',
 				'after'  => '</span>',
 				'echo'   => true,
-				'visible'     => ! is_singular( 'post' ) ? onclinic_theme()->customizer->get_value( 'blog_post_author' ) : onclinic_theme()->customizer->get_value( 'single_post_author' ),
+				'visible'     => ! is_singular( 'post' ) ? ocularis_theme()->customizer->get_value( 'blog_post_author' ) : ocularis_theme()->customizer->get_value( 'single_post_author' ),
 			);
 
 			$args = wp_parse_args( $args, $default_args );
-			$args = apply_filters( 'onclinic_posted_by_args', $args );
+			$args = apply_filters( 'ocularis_posted_by_args', $args );
 
 			$visible = filter_var( $args['visible'], FILTER_VALIDATE_BOOLEAN );
 
@@ -151,16 +151,16 @@ if ( ! function_exists( 'onclinic_posted_by' ) ) :
 				return false;
 			}
 			
-			onclinic_get_post_author( $args );
+			ocularis_get_post_author( $args );
 		}
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_posted_in' ) ) :
+if ( ! function_exists( 'ocularis_posted_in' ) ) :
 	/**
 	 * Prints HTML with meta information for the current categories.
 	 */
-	function onclinic_posted_in( $args = array() ) {
+	function ocularis_posted_in( $args = array() ) {
 		if ( 'post' === get_post_type() ) {
 
 			$default_args = array(
@@ -171,7 +171,7 @@ if ( ! function_exists( 'onclinic_posted_in' ) ) :
 				'visible' 	=> true
 			);
 			$args = wp_parse_args( $args, $default_args );
-			$args = apply_filters( 'onclinic_post_thumbnail_args', $args );
+			$args = apply_filters( 'ocularis_post_thumbnail_args', $args );
 
 			$visible = filter_var( $args['visible'], FILTER_VALIDATE_BOOLEAN );
 
@@ -183,12 +183,12 @@ if ( ! function_exists( 'onclinic_posted_in' ) ) :
 			if ( $categories_list ) {
 				$categories = sprintf(
 					/* translators: 1: list of categories. */
-					esc_html__( '%s', 'onclinic' ),
+					esc_html__( '%s', 'ocularis' ),
 					$categories_list
 				);
 
 				echo apply_filters(
-					'onclinic-theme/post/categories-output',
+					'ocularis-theme/post/categories-output',
 					$args['before'] . $args['prefix'] . ' ' . $categories . $args['after']
 				);
 			}
@@ -196,11 +196,11 @@ if ( ! function_exists( 'onclinic_posted_in' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_post_tags' ) ) :
+if ( ! function_exists( 'ocularis_post_tags' ) ) :
 	/**
 	 * Prints HTML with meta information for the current tags.
 	 */
-	function onclinic_post_tags( $args = array() ) {
+	function ocularis_post_tags( $args = array() ) {
 		if ( 'post' !== get_post_type() ) {
 			return false;
 		}
@@ -210,11 +210,11 @@ if ( ! function_exists( 'onclinic_post_tags' ) ) :
 			'delimiter' => ', ',
 			'before'    => '<span class="tags-links">',
 			'after'     => '</span>',
-			'visible'   => ! is_singular( 'post' ) ? onclinic_theme()->customizer->get_value( 'blog_post_tags' ) : onclinic_theme()->customizer->get_value( 'single_post_tags' ),
+			'visible'   => ! is_singular( 'post' ) ? ocularis_theme()->customizer->get_value( 'blog_post_tags' ) : ocularis_theme()->customizer->get_value( 'single_post_tags' ),
 		);
 
 		$args = wp_parse_args( $args, $default_args );
-		$args = apply_filters( 'onclinic_post_tags_args', $args );
+		$args = apply_filters( 'ocularis_post_tags_args', $args );
 
 		$visible = filter_var( $args['visible'], FILTER_VALIDATE_BOOLEAN );
 
@@ -223,27 +223,27 @@ if ( ! function_exists( 'onclinic_post_tags' ) ) :
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html_x( $args['delimiter'], 'list item separator', 'onclinic' ) );
+		$tags_list = get_the_tag_list( '', esc_html_x( $args['delimiter'], 'list item separator', 'ocularis' ) );
 		if ( $tags_list ) {
 			$tags = sprintf(
 				/* translators: 1: list of tags. */
-				esc_html__( '%s', 'onclinic' ),
+				esc_html__( '%s', 'ocularis' ),
 				$tags_list
 			);
 
 			echo apply_filters(
-				'onclinic-theme/post/tags-output',
+				'ocularis-theme/post/tags-output',
 				$args['before'] . $args['prefix'] . ' ' . $tags . $args['after']
 			);
 		}
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_post_comments' ) ) :
+if ( ! function_exists( 'ocularis_post_comments' ) ) :
 	/**
 	 * Prints HTML with meta information for the current comments.
 	 */
-	function onclinic_post_comments( $args = array() ) {
+	function ocularis_post_comments( $args = array() ) {
 		if ( 'post' !== get_post_type() ) {
 			return false;
 		}
@@ -253,17 +253,17 @@ if ( ! function_exists( 'onclinic_post_comments' ) ) :
 			'prefix' 	=> '',
 			'before' 	=> '<span class="comments-link">',
 			'after' 	=> '</span>',
-			'postfix' 	=> esc_html( 'Comment(s)', 'onclinic' ),
-			'visible' => ! is_singular( 'post' ) ? onclinic_theme()->customizer->get_value( 'blog_post_comments' ) : onclinic_theme()->customizer->get_value( 'single_post_comments' ),
+			'postfix' 	=> esc_html( 'Comment(s)', 'ocularis' ),
+			'visible' => ! is_singular( 'post' ) ? ocularis_theme()->customizer->get_value( 'blog_post_comments' ) : ocularis_theme()->customizer->get_value( 'single_post_comments' ),
 		);
 
 		$args = wp_parse_args( $args, $default_args );
-		$args = apply_filters( 'onclinic_post_comments_args', $args );
+		$args = apply_filters( 'ocularis_post_comments_args', $args );
 
 		$visible = filter_var( $args['visible'], FILTER_VALIDATE_BOOLEAN );
 
 		$post_comments_visible = $visible && ! post_password_required() && ( comments_open() || get_comments_number() );
-		$post_comments_visible = apply_filters( 'onclinic_post_comments_visible', $post_comments_visible, $args );
+		$post_comments_visible = apply_filters( 'ocularis_post_comments_visible', $post_comments_visible, $args );
 
 		if ( ! $post_comments_visible ) {
 			return false;
@@ -283,17 +283,17 @@ if ( ! function_exists( 'onclinic_post_comments' ) ) :
 		}
 
 		echo apply_filters(
-			'onclinic-theme/post/comments-output',
+			'ocularis-theme/post/comments-output',
 			$args['before'] . '<a href="' . $link . '" class="' . $args['class'] . '">' . $args['prefix'] . $count . $args['postfix'] . '</a>' . $args['after']
 		);
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_get_post_author' ) ) :
+if ( ! function_exists( 'ocularis_get_post_author' ) ) :
 	/*
 	* Display a post author.
 	*/
-	function onclinic_get_post_author( $args = array() ) {
+	function ocularis_get_post_author( $args = array() ) {
 		$default_args = array(
 			'prefix' 	=> '',
 			'before' 	=> '<span class="author">',
@@ -320,7 +320,7 @@ if ( ! function_exists( 'onclinic_get_post_author' ) ) :
 		$author_output .= $args['after'];
 
 		$author_output = apply_filters(
-			'onclinic-theme/post/author-output',
+			'ocularis-theme/post/author-output',
 			$author_output
 		);
 
@@ -332,11 +332,11 @@ if ( ! function_exists( 'onclinic_get_post_author' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_get_post_author_avatar' ) ) :
+if ( ! function_exists( 'ocularis_get_post_author_avatar' ) ) :
 	/*
 	* Display a post author avatar.
 	*/
-	function onclinic_get_post_author_avatar( $args = array() ) {
+	function ocularis_get_post_author_avatar( $args = array() ) {
 		$default_args = array(
 			'size' => 128,
 			'echo' => true
@@ -347,7 +347,7 @@ if ( ! function_exists( 'onclinic_get_post_author_avatar' ) ) :
 		$author_id = $post->post_author;
 
 		$avatar_output = apply_filters(
-			'onclinic-theme/post/avatar-output',
+			'ocularis-theme/post/avatar-output',
 			get_avatar( get_the_author_meta( 'user_email', $author_id ), $args['size'], '', esc_attr( get_the_author_meta( 'nickname', $author_id ) ) )
 		);
 
@@ -359,18 +359,18 @@ if ( ! function_exists( 'onclinic_get_post_author_avatar' ) ) :
 		);
 
 		if ( $args['echo'] ) {
-			echo wp_kses( $avatar_output, onclinic_kses_post_allowed_html( $allowed_html ) );
+			echo wp_kses( $avatar_output, ocularis_kses_post_allowed_html( $allowed_html ) );
 		} else {
 			return $avatar_output;
 		}
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_get_author_role_name' ) ) :
+if ( ! function_exists( 'ocularis_get_author_role_name' ) ) :
 	/*
 	* Display a post author role.
 	*/
-	function onclinic_get_author_role_name() {
+	function ocularis_get_author_role_name() {
 		
 		global $authordata;
 
@@ -383,11 +383,11 @@ if ( ! function_exists( 'onclinic_get_author_role_name' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_get_author_meta' ) ) :
+if ( ! function_exists( 'ocularis_get_author_meta' ) ) :
 	/*
 	* Display author meta.
 	*/
-	function onclinic_get_author_meta( $args = array() ) {
+	function ocularis_get_author_meta( $args = array() ) {
 		$default_args = array(
 			'field' => 'description',
 			'echo'  => true
@@ -398,7 +398,7 @@ if ( ! function_exists( 'onclinic_get_author_meta' ) ) :
 		$author_id = $post->post_author;
 
 		$author_meta_output = apply_filters(
-			'onclinic-theme/post/author-meta-output',
+			'ocularis-theme/post/author-meta-output',
 			get_the_author_meta( $args['field'], $author_id )
 		);
 
@@ -410,8 +410,8 @@ if ( ! function_exists( 'onclinic_get_author_meta' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_post_link' ) ) :
-	function onclinic_post_link( $args = array() ) {
+if ( ! function_exists( 'ocularis_post_link' ) ) :
+	function ocularis_post_link( $args = array() ) {
 
 		$default_args = array(
 			'class' => '',
@@ -419,7 +419,7 @@ if ( ! function_exists( 'onclinic_post_link' ) ) :
 
 		$args = wp_parse_args( $args, $default_args );
 
-		$post_link_type 	= onclinic_theme()->customizer->get_value( 'blog_read_more_type' );
+		$post_link_type 	= ocularis_theme()->customizer->get_value( 'blog_read_more_type' );
 
 		if ( ! $post_link_type ) {
 			return;
@@ -427,23 +427,23 @@ if ( ! function_exists( 'onclinic_post_link' ) ) :
 
 		$link 				= get_permalink();
 		$icon 				= '<svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.57812 11.8906L0.8125 10.7812L6.8125 6.23438L0.8125 1.6875L1.57812 0.578125L8.28125 5.54688V6.90625L1.57812 11.8906Z" fill="#298CD3"/></svg>';
-		$title 				= onclinic_theme()->customizer->get_value( 'blog_read_more_text' );
+		$title 				= ocularis_theme()->customizer->get_value( 'blog_read_more_text' );
 		$post_link_output 	= '<a href="' . esc_url( $link ) . '" class="btn-text-icon' . esc_attr( $args['class'] ) . '">' . esc_html( $title ) . '' . wp_unslash( $icon ) . '</a>';
 
 		echo apply_filters(
-			'onclinic-theme/post/link-output',
+			'ocularis-theme/post/link-output',
 			$post_link_output
 		);
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_edit_link' ) ) :
-	function onclinic_edit_link() {
+if ( ! function_exists( 'ocularis_edit_link' ) ) :
+	function ocularis_edit_link() {
 		edit_post_link(
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'onclinic' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'ocularis' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -458,7 +458,7 @@ if ( ! function_exists( 'onclinic_edit_link' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_post_thumbnail' ) ) :
+if ( ! function_exists( 'ocularis_post_thumbnail' ) ) :
 /**
  * Displays an optional post thumbnail.
  *
@@ -466,7 +466,7 @@ if ( ! function_exists( 'onclinic_post_thumbnail' ) ) :
  * element when on single views.
  */
 
-function onclinic_post_thumbnail( $image_size = 'post-thumbnail', $args = array() ) {
+function ocularis_post_thumbnail( $image_size = 'post-thumbnail', $args = array() ) {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
@@ -479,7 +479,7 @@ function onclinic_post_thumbnail( $image_size = 'post-thumbnail', $args = array(
 		'visible'    => true,
 	);
 	$args = wp_parse_args( $args, $default_args );
-	$args = apply_filters( 'onclinic_post_thumbnail_args', $args );
+	$args = apply_filters( 'ocularis_post_thumbnail_args', $args );
 
 	$visible = filter_var( $args['visible'], FILTER_VALIDATE_BOOLEAN );
 
@@ -488,7 +488,7 @@ function onclinic_post_thumbnail( $image_size = 'post-thumbnail', $args = array(
 	}
 
 	$image_size = apply_filters(
-		'onclinic-theme/post/thumb-image-size',
+		'ocularis-theme/post/thumb-image-size',
 		$image_size
 	);
 
@@ -505,7 +505,7 @@ function onclinic_post_thumbnail( $image_size = 'post-thumbnail', $args = array(
 	$thumb .= '</figure>';
 
 	$thumb = apply_filters(
-		'onclinic-theme/post/thumb',
+		'ocularis-theme/post/thumb',
 		$thumb
 	);
 
@@ -521,7 +521,7 @@ function onclinic_post_thumbnail( $image_size = 'post-thumbnail', $args = array(
 	);
 
 	if ( $args['echo'] ) {
-		echo wp_kses( $thumb, onclinic_kses_post_allowed_html( $allowed_html ) );
+		echo wp_kses( $thumb, ocularis_kses_post_allowed_html( $allowed_html ) );
 	} else {
 		return $thumb;
 	}
@@ -542,7 +542,7 @@ if ( ! function_exists( 'get_placeholder_url' ) ) :
 			'height'     => 260,
 			'background' => '558dd9',
 			'foreground' => 'fff',
-			'title'      => 'onclinic',
+			'title'      => 'ocularis',
 		) );
 
 		$args      = array_map( 'urlencode', $args );
@@ -565,15 +565,15 @@ if ( ! function_exists( 'get_placeholder_url' ) ) :
 endif;
 
 
-if ( ! function_exists( 'onclinic_post_overlay_thumbnail' ) ) :
+if ( ! function_exists( 'ocularis_post_overlay_thumbnail' ) ) :
 /**
  * Displays post thumbnail as tag style
  *
  * @return string
  */
-function onclinic_post_overlay_thumbnail( $img_size = 'onclinic-thumb-xl', $postID = null ) {
+function ocularis_post_overlay_thumbnail( $img_size = 'ocularis-thumb-xl', $postID = null ) {
 	$thumbnail = apply_filters(
-		'onclinic-theme/post/overlay-thumb',
+		'ocularis-theme/post/overlay-thumb',
 		get_the_post_thumbnail_url( $postID, $img_size )
 	);
 
@@ -583,63 +583,63 @@ function onclinic_post_overlay_thumbnail( $img_size = 'onclinic-thumb-xl', $post
 }
 endif;
 
-if ( ! function_exists( 'onclinic_get_page_preloader' ) ) :
+if ( ! function_exists( 'ocularis_get_page_preloader' ) ) :
 /**
  * Display the page preloader.
  *
  * @since  1.0.0
  * @return void
  */
-function onclinic_get_page_preloader() {
+function ocularis_get_page_preloader() {
 	
-	$page_preloader = onclinic_theme()->customizer->get_value( 'page_preloader' );
+	$page_preloader = ocularis_theme()->customizer->get_value( 'page_preloader' );
 
 	if ( $page_preloader ) {
 
 		echo '<div class="page-preloader-cover">';
-			onclinic_header_logo();
+			ocularis_header_logo();
 			echo '<div class="bar"></div>';
 		echo '</div>';
 	}
 }
 endif;
 
-if ( ! function_exists( 'onclinic_header_bar_markup' ) ) :
+if ( ! function_exists( 'ocularis_header_bar_markup' ) ) :
 	/**
 	 * Header bar markup.
 	 *
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function onclinic_header_bar_markup(){
-		$layout = onclinic_theme()->customizer->get_value( 'header_layout_type' );
+	function ocularis_header_bar_markup(){
+		$layout = ocularis_theme()->customizer->get_value( 'header_layout_type' );
 
 		get_template_part( 'template-parts/header/header', $layout );
 	}
 endif;
-add_action( 'onclinic_header_bar', 'onclinic_header_bar_markup' );
+add_action( 'ocularis_header_bar', 'ocularis_header_bar_markup' );
 
-if ( ! function_exists( 'onclinic_header_logo' ) ) :
+if ( ! function_exists( 'ocularis_header_logo' ) ) :
 /**
  * Display the header logo.
  *
  * @since  1.0.0
  * @return void
  */
-function onclinic_header_logo() {
+function ocularis_header_logo() {
 		
 	$custom_logo_id = get_theme_mod( 'custom_logo' );
 
 	$class = 'site-logo';
 
-	$logo_retina_height = onclinic_theme()->customizer->get_value( 'logo_retina_height' );
+	$logo_retina_height = ocularis_theme()->customizer->get_value( 'logo_retina_height' );
 
 	$custom_logo_attr = array(
 		'itemprop' 	=> 'logo',
 	);
 	$image_retina_url = false;
 	$retina_id = false;
-	$retina_url = onclinic_theme()->customizer->get_value( 'logo_retina' );
+	$retina_url = ocularis_theme()->customizer->get_value( 'logo_retina' );
 	if ( $retina_url ) {
 		$retina_id = attachment_url_to_postid( $retina_url );
 		if ( $retina_id ) {
@@ -667,7 +667,7 @@ function onclinic_header_logo() {
 		$logo = wp_get_attachment_image( $custom_logo_id, 'full', false, $custom_logo_attr );
 
 		$format = apply_filters(
-			'onclinic-theme/header/logo-format',
+			'ocularis-theme/header/logo-format',
 			'<div class="%3$s"><a class="site-logo__link" href="%1$s" rel="home">%2$s</a></div>'
 		);
 
@@ -676,7 +676,7 @@ function onclinic_header_logo() {
 		$logo = get_bloginfo( 'name' );
 
 		$format = apply_filters(
-			'onclinic-theme/header/logo-format',
+			'ocularis-theme/header/logo-format',
 			'<h1 class="%3$s"><a class="site-logo__link" href="%1$s" rel="home">%2$s</a></h1>'
 		);
 	}
@@ -686,15 +686,15 @@ function onclinic_header_logo() {
 }
 endif;
 
-if ( ! function_exists( 'onclinic_site_description' ) ) :
+if ( ! function_exists( 'ocularis_site_description' ) ) :
 	/**
 	 * Display the site description.
 	 *
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function onclinic_site_description() {
-		$site_tagline 	= onclinic_theme()->customizer->get_value( 'site_tagline' );
+	function ocularis_site_description() {
+		$site_tagline 	= ocularis_theme()->customizer->get_value( 'site_tagline' );
 		$description 	= get_bloginfo( 'description', 'display' );
 
 		$visible = $site_tagline && $description;
@@ -709,33 +709,33 @@ if ( ! function_exists( 'onclinic_site_description' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_header_search_toggle' ) ) :
+if ( ! function_exists( 'ocularis_header_search_toggle' ) ) :
 	/**
 	 * Show header search toggle.
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function onclinic_header_search_toggle() {
-		$visible = onclinic_theme()->customizer->get_value( 'header_search_visible' );
+	function ocularis_header_search_toggle() {
+		$visible = ocularis_theme()->customizer->get_value( 'header_search_visible' );
 
 		if ( ! $visible ) {
 			return;
 		}
 
-        echo '<button class="header-search-toggle">'. onclinic_get_icon_svg( 'search' ) .'</button>';
+        echo '<button class="header-search-toggle">'. ocularis_get_icon_svg( 'search' ) .'</button>';
 
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_header_search_popup' ) ) :
+if ( ! function_exists( 'ocularis_header_search_popup' ) ) :
 	/**
 	 * Show header search popup.
 	 *
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function onclinic_header_search_popup() {
-		$visible = onclinic_theme()->customizer->get_value( 'header_search_visible' );
+	function ocularis_header_search_popup() {
+		$visible = ocularis_theme()->customizer->get_value( 'header_search_visible' );
 
 		if ( ! $visible ) {
 			return;
@@ -745,15 +745,15 @@ if ( ! function_exists( 'onclinic_header_search_popup' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_site_description' ) ) :
+if ( ! function_exists( 'ocularis_site_description' ) ) :
 /**
  * Display the site description.
  *
  * @since  1.0.0
  * @return void
  */
-function onclinic_site_description() {
-	$show_desc = onclinic_theme()->customizer->get_value( 'show_tagline' );
+function ocularis_site_description() {
+	$show_desc = ocularis_theme()->customizer->get_value( 'show_tagline' );
 
 	if ( ! $show_desc ) {
 		return;
@@ -765,26 +765,26 @@ function onclinic_site_description() {
 		return;
 	}
 
-	$format = apply_filters( 'onclinic-theme/header/description-format', '<div class="site-description">%s</div>' );
+	$format = apply_filters( 'ocularis-theme/header/description-format', '<div class="site-description">%s</div>' );
 
 	printf( $format, $description );
 }
 endif;
 
-if ( ! function_exists( 'onclinic_footer_copyright' ) ) :
+if ( ! function_exists( 'ocularis_footer_copyright' ) ) :
 	/**
 	 * Show footer copyright text.
 	 *
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function onclinic_footer_copyright() {
-		$copyright 		= onclinic_theme()->customizer->get_value( 'footer_copyright' );
+	function ocularis_footer_copyright() {
+		$copyright 		= ocularis_theme()->customizer->get_value( 'footer_copyright' );
 
 		$logo = '';
 
 		$format = apply_filters(
-			'onclinic-theme/footer/copyright-format',
+			'ocularis-theme/footer/copyright-format',
 			'%1$s<div class="footer-copyright">%2$s</div>'
 		);
 
@@ -792,21 +792,21 @@ if ( ! function_exists( 'onclinic_footer_copyright' ) ) :
 			return;
 		}
 
-		printf( $format, $logo, wp_kses( onclinic_render_macros( $copyright ), wp_kses_allowed_html( 'post' ) ) );
+		printf( $format, $logo, wp_kses( ocularis_render_macros( $copyright ), wp_kses_allowed_html( 'post' ) ) );
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_blog_page_title' ) ) :
+if ( ! function_exists( 'ocularis_blog_page_title' ) ) :
 	/**
 	 * Show blog page title text.
 	 *
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function onclinic_blog_page_title() {
-		$visible 			= onclinic_theme()->customizer->get_value( 'blog_page_title' );
-		$subtitle_text 		= onclinic_theme()->customizer->get_value( 'blog_page_subtitle' );
-		$sidebar_position 	= onclinic_theme()->customizer->get_value( 'blog_sidebar_position' );
+	function ocularis_blog_page_title() {
+		$visible 			= ocularis_theme()->customizer->get_value( 'blog_page_title' );
+		$subtitle_text 		= ocularis_theme()->customizer->get_value( 'blog_page_subtitle' );
+		$sidebar_position 	= ocularis_theme()->customizer->get_value( 'blog_sidebar_position' );
 		
 		if( ! $visible ) {
 			return;
@@ -823,7 +823,7 @@ if ( ! function_exists( 'onclinic_blog_page_title' ) ) :
 		$title = get_the_title( get_option('page_for_posts', true) );
 
 		$format = apply_filters(
-			'onclinic-theme/blog/page-title-format',
+			'ocularis-theme/blog/page-title-format',
 			'<header class="page-header row"><h1 class="page-title %3$s">%1$s</h1>%2$s</header>'
 		);
 
@@ -831,38 +831,38 @@ if ( ! function_exists( 'onclinic_blog_page_title' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_footer_newsletter_popup' ) ) :
+if ( ! function_exists( 'ocularis_footer_newsletter_popup' ) ) :
 	/**
 	 * Show footer newsletter popup.
 	 *
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function onclinic_footer_newsletter_popup() {
+	function ocularis_footer_newsletter_popup() {
 		
 
 		get_template_part( 'template-parts/footer/newsletter-popup' );
 	}
 endif;
 
-if ( ! function_exists( 'onclinic_sticky_label' ) ) :
+if ( ! function_exists( 'ocularis_sticky_label' ) ) :
 /**
  * Show sticky menu label grabbed from options.
  *
  * @since  1.0.0
  * @return void
  */
-function onclinic_sticky_label() {
+function ocularis_sticky_label() {
 	if ( ! is_sticky() || ! is_home() || is_paged() ) {
 		return;
 	}
 
-	$sticky_type = onclinic_theme()->customizer->get_value( 'blog_sticky_type' );
+	$sticky_type = ocularis_theme()->customizer->get_value( 'blog_sticky_type' );
 
 	$content = '';
 
 	$icon    = apply_filters(
-		'onclinic-theme/posts/sticky-icon',
+		'ocularis-theme/posts/sticky-icon',
 		'<svg class="svg-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12.4006 7.70338H20L13.852 12.3607L16.2326 20L10 15.2786L3.76739 20L6.14804 12.3607L0 7.70338H7.59939L10 0ZM10 6.74679L9.08115 9.69532H5.93854L8.48096 11.6213L7.54215 14.6339L10 12.772L12.4579 14.6339L11.519 11.6213L14.0615 9.69532H10.9189L10 6.74679Z"/></svg>'
 	);
 
@@ -873,12 +873,12 @@ function onclinic_sticky_label() {
 		break;
 
 		case 'label':
-		$label = onclinic_theme()->customizer->get_value( 'blog_sticky_label' );
+		$label = ocularis_theme()->customizer->get_value( 'blog_sticky_label' );
 		$content = $label;
 		break;
 
 		case 'both':
-		$label = onclinic_theme()->customizer->get_value( 'blog_sticky_label' );
+		$label = ocularis_theme()->customizer->get_value( 'blog_sticky_label' );
 		$content = $icon . $label;
 		break;
 	}
@@ -895,7 +895,7 @@ endif;
  * Adding Author Bio social icons
  */
 function evatheme_core_add_remove_contactmethods( $contactmethods ) {
-	$contacts = onclinic_author_contact_methods();
+	$contacts = ocularis_author_contact_methods();
 	
 	foreach($contacts as $k=>$v) {
 		$contactmethods[$k] = $v;
@@ -905,23 +905,23 @@ function evatheme_core_add_remove_contactmethods( $contactmethods ) {
 }
 add_filter('user_contactmethods','evatheme_core_add_remove_contactmethods',10,1);
 
-function onclinic_author_contact_methods() {
+function ocularis_author_contact_methods() {
 
-	$contactmethods['onclinic_author_facebook'] 		= esc_html__( 'Facebook', 'onclinic' );
-	$contactmethods['onclinic_author_twitter'] 		= esc_html__( 'Twitter', 'onclinic' );
-	$contactmethods['onclinic_author_instagram'] 		= esc_html__( 'Instagram', 'onclinic' );
-	$contactmethods['onclinic_author_linkedin'] 		= esc_html__( 'Linked In', 'onclinic' );
-	$contactmethods['onclinic_author_youtube'] 		= esc_html__( 'YouTube', 'onclinic' );
-	$contactmethods['onclinic_author_skype'] 			= esc_html__( 'Skype', 'onclinic' );
-	$contactmethods['onclinic_author_pinterest'] 		= esc_html__( 'Pinterest', 'onclinic' );
-	$contactmethods['onclinic_author_wordpress'] 		= esc_html__( 'Wordpress', 'onclinic' );
+	$contactmethods['ocularis_author_facebook'] 		= esc_html__( 'Facebook', 'ocularis' );
+	$contactmethods['ocularis_author_twitter'] 		= esc_html__( 'Twitter', 'ocularis' );
+	$contactmethods['ocularis_author_instagram'] 		= esc_html__( 'Instagram', 'ocularis' );
+	$contactmethods['ocularis_author_linkedin'] 		= esc_html__( 'Linked In', 'ocularis' );
+	$contactmethods['ocularis_author_youtube'] 		= esc_html__( 'YouTube', 'ocularis' );
+	$contactmethods['ocularis_author_skype'] 			= esc_html__( 'Skype', 'ocularis' );
+	$contactmethods['ocularis_author_pinterest'] 		= esc_html__( 'Pinterest', 'ocularis' );
+	$contactmethods['ocularis_author_wordpress'] 		= esc_html__( 'Wordpress', 'ocularis' );
     
     return $contactmethods;
 }
 
-function onclinic_get_author_social_networks() {
+function ocularis_get_author_social_networks() {
 	
-	$options = onclinic_author_contact_methods();
+	$options = ocularis_author_contact_methods();
 	
 	foreach( $options as $option => $class ) {
 		
@@ -941,10 +941,10 @@ function onclinic_get_author_social_networks() {
 
 }
 
-if ( ! function_exists( 'onclinic_header_address' ) ) :
-    function onclinic_header_address(){
-        $enable = onclinic_theme()->customizer->get_value( 'header_address_text_checkbox' );
-        $text = onclinic_theme()->customizer->get_value( 'header_address_text' );
+if ( ! function_exists( 'ocularis_header_address' ) ) :
+    function ocularis_header_address(){
+        $enable = ocularis_theme()->customizer->get_value( 'header_address_text_checkbox' );
+        $text = ocularis_theme()->customizer->get_value( 'header_address_text' );
 
         if ( !$enable ) {
             return;
@@ -963,11 +963,11 @@ if ( ! function_exists( 'onclinic_header_address' ) ) :
     }
 endif;
 
-if ( ! function_exists( 'onclinic_header_phone' ) ) :
-    function onclinic_header_phone(){
-        $enable = onclinic_theme()->customizer->get_value( 'header_phone_checkbox' );
-        $text = onclinic_theme()->customizer->get_value( 'header_phone_text' );
-        $number = onclinic_theme()->customizer->get_value( 'header_phone_number' );
+if ( ! function_exists( 'ocularis_header_phone' ) ) :
+    function ocularis_header_phone(){
+        $enable = ocularis_theme()->customizer->get_value( 'header_phone_checkbox' );
+        $text = ocularis_theme()->customizer->get_value( 'header_phone_text' );
+        $number = ocularis_theme()->customizer->get_value( 'header_phone_number' );
 
         if ( !$enable ) {
             return;
@@ -998,11 +998,11 @@ if ( ! function_exists( 'onclinic_header_phone' ) ) :
     }
 endif;
 
-if ( ! function_exists( 'onclinic_header_button' ) ) :
-    function onclinic_header_button(){
-        $enable = onclinic_theme()->customizer->get_value( 'header_button_checkbox' );
-        $link = onclinic_theme()->customizer->get_value( 'header_button_link' );
-        $title = onclinic_theme()->customizer->get_value( 'header_button_title' );
+if ( ! function_exists( 'ocularis_header_button' ) ) :
+    function ocularis_header_button(){
+        $enable = ocularis_theme()->customizer->get_value( 'header_button_checkbox' );
+        $link = ocularis_theme()->customizer->get_value( 'header_button_link' );
+        $title = ocularis_theme()->customizer->get_value( 'header_button_title' );
 
         if ( !$enable ) {
             return;

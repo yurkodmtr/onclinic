@@ -1,11 +1,11 @@
-;var Onclinic_Woo_Module;
+;var Ocularis_Woo_Module;
 
 
 (function ($) {
 	"use strict";
 
 
-	Onclinic_Woo_Module = {
+	Ocularis_Woo_Module = {
 
 		init: function () {
 			this.wooHeaderCart();
@@ -46,6 +46,6 @@
 
 	};
 
-	Onclinic_Woo_Module.init();
+	Ocularis_Woo_Module.init();
 
 }(jQuery));

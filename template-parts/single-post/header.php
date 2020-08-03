@@ -4,17 +4,17 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
-$categories_visible = onclinic_theme()->customizer->get_value( 'single_post_categories' );
+$categories_visible = ocularis_theme()->customizer->get_value( 'single_post_categories' );
 ?>
 
 <header class="entry-header">
 	
 	<div class="entry-meta">
 		<?php
-			onclinic_posted_in( array(
+			ocularis_posted_in( array(
 				'prefix'  => '',
 				'visible' => $categories_visible
 			) );
@@ -24,4 +24,4 @@ $categories_visible = onclinic_theme()->customizer->get_value( 'single_post_cate
 	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 </header><!-- .entry-header -->
 
-<?php onclinic_post_thumbnail( 'full', array( 'link' => false ) ); ?>
+<?php ocularis_post_thumbnail( 'full', array( 'link' => false ) ); ?>

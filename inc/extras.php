@@ -4,23 +4,23 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
 /**
  * Sidebar position
  */
-add_filter( 'theme_mod_sidebar_position', 'onclinic_set_post_meta_value' );
+add_filter( 'theme_mod_sidebar_position', 'ocularis_set_post_meta_value' );
 
 /**
  * Container type
  */
-add_filter( 'theme_mod_container_type', 'onclinic_set_post_meta_value' );
+add_filter( 'theme_mod_container_type', 'ocularis_set_post_meta_value' );
 
 /**
  * Header layout type
  */
-add_filter( 'theme_mod_header_layout_type', 'onclinic_set_header_layout_value' );
+add_filter( 'theme_mod_header_layout_type', 'ocularis_set_header_layout_value' );
 
 /**
  * Set post specific meta value.
@@ -28,14 +28,14 @@ add_filter( 'theme_mod_header_layout_type', 'onclinic_set_header_layout_value' )
  * @param  string $value Default meta-value.
  * @return string
  */
-function onclinic_set_post_meta_value( $value ) {
-	$queried_obj = onclinic_get_queried_obj();
+function ocularis_set_post_meta_value( $value ) {
+	$queried_obj = ocularis_get_queried_obj();
 
 	if ( ! $queried_obj ) {
 		return $value;
 	}
 
-	$meta_key   = 'onclinic_' . str_replace( 'theme_mod_', '', current_filter() );
+	$meta_key   = 'ocularis_' . str_replace( 'theme_mod_', '', current_filter() );
 	$meta_value = get_post_meta( $queried_obj, $meta_key, true );
 
 	if ( ! $meta_value || 'inherit' === $meta_value ) {
@@ -51,13 +51,13 @@ function onclinic_set_post_meta_value( $value ) {
  * @param  string $value Default meta-value.
  * @return string
  */
-function onclinic_set_header_layout_value( $value ) {
+function ocularis_set_header_layout_value( $value ) {
 
 	if ( wp_is_mobile() ) {
 		// return 'mobile';
 	}
 
-	return onclinic_set_post_meta_value( $value );
+	return ocularis_set_post_meta_value( $value );
 }
 
 /**
@@ -65,10 +65,10 @@ function onclinic_set_header_layout_value( $value ) {
  *
  * @return string|boolean
  */
-function onclinic_get_queried_obj() {
-	$queried_obj = apply_filters( 'onclinic-theme/posts/queried_object_id', false );
+function ocularis_get_queried_obj() {
+	$queried_obj = apply_filters( 'ocularis-theme/posts/queried_object_id', false );
 
-	if ( ! $queried_obj && ! onclinic_maybe_need_rewrite_mod() ) {
+	if ( ! $queried_obj && ! ocularis_maybe_need_rewrite_mod() ) {
 		return false;
 	}
 
@@ -83,7 +83,7 @@ function onclinic_get_queried_obj() {
  *
  * @return boolean
  */
-function onclinic_maybe_need_rewrite_mod() {
+function ocularis_maybe_need_rewrite_mod() {
 
 	if ( is_front_page() && 'page' !== get_option( 'show_on_front' ) ) {
 		return false;
@@ -107,9 +107,9 @@ function onclinic_maybe_need_rewrite_mod() {
  * @param  string $string String to parse.
  * @return string
  */
-function onclinic_render_macros( $string ) {
+function ocularis_render_macros( $string ) {
 
-	$macros = apply_filters( 'onclinic-theme/data_macros', array(
+	$macros = apply_filters( 'ocularis-theme/data_macros', array(
 		'/%%year%%/' => date( 'Y' ),
 		'/%%date%%/' => date( get_option( 'date_format' ) ),
 	) );
@@ -123,13 +123,13 @@ function onclinic_render_macros( $string ) {
  * @param  string $content content to render
  * @return string
  */
-function onclinic_render_icons( $content ) {
-	$icons     = onclinic_get_render_icons_set();
+function ocularis_render_icons( $content ) {
+	$icons     = ocularis_get_render_icons_set();
 	$icons_set = implode( '|', array_keys( $icons ) );
 
 	$regex = '/icon:(' . $icons_set . ')?:?([a-zA-Z0-9-_]+)/';
 
-	return preg_replace_callback( $regex, 'onclinic_render_icons_callback', $content );
+	return preg_replace_callback( $regex, 'ocularis_render_icons_callback', $content );
 }
 
 /**
@@ -138,7 +138,7 @@ function onclinic_render_icons( $content ) {
  * @param  array $matches Search matches array.
  * @return string
  */
-function onclinic_render_icons_callback( $matches ) {
+function ocularis_render_icons_callback( $matches ) {
 
 	if ( empty( $matches[1] ) && empty( $matches[2] ) ) {
 		return $matches[0];
@@ -148,7 +148,7 @@ function onclinic_render_icons_callback( $matches ) {
 		return sprintf( '<i class="fa fa-%s"></i>', $matches[2] );
 	}
 
-	$icons = onclinic_get_render_icons_set();
+	$icons = ocularis_get_render_icons_set();
 
 	if ( ! isset( $icons[ $matches[1] ] ) ) {
 		return $matches[0];
@@ -162,8 +162,8 @@ function onclinic_render_icons_callback( $matches ) {
  *
  * @return array
  */
-function onclinic_get_render_icons_set() {
-	return apply_filters( 'onclinic-theme/icons/icons-set', array(
+function ocularis_get_render_icons_set() {
+	return apply_filters( 'ocularis-theme/icons/icons-set', array(
 		'fa'       => '<i class="fa fa-%s"></i>',
 		'material' => '<i class="material-icons">%s</i>',
 	) );
@@ -175,7 +175,7 @@ function onclinic_get_render_icons_set() {
  * @param  string $url Formatted URL to parse.
  * @return string
  */
-function onclinic_render_theme_url( $url ) {
+function ocularis_render_theme_url( $url ) {
 	return sprintf( $url, get_template_directory_uri() );
 }
 
@@ -184,8 +184,8 @@ function onclinic_render_theme_url( $url ) {
  *
  * @return string
  */
-function onclinic_get_post_template_part_slug() {
-	return apply_filters( 'onclinic-theme/posts/template-part-slug', 'template-parts/content' );
+function ocularis_get_post_template_part_slug() {
+	return apply_filters( 'ocularis-theme/posts/template-part-slug', 'template-parts/content' );
 }
 
 /**
@@ -193,8 +193,8 @@ function onclinic_get_post_template_part_slug() {
  *
  * @return string
  */
-function onclinic_get_post_style() {
-	return apply_filters( 'onclinic-theme/posts/post-style', false );
+function ocularis_get_post_style() {
+	return apply_filters( 'ocularis-theme/posts/post-style', false );
 }
 
 /**
@@ -204,7 +204,7 @@ function onclinic_get_post_style() {
  *
  * @return array
  */
-function onclinic_kses_post_allowed_html( $additional_allowed_html = array() ) {
+function ocularis_kses_post_allowed_html( $additional_allowed_html = array() ) {
 	$allowed_html = wp_kses_allowed_html( 'post' );
 
 	if ( ! empty( $additional_allowed_html ) ) {
@@ -228,13 +228,13 @@ function onclinic_kses_post_allowed_html( $additional_allowed_html = array() ) {
  * @param  string $context Current post context - 'single' or 'loop'.
  * @return bool
  */
-function onclinic_is_meta_visible( $meta, $context = 'loop' ) {
+function ocularis_is_meta_visible( $meta, $context = 'loop' ) {
 
 	if ( ! $meta ) {
 		return false;
 	}
 
-	$meta_enabled = get_theme_mod( $meta, onclinic_theme()->customizer->get_default( $meta ) );
+	$meta_enabled = get_theme_mod( $meta, ocularis_theme()->customizer->get_default( $meta ) );
 
 	switch ( $context ) {
 
@@ -260,9 +260,9 @@ function onclinic_is_meta_visible( $meta, $context = 'loop' ) {
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
-function onclinic_pingback_header() {
+function ocularis_pingback_header() {
     if ( is_singular() && pings_open() ) {
         echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
     }
 }
-add_action( 'wp_head', 'onclinic_pingback_header' );
+add_action( 'wp_head', 'ocularis_pingback_header' );

@@ -1,20 +1,20 @@
 @charset "UTF-8";
 /*!
-Theme Name: Onclinic
-Theme URI: https://ld-wp73.template-help.com/tf/onclinic/
+Theme Name: Ocularis
+Theme URI: https://ld-wp73.template-help.com/tf/ocularis/
 Author: Zemez
 Author URI: Zemez.io
-Description: Onclinic - meet an Elementor-based photo portfolio theme, made to showcase artworks and photoshots into robust galleries.
+Description: Ocularis - meet an Elementor-based photo portfolio theme, made to showcase artworks and photoshots into robust galleries.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: onclinic
+Text Domain: ocularis
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Onclinic is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Ocularis is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -24,14 +24,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Animation
 --------------------------------------------------------------*/
-@-webkit-keyframes onclinic_spin {
+@-webkit-keyframes ocularis_spin {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
-@keyframes onclinic_spin {
+@keyframes ocularis_spin {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
@@ -5503,7 +5503,7 @@ html#ecwid_html body#ecwid_body {
   html#ecwid_html body#ecwid_body .ec-size .ec-wrapper .ec-store .grid__products--layout-left .grid-product__price {
     padding-top: .1em; }
   html#ecwid_html body#ecwid_body .ec-size .ec-wrapper .ec-store .form-control__button {
-    /* Default onclinic border-radius styles */
+    /* Default ocularis border-radius styles */
     border-radius: 0; }
   html#ecwid_html body#ecwid_body .ec-size.ec-size--l .ec-wrapper .ec-store {
     /* Add To Cart small state */

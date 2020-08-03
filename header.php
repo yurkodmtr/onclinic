@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
 ?><!DOCTYPE html>
@@ -21,12 +21,12 @@
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	
-<?php do_action( 'onclinic-theme/site/page-start' ); ?>
-<?php onclinic_get_page_preloader(); ?>
+<?php do_action( 'ocularis-theme/site/page-start' ); ?>
+<?php ocularis_get_page_preloader(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'onclinic' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ocularis' ); ?></a>
 	<header id="masthead">
-		<?php onclinic_theme()->do_location( 'header', 'template-parts/header' ); ?>
+		<?php ocularis_theme()->do_location( 'header', 'template-parts/header' ); ?>
 	</header><!-- #masthead -->
 	<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
-	<div id="content" <?php echo onclinic_get_container_classes( 'site-content' ); ?>>
+	<div id="content" <?php echo ocularis_get_container_classes( 'site-content' ); ?>>

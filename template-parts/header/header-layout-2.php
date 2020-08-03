@@ -4,24 +4,24 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
-$visible_header_wc_cart 	= onclinic_theme()->customizer->get_value( 'woo_header_cart_icon' ) && class_exists( 'WooCommerce' );
+$visible_header_wc_cart 	= ocularis_theme()->customizer->get_value( 'woo_header_cart_icon' ) && class_exists( 'WooCommerce' );
 ?>
 
-<div <?php onclinic_header_class(); ?> >
+<div <?php ocularis_header_class(); ?> >
     <div class="reheader__desktop">
         <div class="reheader__desktop__top">
             <div class="container">
                 <div class="reheader__desktop__top__wrap">
-                    <?php onclinic_header_address(); ?>
-                    <?php onclinic_header_logo(); ?>
+                    <?php ocularis_header_address(); ?>
+                    <?php ocularis_header_logo(); ?>
                     <div class="right_side">
-                        <?php onclinic_header_phone(); ?>
-                        <?php onclinic_header_search_toggle(); ?>
+                        <?php ocularis_header_phone(); ?>
+                        <?php ocularis_header_search_toggle(); ?>
                         <?php if ( $visible_header_wc_cart ) :
-                            onclinic_wc_header_cart();
+                            ocularis_wc_header_cart();
                         endif; ?>
                     </div>
                 </div>
@@ -30,13 +30,13 @@ $visible_header_wc_cart 	= onclinic_theme()->customizer->get_value( 'woo_header_
         <div class="reheader__desktop__bottom">
             <div class="container">
                 <div class="reheader__desktop__bottom__wrap">
-                    <?php onclinic_main_menu(); ?>
-                    <?php onclinic_header_button(); ?>
+                    <?php ocularis_main_menu(); ?>
+                    <?php ocularis_header_button(); ?>
                 </div>
             </div>
         </div>
     </div>
     <?php get_template_part( 'template-parts/header/header_mobile' ); ?>
     <?php get_template_part( 'template-parts/header/menu_mobile' ); ?>
-    <?php onclinic_header_search_popup(); ?>
+    <?php ocularis_header_search_popup(); ?>
 </div>

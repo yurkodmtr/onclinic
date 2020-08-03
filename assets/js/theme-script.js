@@ -1,9 +1,9 @@
-;var Onclinic_Theme_JS;
+;var Ocularis_Theme_JS;
 
 (function($) {
 	'use strict';
 
-	Onclinic_Theme_JS = {
+	Ocularis_Theme_JS = {
 
 		$document: $( document ),
 
@@ -91,8 +91,8 @@
 
 
 		responsiveMenuInit: function() {
-			if (typeof onclinicResponsiveMenu !== 'undefined') {
-				onclinicResponsiveMenu();
+			if (typeof ocularisResponsiveMenu !== 'undefined') {
+				ocularisResponsiveMenu();
 			}
 		},
 
@@ -178,6 +178,6 @@
 		}
 	};
 
-	Onclinic_Theme_JS.init();
+	Ocularis_Theme_JS.init();
 
 }(jQuery));

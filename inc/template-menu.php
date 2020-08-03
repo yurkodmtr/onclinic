@@ -2,7 +2,7 @@
 /**
  * Menu Template Functions.
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
 /**
@@ -12,7 +12,7 @@
  * @param  string $mode Default or vertical.
  * @return void
  */
-function onclinic_main_menu( $mode = 'default' ) {
+function ocularis_main_menu( $mode = 'default' ) {
 
 	$classes[] = 'main-navigation';
 
@@ -22,12 +22,12 @@ function onclinic_main_menu( $mode = 'default' ) {
 	<nav id="site-navigation" class="<?php echo join( ' ', $classes ); ?>" role="navigation">
 		<div class="main-navigation-inner">
 		<?php
-			$args = apply_filters( 'onclinic-theme/menu/main-menu-args', array(
+			$args = apply_filters( 'ocularis-theme/menu/main-menu-args', array(
 				'theme_location'   => 'main',
 				'container'        => '',
 				'menu_id'          => 'main-menu',
-				'fallback_cb'      => 'onclinic_set_nav_menu',
-				'fallback_message' => esc_html__( 'Set main menu', 'onclinic' ),
+				'fallback_cb'      => 'ocularis_set_nav_menu',
+				'fallback_message' => esc_html__( 'Set main menu', 'ocularis' ),
 			) );
 
 			wp_nav_menu( $args );
@@ -45,16 +45,16 @@ function onclinic_main_menu( $mode = 'default' ) {
  * @param  string $mode Default or vertical.
  * @return void
  */
-function onclinic_main_menu_mobile( ) {
+function ocularis_main_menu_mobile( ) {
     ?>
     <nav class="stack-menu" role="navigation">
         <?php
-            $args = apply_filters( 'onclinic-theme/menu/main-menu-args', array(
+            $args = apply_filters( 'ocularis-theme/menu/main-menu-args', array(
                 'theme_location'   => 'main',
                 'container'        => '',
                 'menu_id'          => 'main-menu-mobile',
-                'fallback_cb'      => 'onclinic_set_nav_menu',
-                'fallback_message' => esc_html__( 'Set main menu', 'onclinic' ),
+                'fallback_cb'      => 'ocularis_set_nav_menu',
+                'fallback_message' => esc_html__( 'Set main menu', 'ocularis' ),
             ) );
 
             wp_nav_menu( $args );
@@ -71,7 +71,7 @@ function onclinic_main_menu_mobile( ) {
  * @param  array $args Nav menu arguments.
  * @return void
  */
-function onclinic_set_nav_menu( $args ) {
+function ocularis_set_nav_menu( $args ) {
 
 	if ( ! current_user_can( 'edit_theme_options' ) ) {
 		return null;
@@ -91,9 +91,9 @@ function onclinic_set_nav_menu( $args ) {
  * @param  bool  $echo Return or print.
  * @return string|bool
  */
-function onclinic_main_menu_toggle( $echo = true ) {
+function ocularis_main_menu_toggle( $echo = true ) {
 	$toggle_html = apply_filters(
-		'onclinic_main_menu_toggle_html',
+		'ocularis_main_menu_toggle_html',
 		'<div class="menu-toggle-wrapper"><button class="menu-toggle btn-initial" aria-controls="main-menu" aria-expanded="false"><span class="menu-toggle-box"></button></div>'
 	);
 

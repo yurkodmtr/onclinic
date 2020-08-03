@@ -8,12 +8,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! class_exists( 'Onclinic_Module_Base' ) ) {
+if ( ! class_exists( 'Ocularis_Module_Base' ) ) {
 
 	/**
-	 * Define Onclinic_Module_Base class
+	 * Define Ocularis_Module_Base class
 	 */
-	abstract class Onclinic_Module_Base {
+	abstract class Ocularis_Module_Base {
 
 		/**
 		 * Returns module ID.
@@ -57,7 +57,7 @@ if ( ! class_exists( 'Onclinic_Module_Base' ) ) {
 		public function load_child_modules( $childs = array() ) {
 
 			foreach ( $childs as $child => $childs_of_child ) {
-				onclinic_theme()->load_module( $child, $childs_of_child );
+				ocularis_theme()->load_module( $child, $childs_of_child );
 			}
 
 		}

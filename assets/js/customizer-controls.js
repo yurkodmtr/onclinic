@@ -11,8 +11,8 @@
 	// Init Controls Conditions
 	wp.customize.bind( 'ready', function() {
 
-		var onclinicControlsConditions = window.onclinicControlsConditions,
-			onclinicControlsTools  = {
+		var ocularisControlsConditions = window.ocularisControlsConditions,
+			ocularisControlsTools  = {
 				isArray: function( value ) {
 					return $.isArray( value );
 				},
@@ -22,9 +22,9 @@
 				}
 			};
 
-		if ( undefined !== onclinicControlsConditions ) {
+		if ( undefined !== ocularisControlsConditions ) {
 
-			$.each( onclinicControlsConditions, function( control_id, conditions ) {
+			$.each( ocularisControlsConditions, function( control_id, conditions ) {
 
 				wp.customize.control( control_id, function( control ) {
 
@@ -37,8 +37,8 @@
 
 							setting_id = setting_id.replace( '!', '' );
 
-							if ( onclinicControlsTools.isArray( condition ) ) {
-								check = onclinicControlsTools.inArray( wp.customize( setting_id ).get(), condition );
+							if ( ocularisControlsTools.isArray( condition ) ) {
+								check = ocularisControlsTools.inArray( wp.customize( setting_id ).get(), condition );
 							} else {
 								check = condition === wp.customize( setting_id ).get();
 							}

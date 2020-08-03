@@ -4,11 +4,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
-do_action( 'onclinic_before_header_bar' );
+do_action( 'ocularis_before_header_bar' );
 
-do_action( 'onclinic_header_bar' );
+do_action( 'ocularis_header_bar' );
 
-do_action( 'onclinic_after_header_bar' );
+do_action( 'ocularis_after_header_bar' );

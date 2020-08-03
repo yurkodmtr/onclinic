@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
 ?>
@@ -13,8 +13,8 @@
 	<div class="entry-footer-container">
 		<div class="entry-meta">
 			<?php
-				onclinic_post_tags ( array(
-					'prefix'    => '<strong>' . esc_html__( 'Tag cloud:', 'onclinic' ) . '</strong>',
+				ocularis_post_tags ( array(
+					'prefix'    => '<strong>' . esc_html__( 'Tag cloud:', 'ocularis' ) . '</strong>',
 					'delimiter' => ''
 				) );
 			?>

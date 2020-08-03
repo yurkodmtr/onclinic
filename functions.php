@@ -1,12 +1,12 @@
 <?php
-if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
+if ( ! class_exists( 'Ocularis_Theme_Setup' ) ) {
 
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
 	 * @since 1.0.0
 	 */
-	class Onclinic_Theme_Setup {
+	class Ocularis_Theme_Setup {
 
 		/**
 		 * A reference to an instance of this class.
@@ -58,13 +58,13 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 			$this->version = $theme_obj->get( 'Version' );
 
 			// Load the theme modules.
-			add_action( 'after_setup_theme', array( $this, 'onclinic_framework_loader' ), -20 );
+			add_action( 'after_setup_theme', array( $this, 'ocularis_framework_loader' ), -20 );
 
 			// Initialization of customizer.
-			add_action( 'after_setup_theme', array( $this, 'onclinic_customizer' ) );
+			add_action( 'after_setup_theme', array( $this, 'ocularis_customizer' ) );
 
 			// Initialization of breadcrumbs module
-			add_action( 'wp_head', array( $this, 'onclinic_breadcrumbs' ) );
+			add_action( 'wp_head', array( $this, 'ocularis_breadcrumbs' ) );
 
 			// Language functions and translations setup.
 			add_action( 'after_setup_theme', array( $this, 'l10n' ), 2 );
@@ -79,7 +79,7 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 			add_action( 'after_setup_theme', array( $this, 'load_modules' ), 5 );
 
 			// Init properties.
-			add_action( 'wp_head', array( $this, 'onclinic_init_properties' ) );
+			add_action( 'wp_head', array( $this, 'ocularis_init_properties' ) );
 
 			// Register public assets.
 			add_action( 'wp_enqueue_scripts', array( $this, 'register_assets' ), 9 );
@@ -108,7 +108,7 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 		 * @return string
 		 */
 		public function version() {
-			return apply_filters( 'onclinic-theme/version', $this->version );
+			return apply_filters( 'ocularis-theme/version', $this->version );
 		}
 
 		/**
@@ -116,11 +116,11 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 		 *
 		 * @since  1.0.0
 		 */
-		public function onclinic_framework_loader() {
+		public function ocularis_framework_loader() {
 
 			require get_theme_file_path( 'framework/loader.php' );
 
-			new Onclinic_CX_Loader(
+			new Ocularis_CX_Loader(
 				array(
 					get_theme_file_path( 'framework/modules/customizer/cherry-x-customizer.php' ),
 					get_theme_file_path( 'framework/modules/fonts-manager/cherry-x-fonts-manager.php' ),
@@ -136,10 +136,10 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		public function onclinic_customizer() {
+		public function ocularis_customizer() {
 
-			$this->customizer = new CX_Customizer( onclinic_get_customizer_options() );
-			$this->dynamic_css = new CX_Dynamic_CSS( onclinic_get_dynamic_css_options() );
+			$this->customizer = new CX_Customizer( ocularis_get_customizer_options() );
+			$this->dynamic_css = new CX_Dynamic_CSS( ocularis_get_dynamic_css_options() );
 
 		}
 
@@ -148,9 +148,9 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		public function onclinic_breadcrumbs() {
+		public function ocularis_breadcrumbs() {
 
-			$this->breadcrumbs = new CX_Breadcrumbs( onclinic_get_breadcrumbs_options() );
+			$this->breadcrumbs = new CX_Breadcrumbs( ocularis_get_breadcrumbs_options() );
 
 		}
 
@@ -159,18 +159,18 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		public function onclinic_init_properties() {
+		public function ocularis_init_properties() {
 
 			$this->is_blog = is_home() || ( is_archive() && ! is_tax() && ! is_post_type_archive() ) ? true : false;
 
 			// Blog list properties init
 			if ( $this->is_blog ) {
-				$this->sidebar_position = onclinic_theme()->customizer->get_value( 'blog_sidebar_position' );
+				$this->sidebar_position = ocularis_theme()->customizer->get_value( 'blog_sidebar_position' );
 			}
 
 			// Single blog properties init
 			if ( is_singular( 'post' ) ) {
-				$this->sidebar_position = onclinic_theme()->customizer->get_value( 'single_sidebar_position' );
+				$this->sidebar_position = ocularis_theme()->customizer->get_value( 'single_sidebar_position' );
 			}
 
 		}
@@ -186,7 +186,7 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 			 * Make theme available for translation.
 			 * Translations can be filed in the /languages/ directory.
 			 */
-			load_theme_textdomain( 'onclinic', get_theme_file_path( 'languages' ) );
+			load_theme_textdomain( 'ocularis', get_theme_file_path( 'languages' ) );
 
 		}
 
@@ -302,7 +302,7 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 		public function get_module_class( $name ) {
 
 			$module = str_replace( ' ', '_', ucwords( str_replace( '-', ' ', $name ) ) );
-			return 'Onclinic_' . $module . '_Module';
+			return 'Ocularis_' . $module . '_Module';
 
 		}
 
@@ -313,9 +313,9 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 		 */
 		public function load_modules() {
 
-			$disabled_modules = apply_filters( 'onclinic-theme/disabled-modules', array() );
+			$disabled_modules = apply_filters( 'ocularis-theme/disabled-modules', array() );
 
-			foreach ( onclinic_get_allowed_modules() as $module => $childs ) {
+			foreach ( ocularis_get_allowed_modules() as $module => $childs ) {
 				if ( ! in_array( $module, $disabled_modules ) ) {
 					$this->load_module( $module, $childs );
 				}
@@ -422,7 +422,7 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 			);
 
 			wp_register_script(
-				'onclinic-custom-stickysidebar',
+				'ocularis-custom-stickysidebar',
 				get_theme_file_uri( 'assets/js/custom-stickysidebar.js' ),
 				array(),
 				false,
@@ -474,7 +474,7 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 			 * @since 1.0.0
 			 * @var   array
 			 */
-			$scripts_depends = 	apply_filters( 'onclinic-theme/assets-depends/script', array(
+			$scripts_depends = 	apply_filters( 'ocularis-theme/assets-depends/script', array(
 				'jquery',
 				'responsive-menu',
 				'jquery-stack-menu'
@@ -485,7 +485,7 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 			}
 
 			wp_enqueue_script(
-				'onclinic-theme-script',
+				'ocularis-theme-script',
 				get_theme_file_uri( 'assets/js/theme-script.js' ),
 				$scripts_depends,
 				$this->version() . time(),
@@ -512,7 +512,7 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 			 * @since 1.0.0
 			 * @var   array
 			 */
-			$styles_depends = apply_filters( 'onclinic-theme/assets-depends/styles', array(
+			$styles_depends = apply_filters( 'ocularis-theme/assets-depends/styles', array(
 				'font-awesome',
 			) );
 
@@ -521,7 +521,7 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
 			}
 
             wp_enqueue_style(
-                'onclinic-theme-style',
+                'ocularis-theme-style',
                 get_stylesheet_uri(),
                 $styles_depends,
                 $this->version() . time()
@@ -622,54 +622,54 @@ if ( ! class_exists( 'Onclinic_Theme_Setup' ) ) {
  * @since  1.0.0
  * @return object
  */
-function onclinic_theme() {
+function ocularis_theme() {
 
-	return Onclinic_Theme_Setup::get_instance();
+	return Ocularis_Theme_Setup::get_instance();
 
 }
 
-add_action( 'jet-theme-core/register-config', 'onclinic_core_config' );
+add_action( 'jet-theme-core/register-config', 'ocularis_core_config' );
 
-function onclinic_core_config( $manager ) {
+function ocularis_core_config( $manager ) {
 	$manager->register_config(
 		array(
-			'dashboard_page_name' => esc_html__( 'Onclinic', 'onclinic' ),
+			'dashboard_page_name' => esc_html__( 'Ocularis', 'ocularis' ),
 			'library_button'      => false,
 			'menu_icon'           => 'dashicons-admin-generic',
 			'api'                 => array( 'enabled' => false ),
 			'guide' => array(
-				'title' => esc_html__( 'Learn More About Onclinic', 'onclinic' ),
+				'title' => esc_html__( 'Learn More About Ocularis', 'ocularis' ),
 				'links' => array(
 					'documentation' => array(
-						'label'  => esc_html__( 'Check documentation', 'onclinic' ),
+						'label'  => esc_html__( 'Check documentation', 'ocularis' ),
 						'type'   => 'primary',
 						'target' => '_blank',
 						'icon'   => 'dashicons-welcome-learn-more',
-						'desc'   => esc_html__( 'Get more info from documentation', 'onclinic' ),
-						'url'    => 'http://documentation.zemez.io/wordpress/index.php?project=onclinic',
+						'desc'   => esc_html__( 'Get more info from documentation', 'ocularis' ),
+						'url'    => 'http://documentation.zemez.io/wordpress/index.php?project=ocularis',
 					),
 					'knowledge-base' => array(
-						'label'  => esc_html__( 'Knowledge Base', 'onclinic' ),
+						'label'  => esc_html__( 'Knowledge Base', 'ocularis' ),
 						'type'   => 'primary',
 						'target' => '_blank',
 						'icon'   => 'dashicons-sos',
-						'desc'   => esc_html__( 'Access the vast knowledge base', 'onclinic' ),
-						'url'    => 'https://zemez.io/wordpress/support/knowledge-base-category/onclinic/',
+						'desc'   => esc_html__( 'Access the vast knowledge base', 'ocularis' ),
+						'url'    => 'https://zemez.io/wordpress/support/knowledge-base-category/ocularis/',
 					),
 					'community' => array(
-						'label'  => esc_html__( 'Community', 'onclinic' ),
+						'label'  => esc_html__( 'Community', 'ocularis' ),
 						'type'   => 'primary',
 						'target' => '_blank',
 						'icon'   => 'dashicons-facebook',
-						'desc'   => esc_html__( 'Join community to stay tuned to the latest news', 'onclinic' ),
+						'desc'   => esc_html__( 'Join community to stay tuned to the latest news', 'ocularis' ),
 						'url'    => 'https://www.facebook.com/groups/ZemezJetCommunity/',
 					),
 					'video-tutorials' => array(
-						'label' => esc_html__( 'View Video', 'onclinic' ),
+						'label' => esc_html__( 'View Video', 'ocularis' ),
 						'type'   => 'primary',
 						'target' => '_blank',
 						'icon'   => 'dashicons-format-video',
-						'desc'   => esc_html__( 'View video tutorials', 'onclinic' ),
+						'desc'   => esc_html__( 'View video tutorials', 'ocularis' ),
 						'url'    => 'https://zemez.io/wordpress/support/video-tutorials/',
 					),
 				),
@@ -688,4 +688,4 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 	}
 }
 
-onclinic_theme();
+ocularis_theme();

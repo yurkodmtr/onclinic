@@ -1,4 +1,4 @@
-const onclinicResponsiveMenu = (options = {}) => {
+const ocularisResponsiveMenu = (options = {}) => {
 
 	const defaults = {
 		wrapper: '.main-navigation',

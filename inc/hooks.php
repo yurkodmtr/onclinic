@@ -2,42 +2,42 @@
 /**
  * Theme hooks.
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
 // Adds the meta viewport to the header.
-add_action( 'wp_head', 'onclinic_meta_viewport', 0 );
+add_action( 'wp_head', 'ocularis_meta_viewport', 0 );
 
 // Additional body classes.
-add_filter( 'body_class', 'onclinic_extra_body_classes' );
+add_filter( 'body_class', 'ocularis_extra_body_classes' );
 
 // Enqueue sticky menu if required.
-add_filter( 'onclinic-theme/assets-depends/script', 'onclinic_enqueue_misc' );
+add_filter( 'ocularis-theme/assets-depends/script', 'ocularis_enqueue_misc' );
 
 // Additional image sizes for media gallery.
-add_filter( 'image_size_names_choose', 'onclinic_image_size_names_choose' );
+add_filter( 'image_size_names_choose', 'ocularis_image_size_names_choose' );
 
 // Modify a comment form.
-add_filter( 'comment_form_defaults', 'onclinic_modify_comment_form' );
+add_filter( 'comment_form_defaults', 'ocularis_modify_comment_form' );
 
 
 // Modify background-image dynamic css variables.
-add_filter( 'cherry_css_variables', 'onclinic_modify_bg_img_variables', 10, 2 );
+add_filter( 'cherry_css_variables', 'ocularis_modify_bg_img_variables', 10, 2 );
 
 
 // Add dynamic css function.
-add_filter( 'cx_dynamic_css/func_list', 'onclinic_add_dynamic_css_function' );
+add_filter( 'cx_dynamic_css/func_list', 'ocularis_add_dynamic_css_function' );
 
 // Add has/no thumbnail classes for posts.
-add_filter( 'post_class', 'onclinic_post_thumb_classes' );
+add_filter( 'post_class', 'ocularis_post_thumb_classes' );
 
 //	Callback function for additional fonts in Elementor.
-add_filter( 'elementor/fonts/additional_fonts', 'onclinic_add_additional_fonts' );
+add_filter( 'elementor/fonts/additional_fonts', 'ocularis_add_additional_fonts' );
 
 //	Remove the parentheses from the category/archive/tag widget.
-add_filter( 'wp_list_categories', 'onclinic_categories_postcount_filter' );
-add_filter( 'get_archives_link', 'onclinic_categories_postcount_filter' );
-add_filter( 'wp_tag_cloud', 'onclinic_tagcloud_postcount_filter');
+add_filter( 'wp_list_categories', 'ocularis_categories_postcount_filter' );
+add_filter( 'get_archives_link', 'ocularis_categories_postcount_filter' );
+add_filter( 'wp_tag_cloud', 'ocularis_tagcloud_postcount_filter');
 
 /**
  * Add has/no thumbnail classes for posts
@@ -46,7 +46,7 @@ add_filter( 'wp_tag_cloud', 'onclinic_tagcloud_postcount_filter');
  *
  * @return array
  */
-function onclinic_post_thumb_classes( $classes ) {
+function ocularis_post_thumb_classes( $classes ) {
 	$thumb = 'no-thumb';
 
 	if ( has_post_thumbnail() ) {
@@ -66,7 +66,7 @@ function onclinic_post_thumb_classes( $classes ) {
  *
  * @return array
  */
-function onclinic_modify_bg_img_variables( $variables = array(), $args = array() ) {
+function ocularis_modify_bg_img_variables( $variables = array(), $args = array() ) {
 
 	$bg_img_variables = array(
 		'header_bg_image',
@@ -74,7 +74,7 @@ function onclinic_modify_bg_img_variables( $variables = array(), $args = array()
 	);
 
 	foreach ( $bg_img_variables as $var ) {
-		$variables[ $var ] = esc_url( onclinic_render_theme_url( $variables[ $var ] ) );
+		$variables[ $var ] = esc_url( ocularis_render_theme_url( $variables[ $var ] ) );
 	}
 
 	return $variables;
@@ -87,7 +87,7 @@ function onclinic_modify_bg_img_variables( $variables = array(), $args = array()
  * @since  1.0.0
  * @return string `<meta>` tag for viewport.
  */
-function onclinic_meta_viewport() {
+function ocularis_meta_viewport() {
 	echo '<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n";
 }
 
@@ -97,7 +97,7 @@ function onclinic_meta_viewport() {
  * @param  array $classes Existing classes.
  * @return array
  */
-function onclinic_extra_body_classes( $classes ) {
+function ocularis_extra_body_classes( $classes ) {
 
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
@@ -112,10 +112,10 @@ function onclinic_extra_body_classes( $classes ) {
 	// Adds a options-based classes.
 	$options_based_classes = array();
 
-	$layout      = onclinic_theme()->customizer->get_value( 'container_type' );
-	$blog_layout = onclinic_theme()->customizer->get_value( 'blog_layout_type' );
-	$sb_position = onclinic_theme()->sidebar_position;
-	$sidebar     = onclinic_theme()->customizer->get_value( 'sidebar_width' );
+	$layout      = ocularis_theme()->customizer->get_value( 'container_type' );
+	$blog_layout = ocularis_theme()->customizer->get_value( 'blog_layout_type' );
+	$sb_position = ocularis_theme()->sidebar_position;
+	$sidebar     = ocularis_theme()->customizer->get_value( 'sidebar_width' );
 
 	array_push( $options_based_classes, 'layout-' . $layout, 'blog-' . $blog_layout );
 	if( 'none' !== $sb_position ) {
@@ -131,8 +131,8 @@ function onclinic_extra_body_classes( $classes ) {
  * @param  array $depends Default dependencies.
  * @return array
  */
-function onclinic_enqueue_misc( $depends ) {
-	$totop_visibility = onclinic_theme()->customizer->get_value( 'totop_visibility' );
+function ocularis_enqueue_misc( $depends ) {
+	$totop_visibility = ocularis_theme()->customizer->get_value( 'totop_visibility' );
 
 	if ( $totop_visibility ) {
 		$depends[] = 'jquery-totop';
@@ -147,8 +147,8 @@ function onclinic_enqueue_misc( $depends ) {
  * @param  array $classes Existing classes.
  * @return array
  */
-function onclinic_image_size_names_choose( $image_sizes ) {
-	$image_sizes['post-thumbnail'] = __( 'Post Thumbnail', 'onclinic' );
+function ocularis_image_size_names_choose( $image_sizes ) {
+	$image_sizes['post-thumbnail'] = __( 'Post Thumbnail', 'ocularis' );
 
 	return $image_sizes;
 }
@@ -159,7 +159,7 @@ function onclinic_image_size_names_choose( $image_sizes ) {
  * @param  array $args Argumnts for comment form.
  * @return array
  */
-function onclinic_modify_comment_form( $args ) {
+function ocularis_modify_comment_form( $args ) {
 	$args = wp_parse_args( $args );
 
 	if ( ! isset( $args['format'] ) ) {
@@ -172,15 +172,15 @@ function onclinic_modify_comment_form( $args ) {
 	$html5     = 'html5' === $args['format'];
 	$commenter = wp_get_current_commenter();
 
-	$args['label_submit'] = esc_html__( 'Submit', 'onclinic' );
+	$args['label_submit'] = esc_html__( 'Submit', 'ocularis' );
 
-	$args['fields']['author'] = '<div class="comment-form__input_wrap clear"><p class="comment-form-author"><input id="author" class="comment-form__field" name="author" type="text" placeholder="' . esc_attr__( 'Your name', 'onclinic' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . $html_req . ' /></p>';
+	$args['fields']['author'] = '<div class="comment-form__input_wrap clear"><p class="comment-form-author"><input id="author" class="comment-form__field" name="author" type="text" placeholder="' . esc_attr__( 'Your name', 'ocularis' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . $html_req . ' /></p>';
 
-	$args['fields']['email'] = '<p class="comment-form-email"><input id="email" class="comment-form__field" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' placeholder="' . esc_attr__( 'Your email', 'onclinic' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></p>';
+	$args['fields']['email'] = '<p class="comment-form-email"><input id="email" class="comment-form__field" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' placeholder="' . esc_attr__( 'Your email', 'ocularis' ) . ( $req ? ' *' : '' ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></p>';
 
-	$args['fields']['url'] = '<p class="comment-form-url"><input id="url" class="comment-form__field" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' placeholder="' . esc_attr__( 'Your website', 'onclinic' ) . '" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p></div>';
+	$args['fields']['url'] = '<p class="comment-form-url"><input id="url" class="comment-form__field" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' placeholder="' . esc_attr__( 'Your website', 'ocularis' ) . '" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p></div>';
 
-	$args['comment_field'] = '<p class="comment-form-comment"><textarea id="comment" class="comment-form__field" name="comment" placeholder="' . esc_attr__( 'Say something nice...', 'onclinic' ) . '" cols="45" rows="7" ></textarea></p>';
+	$args['comment_field'] = '<p class="comment-form-comment"><textarea id="comment" class="comment-form__field" name="comment" placeholder="' . esc_attr__( 'Say something nice...', 'ocularis' ) . '" cols="45" rows="7" ></textarea></p>';
 
 	return $args;
 }
@@ -193,9 +193,9 @@ function onclinic_modify_comment_form( $args ) {
  *
  * @return array
  */
-function onclinic_add_dynamic_css_function( $func_list = array() ) {
+function ocularis_add_dynamic_css_function( $func_list = array() ) {
 
-	$func_list['background_position'] = 'onclinic_dynamic_css_background_position';
+	$func_list['background_position'] = 'ocularis_dynamic_css_background_position';
 
 	return $func_list;
 }
@@ -207,7 +207,7 @@ function onclinic_add_dynamic_css_function( $func_list = array() ) {
  *
  * @return bool|string
  */
-function onclinic_dynamic_css_background_position( $position = '' ) {
+function ocularis_dynamic_css_background_position( $position = '' ) {
 
 	if ( empty( $position ) ) {
 		return;
@@ -221,7 +221,7 @@ function onclinic_dynamic_css_background_position( $position = '' ) {
 /**
  * Callback function for additional fonts in Elementor.
  */
-function onclinic_add_additional_fonts( $additional_fonts ) {
+function ocularis_add_additional_fonts( $additional_fonts ) {
 	
 	$additional_fonts[ 'Contata One' ] = 'googlefonts';
 	$additional_fonts[ 'Spartan' ] = 'googlefonts';
@@ -232,7 +232,7 @@ function onclinic_add_additional_fonts( $additional_fonts ) {
 /**
  * Remove the parentheses from the category widget.
  */
-function onclinic_categories_postcount_filter ($variable) {
+function ocularis_categories_postcount_filter ($variable) {
    
    $variable = str_replace('(', '<span class="post_count"> ', $variable);
    $variable = str_replace(')', ' </span>', $variable);
@@ -243,7 +243,7 @@ function onclinic_categories_postcount_filter ($variable) {
 /**
  * Remove parentheses from tag cloud count
  */
-function onclinic_tagcloud_postcount_filter ($variable) {
+function ocularis_tagcloud_postcount_filter ($variable) {
 	$variable = str_replace('(', '', $variable);
 	$variable = str_replace(')', '', $variable);
 	

@@ -9,21 +9,21 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
 get_header(); 
 
-	do_action( 'onclinic-theme/site/site-content-before', 'page' ); ?>
+	do_action( 'ocularis-theme/site/site-content-before', 'page' ); ?>
 
-	<div <?php onclinic_content_class() ?>>
+	<div <?php ocularis_content_class() ?>>
 		<div class="row">
 
-			<?php do_action( 'onclinic-theme/site/primary-before', 'page' ); ?>
+			<?php do_action( 'ocularis-theme/site/primary-before', 'page' ); ?>
 			
-			<div id="primary" <?php onclinic_primary_content_class(); ?>>
+			<div id="primary" <?php ocularis_primary_content_class(); ?>>
 
-				<?php do_action( 'onclinic-theme/site/main-before', 'page' ); ?>
+				<?php do_action( 'ocularis-theme/site/main-before', 'page' ); ?>
 
 				<main id="main" class="site-main"><?php
 					while ( have_posts() ) : the_post();
@@ -38,16 +38,16 @@ get_header();
 					endwhile; // End of the loop.
 				?></main><!-- #main -->
 
-				<?php do_action( 'onclinic-theme/site/main-after', 'page' ); ?>
+				<?php do_action( 'ocularis-theme/site/main-after', 'page' ); ?>
 
 			</div><!-- #primary -->
 
-			<?php do_action( 'onclinic-theme/site/primary-after', 'page' ); ?>
+			<?php do_action( 'ocularis-theme/site/primary-after', 'page' ); ?>
 
 			<?php get_sidebar(); // Loads the sidebar.php template.  ?>
 		</div>
 	</div>
 
-	<?php do_action( 'onclinic-theme/site/site-content-after', 'page' );
+	<?php do_action( 'ocularis-theme/site/site-content-after', 'page' );
 
 get_footer();

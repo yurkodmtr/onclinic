@@ -2,5 +2,5 @@
 /**
  * Elementor hooks.
  *
- * @package Onclinic
+ * @package Ocularis
  */

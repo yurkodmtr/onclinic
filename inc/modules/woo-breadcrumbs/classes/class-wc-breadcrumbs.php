@@ -4,7 +4,7 @@
  * Custom WooCommerce breadcrumbs for Cherry
  * (extends default Cherry breadcrumbs)
  */
-class Onclinic_WC_Breadcrumbs extends CX_Breadcrumbs {
+class Ocularis_WC_Breadcrumbs extends CX_Breadcrumbs {
 
 	/**
 	 * Build breadcrumbs trail items array
@@ -49,7 +49,7 @@ class Onclinic_WC_Breadcrumbs extends CX_Breadcrumbs {
 			);
 		}
 		if ( $terms ) {
-			$main_term = apply_filters( 'onclinic-theme/woo/breadcrumbs/main_term', $terms[0], $terms );
+			$main_term = apply_filters( 'ocularis-theme/woo/breadcrumbs/main_term', $terms[0], $terms );
 			$this->term_ancestors( $main_term->term_id, 'product_cat' );
 			$this->_add_item( 'link_format', $main_term->name, get_term_link( $main_term ) );
 		}

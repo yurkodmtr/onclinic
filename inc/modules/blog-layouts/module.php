@@ -8,12 +8,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! class_exists( 'Onclinic_Blog_Layouts_Module' ) ) {
+if ( ! class_exists( 'Ocularis_Blog_Layouts_Module' ) ) {
 
 	/**
-	 * Define Onclinic_Blog_Layouts_Module class
+	 * Define Ocularis_Blog_Layouts_Module class
 	 */
-	class Onclinic_Blog_Layouts_Module extends Onclinic_Module_Base {
+	class Ocularis_Blog_Layouts_Module extends Ocularis_Module_Base {
 		/**
 		 * properties.
 		 */
@@ -57,13 +57,13 @@ if ( ! class_exists( 'Onclinic_Blog_Layouts_Module' ) ) {
 		public function filters() {
 
 			add_action( 'wp_head', array( $this, 'module_init_properties' ) );
-			add_filter( 'onclinic-theme/customizer/options', array( $this, 'customizer_options' ) );
-			add_filter( 'onclinic-theme/customizer/blog-sidebar-enabled', array( $this, 'customizer_blog_sidebar_enabled' ) );
-			add_filter( 'onclinic-theme/customizer/blog-columns-enabled', array( $this, 'customizer_blog_columns_enabled' ) );
-			add_filter( 'onclinic-theme/posts/template-part-slug', array( $this, 'apply_layout_template' ) );
-			add_filter( 'onclinic-theme/posts/post-style', array( $this, 'apply_style_template' ) );
-			add_filter( 'onclinic-theme/posts/list-class', array( $this, 'add_list_class' ) );
-			add_filter( 'onclinic-theme/site-content/container-enabled', array( $this, 'disable_site_content_container' ) );
+			add_filter( 'ocularis-theme/customizer/options', array( $this, 'customizer_options' ) );
+			add_filter( 'ocularis-theme/customizer/blog-sidebar-enabled', array( $this, 'customizer_blog_sidebar_enabled' ) );
+			add_filter( 'ocularis-theme/customizer/blog-columns-enabled', array( $this, 'customizer_blog_columns_enabled' ) );
+			add_filter( 'ocularis-theme/posts/template-part-slug', array( $this, 'apply_layout_template' ) );
+			add_filter( 'ocularis-theme/posts/post-style', array( $this, 'apply_style_template' ) );
+			add_filter( 'ocularis-theme/posts/list-class', array( $this, 'add_list_class' ) );
+			add_filter( 'ocularis-theme/site-content/container-enabled', array( $this, 'disable_site_content_container' ) );
 
 		}
 
@@ -74,8 +74,8 @@ if ( ! class_exists( 'Onclinic_Blog_Layouts_Module' ) ) {
 		 */
 		public function module_init_properties() {
 
-			$this->layout_type 		= onclinic_theme()->customizer->get_value( 'blog_layout_type' );
-			$this->layout_columns 	= onclinic_theme()->customizer->get_value( 'blog_layout_columns' );
+			$this->layout_type 		= ocularis_theme()->customizer->get_value( 'blog_layout_type' );
+			$this->layout_columns 	= ocularis_theme()->customizer->get_value( 'blog_layout_columns' );
 			$this->layout_style 	= 'default';
 
 			if ( isset( $this->sidebar_list[$this->layout_type] ) && $this->is_blog_archive() ) {
@@ -87,7 +87,7 @@ if ( ! class_exists( 'Onclinic_Blog_Layouts_Module' ) ) {
 			}
 
 			if ( ! $this->sidebar_enabled ) {
-				onclinic_theme()->sidebar_position = 'none';
+				ocularis_theme()->sidebar_position = 'none';
 			}
 
 		}
@@ -153,14 +153,14 @@ if ( ! class_exists( 'Onclinic_Blog_Layouts_Module' ) ) {
 
 			$new_options = array(
 				'blog_layout_type' => array(
-					'title'    => esc_html__( 'Layout', 'onclinic' ),
+					'title'    => esc_html__( 'Layout', 'ocularis' ),
 					'priority' => 1,
 					'section'  => 'blog',
 					'default'  => 'default',
 					'field'    => 'select',
 					'choices'  => array(
-						'default'          => esc_html__( 'Listing', 'onclinic' ),
-						'grid'             => esc_html__( 'Grid', 'onclinic' ),
+						'default'          => esc_html__( 'Listing', 'ocularis' ),
+						'grid'             => esc_html__( 'Grid', 'ocularis' ),
 					),
 					'type' => 'control',
 				)
@@ -239,7 +239,7 @@ if ( ! class_exists( 'Onclinic_Blog_Layouts_Module' ) ) {
 					'blog-layouts-module-rtl',
 					get_theme_file_uri( 'inc/modules/blog-layouts/assets/css/rtl.css' ),
 					false,
-					onclinic_theme()->version()
+					ocularis_theme()->version()
 				);
 			}
 

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
 ?>
@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<?php onclinic_theme()->do_location( 'footer', 'template-parts/footer' ); ?>
+		<?php ocularis_theme()->do_location( 'footer', 'template-parts/footer' ); ?>
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->

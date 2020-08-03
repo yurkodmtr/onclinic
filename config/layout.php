@@ -2,13 +2,13 @@
 /**
  * Layout configuration.
  *
- * @package Onclinic
+ * @package Ocularis
  */
 
-add_action( 'after_setup_theme', 'onclinic_set_layout', 5 );
-function onclinic_set_layout() {
+add_action( 'after_setup_theme', 'ocularis_set_layout', 5 );
+function ocularis_set_layout() {
 
-	onclinic_theme()->layout = array(
+	ocularis_theme()->layout = array(
 		'one-right-sidebar' => array(
 			'1/3' => array(
 				'content' => array( 'col-xs-12', 'col-md-8' ),
