@@ -11,22 +11,17 @@
             font-size: 60px!important;
             line-height: 75px!important;
             text-align: center;
-            color: #1E306E;
         }
     }
 
     .woocommerce-checkout-review-order table {
-        background: #F6F7F9;
-        border: 1px solid #DDE0E9;
         box-sizing: border-box;
         thead {
-            background: #F6F7F9;
             th {
                 font-weight: 300;
                 font-size: 14px;
                 line-height: 17px;
                 text-transform: uppercase;
-                color: #1E306E!important;
                 padding:17px 20px 14px 20px!important;
             }
         }
@@ -34,22 +29,18 @@
             font-weight: 600;
             font-size: 16px;
             line-height: 20px;
-            color: #1E306E;
             padding:23px 19px 26px!important;
             &.product-total {
                 span, * {
                     font-weight: 300;
                     font-size: 16px!important;
                     line-height: 20px;
-                    color: #1E306E!important;
                 }
             }
         }
         tfoot {
-            background: #F6F7F9;
             th, td {
                 padding:8px 10px!important;
-                color: #1E306E;
             }
             tr {
                 &:first-child {
@@ -74,13 +65,11 @@
             font-weight: 600;
             font-size: 20px;
             line-height: 25px;
-            color: #1E306E;
             margin-bottom: 40px!important;
             a {
                 font-weight: 300;
                 font-size: 16px;
                 line-height: 20px;
-                color: #1E306E;
                 text-decoration: none;
                 vertical-align: middle;
                 &:hover {
@@ -95,29 +84,24 @@
             font-weight: 300;
             font-size: 14px;
             line-height: 17px;
-            color: #1E306E;
             margin-bottom: 25px;
         }
         .form-row.form-row-first {
             margin-bottom: 40px;
         }
         #coupon_code {
-            background: #F6F7F9;
             border-radius: 6px;
             font-weight: 300;
             font-size: 18px;
             line-height: 22px;
-            color: #8a93b3;
             padding:16px 20px 16px 20px;
         }
         .button {
-            background: #BCE0F7;
             border-radius: 8px;
             font-weight: 500;
             font-size: 16px;
             line-height: 20px;
             text-align: center;
-            color: #1E306E;
             padding:25px;
             width: 100%;
             max-width: 250px;
@@ -125,8 +109,6 @@
             transition: 0.2s;
             &:hover {
                 border:none;
-                color:#FFF;
-                background:#1E306E;
             }
         }
     }
@@ -136,7 +118,6 @@
 		font-weight: 600!important;
 		font-size: 20px!important;
 		line-height: 25px!important;
-		color: #1E306E!important;
 	}
 	.woocommerce {
 		max-width: 570px;
@@ -148,24 +129,19 @@
             font-weight: 300;
             font-size: 18px;
             line-height: 22px;
-            color: #1E306E;
         }
     }
 
     #place_order {
-        background: #8067BD;
         border-radius: 8px;
         padding:25px;
         font-weight: 500;
         font-size: 16px;
         line-height: 20px;
         text-align: center;
-        color: #FFFFFF;
         transition: 0.2s;
         border:none;
         &:hover {
-            background:#1E306E;
-            color:#FFF;
             border:none;
         }
     }
@@ -175,7 +151,6 @@
             font-weight: 300;
             font-size: 18px;
             line-height: 22px;
-            color: #1E306E;
         }
     }
 
@@ -183,30 +158,24 @@
         display: block!important;
         padding:0px!important;
         input {
-            background: #F6F7F9;
             border-radius: 6px;
             font-weight: 300;
             font-size: 18px;
             line-height: 22px;
-            color: #8a93b3;
             padding:16px 20px 16px 20px;
         }
         textarea {
-            background: #F6F7F9;
             border-radius: 6px;
             font-weight: 300;
             font-size: 18px;
             line-height: 22px;
-            color: #8a93b3;
             padding:16px 20px 16px 20px;
         }
         .select2 {
-            background: #F6F7F9;
             border-radius: 6px;
             font-weight: 300;
             font-size: 18px;
             line-height: 22px;
-            color: #8a93b3;
             padding:16px 20px 16px 20px;
             .select2-selection {
                 height: auto!important;
@@ -238,7 +207,6 @@
 
 	.woocommerce-error {
 		margin-left: 0;
-        border: 1px solid #DDE0E9;
         box-sizing: border-box;
         border-radius: 6px;
         padding:34px 40px 30px 100px;
@@ -250,7 +218,6 @@
             font-weight: 600;
             font-size: 20px;
             line-height: 30px;
-            color: #1E306E;
         }
 	}
 
@@ -307,7 +274,6 @@
 		line-height: 15px;
 		letter-spacing: 0.3px;
 		text-transform: uppercase;
-		color: #1E306E;
         margin-bottom: 6px;
 		abbr {
 			border-bottom:none;

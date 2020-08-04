@@ -40,7 +40,6 @@
 							font-weight: 600;
 							font-size: 24px;
 							line-height: 30px;
-							color: #298CD3;
 						}
 						.timeslot-range {
 							.booked-icon {
@@ -54,7 +53,6 @@
 							font-weight: 600;
 							font-size: 20px;
 							line-height: 25px;
-							color: #1E306E;
 							margin-bottom: 5px;
 						}
 						.spots-available {
@@ -62,24 +60,18 @@
 							font-weight: 300;
 							font-size: 14px;
 							line-height: 17px;
-							color: #1E306E;
 							text-transform: none;
 						}
 					}
 					&-people {
 						padding:0px!important;
 						button {
-							background: #1E306E;
 							border-radius: 8px;
 							font-weight: 500;
 							font-size: 16px!important;
 							line-height: 20px!important;
-							color: #FFFFFF;
 							padding:25px 30px 25px 30px!important;
 							border:none!important;
-							&:hover {
-								background:#9985CA!important;
-							}
 						}
 					}
 				}
@@ -93,7 +85,6 @@
 					.monthName {
 						font-weight: 500;
 						text-align: center;
-						color: #1E306E;
 							font-size: 60px;
 							line-height: 75px;
 						@include media-breakpoint-down(md) {
@@ -101,13 +92,13 @@
 							line-height: 32px;
 						}
 						.backToMonth {
+							padding-left:0px!important;
 							display: block;
 							text-align: center;
 							font-weight: 500;
 							font-size: 16px;
 							line-height: 20px;
 							text-decoration: underline;
-							color: #8067BD;
 							&:before {
 								content: url("data:image/svg+xml; utf8, %3Csvg%20width%3D%228%22%20height%3D%2212%22%20viewBox%3D%220%200%208%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M0.257812%206.90625V5.54688L6.92969%200.578125L7.72656%201.6875L1.71094%206.23438L7.72656%2010.7812L6.92969%2011.8906L0.257812%206.90625Z%22%20fill%3D%22%238067BD%22%2F%3E%0A%3C%2Fsvg%3E%0A");
 								display: inline-block;
@@ -155,8 +146,6 @@
 						font-size: 16px!important;
 						line-height: 20px!important;
 						text-align: center;
-						color: #1E306E!important;
-						background: #EFF9FE!important;
 						text-transform: none!important;
 						@include media-breakpoint-up(sm) {
 							padding: 20px;
@@ -171,7 +160,6 @@
 			tbody {
 				tr {
 					&.entryBlock {
-						background: #FFF;
 						td {
 							padding:25px!important;
 							position: relative;
@@ -179,7 +167,6 @@
 								font-weight: 500;
 								font-size: 34px;
 								line-height: 42px;
-								color: #1E306E;
 								text-align: left;
 								margin:0px!important;
 								padding:30px 0px;
@@ -219,7 +206,6 @@
 								.number {
 									@include scale(1);
 									background: none !important;
-									color: $color__white !important;
 								}
 							}
 						}
@@ -241,13 +227,13 @@
 						}
 						&.prev-date {
 							.date:hover {
-								background: rgba($color__background-hr, .1) !important;
+								background: rgba(#ececec, .1) !important;
 							}
 						}
 						&.blur {
 							pointer-events: none;
 							.date {
-								background: rgba($color__background-hr, .1);
+								background: rgba(#ececec, .1);
 							}
 							.number {
 								opacity: .2;
@@ -257,16 +243,12 @@
 							@include transition(.3s ease all);
 							height: inherit;
 							&:hover {
-								.number {
-									color: $color__white;
-								}
 							}
 						}
 					}
 					&.week {
 						td {
 							.date {
-								background: #BCE0F7;
 								.number {
 									left:0px;
 									top:0px;
@@ -274,19 +256,6 @@
 									bottom:0px;
 									margin:auto;
 									font-weight: 600;
-									font-size: 20px;
-									color: #1E306E;
-								}
-								&:hover {
-									background: #1E306E;
-									.number {
-										color:#FFF;
-									}
-								}
-							}
-							&.prev-date {
-								.date {
-									background: #FAFAFB!important;
 								}
 							}
 						}
@@ -302,13 +271,49 @@
 				th {
 					padding: 20px 0 10px !important;
 					.monthName {
-						font-size: 18px;
+						font-weight: 500;
+						font-size: 16px;
+						line-height: 20px;
+						text-transform: capitalize;
+						.backToMonth {
+							margin-top:5px;
+							font-size:14px;
+							line-height: 16px;
+							&:before {
+								display:none;
+							}
+						}
+					}
+					.page-right {
+						position:absolute;
+						right:0px;
+						top:50%;
+						transform: translateY(-50%);
+						line-height: 0px;
+						margin-top:0px!important;
+						&:before {
+							line-height: 0px;
+							content: url("data:image/svg+xml; utf8, %3Csvg%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.57812%2011.8906L0.8125%2010.7812L6.8125%206.23438L0.8125%201.6875L1.57812%200.578125L8.28125%205.54688V6.90625L1.57812%2011.8906Z%22%20fill%3D%22%23298CD3%22%2F%3E%0A%3C%2Fsvg%3E%0A") !important;
+						}
+					}
+					.page-left {
+						position:absolute;
+						left:0px;
+						top:50%;
+						transform: translateY(-50%);
+						line-height: 0px;
+						margin-top:0px!important;
+						&:before {
+							line-height: 0px;
+							content: url("data:image/svg+xml; utf8,%3Csvg%20width%3D%229%22%20height%3D%2212%22%20viewBox%3D%220%200%209%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M0.78125%206.90625V5.54688L7.45312%200.578125L8.25%201.6875L2.23438%206.23438L8.25%2010.7812L7.45312%2011.8906L0.78125%206.90625Z%22%20fill%3D%22%23298CD3%22%2F%3E%0A%3C%2Fsvg%3E%0A") !important;
+						}
 					}
 				}
 				tr.days {
 					th {
 						text-align: center !important;
 						padding: 13px 5px !important;
+						font-size:14px!important;
 					}
 				}
 			}
@@ -323,6 +328,7 @@
 						.date {
 							margin: 1px 1px 0;
 							.number {
+								font-size:14px!important;
 								transform: scale(1) !important;
 							}
 						}
@@ -337,6 +343,30 @@
 							padding: 0;
 						}
 					}
+					&.entryBlock {
+						td {
+							padding:15px!important;
+							.booked-appt-list {
+								h2 {
+									padding:0px!important;
+									margin-bottom: 11px!important;
+									text-align: center;
+									line-height: 15px;
+									strong {
+										font-weight: 500;
+										font-size: 12px;
+										line-height: 15px;
+									}
+								}
+								.timeslot {
+									padding:0px!important;
+									.new-appt {
+										padding:10px 15px!important;
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -346,9 +376,6 @@
 body .booked-modal {
 	padding-left:15px;
 	padding-right:15px;
-	.booked-scrollable {
-		background:#FFF!important;
-	}
 	.bm-window {
 		width:100%;
 		max-width: 760px!important;
@@ -366,7 +393,6 @@ body .booked-modal {
 			font-weight: 600;
 			font-size: 20px;
 			line-height: 25px;
-			color: #1E306E;
 			margin-bottom: 20px;
 		}
 		input.button-primary[type="submit"] {
@@ -376,7 +402,6 @@ body .booked-modal {
 			font-size: 16px;
 			line-height: 20px;
 			text-align: center;
-			color: #FFFFFF;
 			padding:20px 20px 20px 20px;
 			max-width: 315px!important;
 			width: 100%;
@@ -391,20 +416,16 @@ body .booked-modal {
 			}
 			&:hover {
 				border:none!important;
-				background: #8067BD!important;
 			}
 		}
 		.cancel, .booked-forgot-goback {
 			box-sizing: border-box;
-			background: #FFFFFF!important;
-			border: 1px solid #DDE0E9;
 			box-sizing: border-box;
 			border-radius: 8px;
 			font-weight: 500!important;
 			font-size: 16px!important;
 			line-height: 20px;
 			text-align: center;
-			color: #1E306E!important;
 			max-width: 135px!important;
 			width: 100%;
 			padding:19px 20px 19px 20px;
@@ -413,19 +434,15 @@ body .booked-modal {
 				max-width: 100% !important;
 			}
 			&:hover {
-				border: 1px solid #8067BD;
 				background: #8067BD!important;
-				color:#FFF!important;
 			}
 		}
 		.cf-block {
 			.textfield {
-				background: #F6F7F9!important;
 				border-radius: 6px;
 				font-weight: 300;
 				font-size: 18px!important;
 				line-height: 22px!important;
-				color: #8a93b3;
 				border:none;
 				padding:17px 25px 17px 25px;
 			}
@@ -433,7 +450,6 @@ body .booked-modal {
 	}
 	.booked-title-bar {
 		border-radius: 0px!important;
-		background: #8067BD!important;
 		padding:28px 50px 28px 50px!important;
 		@include media-breakpoint-down(xs) {
 			padding:28px 25px 28px 25px!important;
@@ -443,7 +459,6 @@ body .booked-modal {
 			font-weight: 500!important;
 			font-size: 34px!important;
 			line-height: 42px;
-			color: #FFFFFF;
 			@include media-breakpoint-down(xs) {
 				font-size:22px!important;
 				line-height: 28px;
@@ -471,7 +486,6 @@ body .booked-modal {
 	.bookings {
 		.booked-appointments {
 			padding:27px 30px 26px;
-			background: #EFF9FE;
 			border-radius: 6px;
 			box-shadow: none!important;
 			margin-bottom: 40px;
@@ -483,14 +497,12 @@ body .booked-modal {
 					font-weight: 600;
 					font-size: 24px;
 					line-height: 30px;
-					color: #298CD3;
 					margin-bottom: 8px;
 				}
 				.appointment-info {
 					font-weight: 300;
 					font-size: 18px;
 					line-height: 22px;
-					color: #1E306E;
 					i {
 						position: relative;
 						top:2px;
@@ -565,17 +577,12 @@ body #booked-profile-page {
                         line-height: 38px!important;
                     }
                 }
-				color: #1E306E;
 				a {
 					display: block;
 					width: 80px;
 					font-weight: 300;
 					font-size: 18px;
 					line-height: 22px;
-					color: #1E306E;
-					&:hover {
-						color:#298CD3;
-					}
 				}
 			}
 		}
@@ -584,7 +591,6 @@ body #booked-profile-page {
 		margin-bottom: 70px!important;
 		border:none;
 		border-bottom: 1px solid;
-		border-color:#DDE0E9!important;
 		background-color: transparent!important;
 		padding-bottom:20px!important;
         @media screen and (max-width: 720px) {
@@ -607,7 +613,6 @@ body #booked-profile-page {
 				font-size: 16px;
 				line-height: 20px;
 				text-transform: uppercase;
-				color: #1E306E;
 				transition: 0.2s;
 				background:transparent!important;
                 display: inline-block!important;
@@ -622,21 +627,15 @@ body #booked-profile-page {
 					width: 0px;
 					height: 3px;
 					transition: 0.2s;
-					background: #298CD3;
                     @media screen and (max-width: 720px) {
                         bottom:-2px;
                     }
 				}
-				&:hover {
-					color:#298CD3!important;
-				}
 			}
 			&.active {
 				a {
-					color:#298CD3!important;
 					background:transparent!important;
 					&:hover {
-						color:#298CD3!important;
 						background:transparent!important;
 					}
 					&:before {
@@ -654,7 +653,6 @@ body #booked-profile-page {
 			font-weight: 500;
 			font-size: 34px;
 			line-height: 42px;
-			color: #1E306E;
             @media screen and (max-width: 720px) {
                 font-size: 26px;
                 line-height: 32px;
@@ -665,11 +663,9 @@ body #booked-profile-page {
 			padding:0px 0px 39px 0px!important;
 			margin:0px 0px 37px 0px!important;
 			border-bottom:1px solid;
-			border-color:#DDE0E9;
             font-weight: 600;
             font-size: 20px;
             line-height: 25px;
-            color: #8e97b6;
             strong {
                 font-size: 24px;
                 line-height: 30px;
@@ -692,12 +688,6 @@ body #booked-profile-page {
                 }
 				i {
 					margin-right: 20px;
-				}
-			}
-			&.approved {
-                color: #1E306E;
-                .status-block {
-					color: #20991A;
 				}
 			}
 			.booked-icon-clock {
@@ -735,15 +725,12 @@ body #booked-profile-page {
 				.cancel {
                     margin-right: 0px!important;
 					box-sizing: border-box;
-					background: #FFFFFF!important;
-					border: 1px solid #DDE0E9;
 					box-sizing: border-box;
 					border-radius: 8px;
 					font-weight: 500!important;
 					font-size: 16px!important;
 					line-height: 20px;
 					text-align: center;
-					color: #1E306E!important;
                     padding:24px 29px;
 					display: block;
                     @media screen and (max-width: 720px) {
@@ -754,11 +741,6 @@ body #booked-profile-page {
 					@include media-breakpoint-down(xs) {
 						max-width: 100% !important;
 					}
-					&:hover {
-						border: 1px solid #8067BD;
-						background: #8067BD!important;
-						color:#FFF!important;
-					}
 				}
                 .addeventatc {
                     margin-right: 20px;
@@ -766,8 +748,6 @@ body #booked-profile-page {
                     font-size: 16px;
                     line-height: 20px;
                     text-align: center;
-                    color: #FFFFFF!important;
-                    background: #1E306E;
                     border-radius: 8px;
                     padding:25px 30px;
                     border:none!important;
@@ -788,7 +768,6 @@ body #booked-profile-page {
                     }
                     &:hover {
                         border:none!important;
-                        background: #8067BD!important;
                     }
                 }
 			}
@@ -812,7 +791,6 @@ body #booked-profile-page {
             }
             .booked-upload-wrap {
                 margin:0px;
-                background: #EFF9FE;
                 border-radius: 8px;
                 padding:19px 20px 14px 20px;
                 height:auto;
@@ -820,26 +798,19 @@ body #booked-profile-page {
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 20px;
-                    color: #1E306E;
                 }
             }
             input[type=text], input[type=password], input[type=email], textarea {
-                background: #F6F7F9;
-                border: 2px solid #F6F7F9;
                 border-radius: 6px;
                 font-weight: 300;
                 font-size: 18px;
                 line-height: 22px;
-                color: #8a93b3;
                 transition: 0.2s;
                 padding:14px 20px 14px 20px;
                 margin:0px;
                 &:focus {
-                    background: #FFFFFF;
-                    border: 2px solid #BCE0F7;
                     box-sizing: border-box;
                     border-radius: 6px;
-                    color: #1E306E;
                 }
             }
             .hint-p {
@@ -847,7 +818,6 @@ body #booked-profile-page {
                 font-weight: 300;
                 font-size: 18px;
                 line-height: 22px;
-                color: #8E97B6;
                 font-style: normal;
             }
             #updateuser {
@@ -855,16 +825,11 @@ body #booked-profile-page {
                 font-size: 16px;
                 line-height: 20px;
                 text-align: center;
-                color: #FFFFFF;
-                background: #1E306E;
                 border-radius: 8px;
                 padding:25px 20px;
                 width: 100%;
                 max-width: 175px;
                 border:none!important;
-                &:hover { 
-                    background: #9985CA!important;
-                }
             }
         }
     }

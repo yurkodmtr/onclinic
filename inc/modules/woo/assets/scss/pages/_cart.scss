@@ -15,7 +15,6 @@
 		font-weight: 500;
 		font-size: 60px;
 		line-height: 75px;
-		color: #1E306E;
 		margin-bottom: 50px;
 		text-align: center;
 	}
@@ -58,15 +57,6 @@
 		thead {
 			display: none;
 		}
-		tbody {
-			tr {
-				&:first-child {
-					td, th {
-						border-top:1px solid #DDE0E9;
-					}
-				}
-			}
-		}
 
 		tr {
 			background: none !important;
@@ -78,7 +68,6 @@
 
 			td, th {
 				border: 0;
-				border-bottom: 1px solid #DDE0E9;
 				text-align: center;
 				&:last-child {
 					text-align: right;
@@ -116,7 +105,6 @@
 					font-weight: 600;
 					font-size: 18px;
 					line-height: 22px;
-					color: #1E306E;
 					@include media-breakpoint-down(xs) {
 						display: none;
 					}
@@ -147,12 +135,10 @@
 						}
 
 						input {
-							background: #F6F7F9;
 							border-radius: 6px;
 							font-weight: 300;
 							font-size: 18px;
 							line-height: 22px;
-							color: #1E306E;
 							padding:16px 20px 15px 20px;
 						}
 
@@ -161,17 +147,11 @@
 							font-size: 16px;
 							line-height: 20px;
 							text-align: center;
-							color: #1E306E;
-							background: #E0F3FD;
 							border-radius: 6px;
 							border:none;
 							padding:17px 24px;
 							margin-left: 10px;
 							transition: 0.2s;
-							&:hover {
-								background:#8067BD;
-								color:#FFF;
-							}
 							@include media-breakpoint-down(xs) {
 								display: block;
 								width: 100%;
@@ -206,23 +186,13 @@
 						font-weight: 500;
 						font-size: 16px;
 						line-height: 20px;
-						color: #1E306E;
-						background: #FFFFFF;
-						border: 1px solid #DDE0E9;
 						box-sizing: border-box;
 						border-radius: 6px;
 						padding:17px 24px;
 						min-width: 164px;
-						&:hover {
-							background:#8067BD;
-							color:#FFF;
-							border: 1px solid #8067BD;
-						}
-
 						@include media-breakpoint-up(sm) {
 							float: right;
 						}
-
 						@include media-breakpoint-down(xs) {
 							display: block;
 							width: 100%;
@@ -238,7 +208,6 @@
 				// woocomerce cart product quantity
 				&.product-quantity {
 					input {
-						background-color: #F6F7F9;
 						border-radius: 6px;
 						width: 90px;
 						height: 70px;
@@ -246,7 +215,6 @@
 						font-size: 20px;
 						line-height: 25px;
 						text-align: center;
-						color: #1E306E;
 					}
 				}
 
@@ -261,7 +229,6 @@
 						font-weight: 300;
 						font-size: 16px;
 						line-height: 20px;
-						color: #1E306E;
 					}
 
 				}
@@ -297,7 +264,6 @@
 					font-weight: 600;
 					font-size: 18px;
 					line-height: 22px;
-					color: #1E306E;
 				}
 			}
 		}
@@ -309,10 +275,8 @@
 		margin-top: 30px;
 		border: 0;
 		border-radius: 0;
-		background: #F6F7F9;
 
 		width: 100%;
-		margin-top: 30px;
 		margin-left: 0;
 
 		@include media-breakpoint-up(md) {
@@ -325,7 +289,6 @@
 			font-weight: 600;
 			font-size: 20px;
 			line-height: 25px;
-			color: #1E306E;
 			margin:0px 0px 25px 0px;
 
 			&:before {
@@ -386,11 +349,6 @@
 						font-weight: 300;
 						font-size: 16px;
 						line-height: 20px;
-						color: #1E306E;
-					}
-
-					.amount {
-						color: #1E306E;
 					}
 				}
 
@@ -427,7 +385,6 @@
 						font-weight: 500;
 						font-size: 34px!important;
 						line-height: 42px!important;
-						color: #1E306E;
 					}
 					strong {
 						font-weight: 500;

@@ -28,7 +28,6 @@
 		line-height: 15px;
 		letter-spacing: 0.3px;
 		text-transform: uppercase;
-		color: #1E306E;
 		border: 0;
 		padding-bottom:6px;
 	}
@@ -53,13 +52,11 @@
 		display: block;
 		max-width: 200px;
 		width: 100%;
-		background-color: #F6F7F9;
 		border-radius: 6px;
 		cursor: pointer;
 		font-weight: 300;
 		font-size: 18px;
 		line-height: 22px;
-		color: #8a93b3;
 		padding:7px 25px 7px 20px;
 		height: 54px;
 		margin-bottom: 0px!important;
@@ -114,8 +111,6 @@
 			font-weight: 500;
 			font-size: 20px;
 			line-height: 25px;
-			color: #1E306E;
-			background: #F6F7F9;
 			border-radius: 6px;
 		}
 	}
@@ -141,8 +136,6 @@
 			vertical-align: middle;
 		}
 		&:hover {
-			background-color: #8067BD!important;
-			color:#FFF!important;
 			&:before {
 				background-color: transparent;
 			}
@@ -192,7 +185,6 @@ table.woocommerce-grouped-product-list {
 
 		del {
 			font-size: 18px;
-			color: #888;
 		}
 		
 		ins {

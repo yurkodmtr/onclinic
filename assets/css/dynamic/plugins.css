@@ -120,7 +120,6 @@ html#ecwid_html body#ecwid_body .ec-size .ec-wrapper .ec-store button {
 html#ecwid_html body#ecwid_body .ec-size .ec-wrapper .ec-store .form-control--secondary .form-control__button,
 html#ecwid_html body#ecwid_body .ec-size .ec-wrapper .ec-store .form-control--primary .form-control__button {
 	border-color: $accent_color;
-	background-color: transparent;
 	color: $accent_color;
 }
 
@@ -171,4 +170,207 @@ html#ecwid_html body#ecwid_body .ec-minicart__body .ec-minicart__icon .icon-defa
 html#ecwid_html body#ecwid_body .ec-minicart:hover .ec-minicart__body .ec-minicart__icon .icon-default path[stroke],
 html#ecwid_html body#ecwid_body .ec-minicart:hover .ec-minicart__body .ec-minicart__icon .icon-default circle[stroke] {
 	stroke: $link_hover_color;
+}
+
+
+
+
+
+
+
+
+
+.booked-calendar-shortcode-wrap .booked-calendar-wrap .booked-calendar .booked-appt-list .timeslot-time .timeslot-title {
+	color: $blue_color;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap .booked-calendar .booked-appt-list .timeslot-time .timeslot-range {
+	color: $dark_blue_lighter_1_color;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap .booked-calendar .booked-appt-list .timeslot-time .spots-available {
+	color: $dark_blue_lighter_1_color;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap .booked-calendar .booked-appt-list .timeslot-people button {
+	background: $dark_blue_lighter_1_color!important;
+	color: $white;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap .booked-calendar .booked-appt-list .timeslot-people button:hover {
+	background: $purple_color_lighter_1 !important;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap thead th .monthName {
+	color: $dark_blue_lighter_1_color;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap thead th .monthName .backToMonth {
+	color: $purple_color;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap thead .days th {
+	color: $dark_blue_lighter_1_color !important;
+	background: $blue_color_lighter_4 !important;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap tbody tr.entryBlock {
+	background: $white;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap tbody tr.entryBlock td h2 {
+	color: $dark_blue_lighter_1_color;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap tbody tr td {
+	border: none;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap tbody tr td.active .date .number {
+	color: $white !important;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap tbody tr.week td .date {
+	background: $blue_color_lighter_2;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap tbody tr.week td .date .number {
+	color: $dark_blue_lighter_1_color;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap tbody tr.week td .date:hover {
+	background: $dark_blue_lighter_1_color;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap tbody tr.week td .date:hover .number {
+	color: $white;
+}
+.booked-calendar-shortcode-wrap .booked-calendar-wrap tbody tr.week td.prev-date .date {
+	background: #FAFAFB !important;
+}
+.booked-calendar-shortcode-wrap.small thead tr:first-child {
+	background: $blue_color_lighter_2;
+}
+.booked-calendar-shortcode-wrap.small tbody.entryBlock td .booked-appt-list h2 strong {
+	color: $dark_blue_lighter_1_color;
+}
+
+body .booked-modal .booked-scrollable {
+	background: $white !important;
+}
+body .booked-modal .booked-form p {
+	color: $dark_blue_lighter_1_color;
+}
+body .booked-modal .booked-form input.button-primary[type=submit] {
+	background: $dark_blue_lighter_1_color;
+	color: $white;
+}
+body .booked-modal .booked-form input.button-primary[type=submit]:hover {
+	background: $purple_color !important;
+}
+body .booked-modal .booked-form .cancel, body .booked-modal .booked-form .booked-forgot-goback {
+	background: $white !important;
+	border: 1px solid $dark_blue_lighter_2_color;
+	box-sizing: border-box;
+	color: $dark_blue_lighter_1_color !important;
+}
+body .booked-modal .booked-form .cancel:hover, body .booked-modal .booked-form .booked-forgot-goback:hover {
+	border: 1px solid $purple_color;
+	background: $purple_color !important;
+	color: $white !important;
+}
+body .booked-modal .booked-form .cf-block .textfield {
+	background: $dark_blue_lighter_3_color !important;
+	color: #8a93b3;
+}
+body .booked-modal .booked-title-bar {
+	background: $purple_color !important;
+}
+body .booked-modal .booked-title-bar small {
+	color: $white;
+}
+body .booked-modal .bookings .booked-appointments {
+	background: $blue_color_lighter_4;
+}
+body .booked-modal .bookings .booked-appointments .booked-appointment-details .appointment-title {
+	color: $blue_color;
+}
+body .booked-modal .bookings .booked-appointments .booked-appointment-details .appointment-info {
+	color: $dark_blue_lighter_1_color;
+}
+
+
+
+
+body #booked-profile-page .booked-profile-header .booked-user h3 {
+	color: $dark_blue_lighter_1_color;
+}
+body #booked-profile-page .booked-profile-header .booked-user h3 a {
+	color: $dark_blue_lighter_1_color;
+}
+body #booked-profile-page .booked-profile-header .booked-user h3 a:hover {
+	color: $blue_color;
+}
+body #booked-profile-page .booked-tabs {
+	border-color: $dark_blue_lighter_2_color !important;
+}
+body #booked-profile-page .booked-tabs li a {
+	color: $dark_blue_lighter_1_color;
+}
+body #booked-profile-page .booked-tabs li a:before {
+	background: $blue_color;
+}
+body #booked-profile-page .booked-tabs li a:hover {
+	color: $blue_color !important;
+}
+body #booked-profile-page .booked-tabs li.active a {
+	color: $blue_color !important;
+}
+body #booked-profile-page .booked-tabs li.active a:hover {
+	color: $blue_color !important;
+}
+body #booked-profile-page .booked-tab-content h4 {
+	color: $dark_blue_lighter_1_color;
+}
+body #booked-profile-page .booked-tab-content .appt-block {
+	border-bottom: 1px solid;
+	border-color: $dark_blue_lighter_2_color;
+	color: #8e97b6;
+}
+body #booked-profile-page .booked-tab-content .appt-block.approved {
+	color: $dark_blue_lighter_1_color;
+}
+body #booked-profile-page .booked-tab-content .appt-block.approved .status-block {
+	color: #20991A;
+}
+body #booked-profile-page .booked-tab-content .appt-block .booked-cal-buttons .cancel {
+	background: $white !important;
+	color: $dark_blue_lighter_1_color !important;
+}
+body #booked-profile-page .booked-tab-content .appt-block .booked-cal-buttons .cancel:hover {
+	border: 1px solid $purple_color;
+	background: $purple_color !important;
+	color: $white !important;
+}
+body #booked-profile-page .booked-tab-content .appt-block .booked-cal-buttons .addeventatc {
+	color: $white !important;
+	background: $dark_blue_lighter_1_color;
+}
+body #booked-profile-page .booked-tab-content .appt-block .booked-cal-buttons .addeventatc:hover {
+	border: none !important;
+	background: $purple_color !important;
+}
+body #booked-profile-page #booked-page-form p label {
+	color: $dark_blue_lighter_1_color;
+}
+body #booked-profile-page #booked-page-form p .booked-upload-wrap {
+	background: $blue_color_lighter_4;
+}
+body #booked-profile-page #booked-page-form p .booked-upload-wrap span {
+	color: $dark_blue_lighter_1_color;
+}
+body #booked-profile-page #booked-page-form p input[type=text], body #booked-profile-page #booked-page-form p input[type=password], body #booked-profile-page #booked-page-form p input[type=email], body #booked-profile-page #booked-page-form p textarea {
+	background: $dark_blue_lighter_3_color;
+	border: 2px solid $dark_blue_lighter_3_color;
+	color: #8a93b3;
+}
+body #booked-profile-page #booked-page-form p input[type=text]:focus, body #booked-profile-page #booked-page-form p input[type=password]:focus, body #booked-profile-page #booked-page-form p input[type=email]:focus, body #booked-profile-page #booked-page-form p textarea:focus {
+	background: $white;
+	border: 2px solid $blue_color_lighter_2;
+	color: $dark_blue_lighter_1_color;
+}
+body #booked-profile-page #booked-page-form p .hint-p {
+	color: #8E97B6;
+}
+body #booked-profile-page #booked-page-form p #updateuser {
+	color: $white;
+	background: $dark_blue_lighter_1_color;
+}
+body #booked-profile-page #booked-page-form p #updateuser:hover {
+	background: $purple_color_lighter_1 !important;
 }

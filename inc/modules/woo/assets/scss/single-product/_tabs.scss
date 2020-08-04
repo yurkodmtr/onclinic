@@ -16,7 +16,6 @@
 			font-weight: 500;
 			font-size: 34px;
 			line-height: 42px;
-			color: #1E306E;
 			margin: 0 0 27px;
 		}
 		
@@ -59,23 +58,15 @@
 			.comment-form-rating {
 				.stars {
 					margin-top:0px;
-					a {
-						&:before {
-							background-color: #F8BD4B;
-						}
-					}
 				}
 			}
 			.comment-form-comment {
 				textarea {
-					background: #FFFFFF;
-					border: 2px solid #BCE0F7;
 					box-sizing: border-box;
 					border-radius: 6px;
 					font-weight: 300;
 					font-size: 18px!important;
 					line-height: 22px;
-					color: #1E306E;
 					padding:15px;
 				}
 			}
@@ -84,7 +75,6 @@
 				font-weight: 300;
 				font-size: 14px;
 				line-height: 17px;
-				color: #1E306E;
 			}
 
 			#comments {
@@ -105,42 +95,25 @@
 				tr {
 					th {
 						transition: 0.2s;
-						background: #FAFAFB;
 						font-weight: 600;
 						font-size: 18px;
 						line-height: 22px;
-						color: #1E306E;
 						padding:14px 25px 14px 25px;
 					}
 					td {
 						transition: 0.2s;
-						background: #FAFAFB;
 						font-weight: 300;
 						font-size: 18px;
 						line-height: 22px;
-						color: #1E306E;
 						padding:14px 25px 14px 25px;
-					}
-					&:hover {
-						th {
-							background: #EEEFF4;
-						}
-						td {
-							background: #EEEFF4;
-						}
 					}
 				}
 			}
 		}
 	}
-	
-	//  woocommerce tabs list
 	.wc-tabs {
 		list-style: none;
 		margin: 0;
-		border-bottom:1px solid #DDE0E9;
-		
-		//  woocommerce tabs element
 		li {
 			position: relative;
 			width: 100%;
@@ -166,7 +139,6 @@
 				font-size: 16px;
 				line-height: 20px;
 				text-transform: uppercase;
-				color: #1E306E;
 				&:after {
 					content: '';
 					position: absolute;
@@ -174,7 +146,6 @@
 					bottom: -22px;
 					width: 0;
 					height: 3px;
-					background-color: #298CD3;
 					transition: width 0.2s ease-out;
 					@include media-breakpoint-down(sm) {
 						bottom:0px;
@@ -184,7 +155,6 @@
 
 			&.active {
 				a {
-					color:#298CD3;
 					&:after {
 						width: 100%;
 					}
@@ -192,9 +162,4 @@
 			}
 		}
 	}
-}
-
-.woocommerce-Tabs-panel--description.panel {
-	
-	
 }

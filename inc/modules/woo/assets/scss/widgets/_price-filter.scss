@@ -11,7 +11,6 @@
 			font-weight: 300;
 			font-size: 16px;
 			line-height: 20px;
-			color: #1E306E;
 			text-align: center;
 		}
 	}
@@ -22,7 +21,6 @@
 		width: 100%;
 		height: 8px;
 		border-radius: 0;
-		background-color: #bfbfbf;
 	}
 	
 	.ui-slider-range{
@@ -40,9 +38,7 @@
 		width: 20px;
 		height: 20px;
 		border-radius: 50%;
-		border: 2px solid #1E306E;
 		outline: none;
-		background-color: #fff;
 		transition: background-color 0.2s ease-out;
 		
 		&:last-child{
@@ -70,9 +66,6 @@
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			&:hover {
-
-			}
 		}
 	}
 }

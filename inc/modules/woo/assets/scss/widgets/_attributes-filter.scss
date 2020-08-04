@@ -38,7 +38,6 @@
 				text-transform: none;
 				font-weight: 500;
 				font-size: 16px;
-				color:#298cd3;
 				&:before{
 					content: "";
 					position: absolute;
@@ -49,23 +48,17 @@
 					display: block;
 					border: 0;
 					border-radius: 2px;
-					background-color: #F6F7F9;
-				}
-				&:hover {
-					color:#8067BD!important;
 				}
 			}
 			> span {
 				font-weight: 500;
 				font-size: 16px;
-				color: #89CCF7;
 				display: inline-block;
 				vertical-align: middle;
 			}
 
 			&.chosen, &.current-cat{
 				a {
-					color: #8067BD;
 					&:after{
 						position: absolute;
 						left: 6px;
@@ -106,3 +99,4 @@
 		font-size: 14px;
 	}
 }
+
